@@ -19,10 +19,11 @@ const bubbleSort = arr => {
         arr[j + 1] = bigger;
       }
     }
-    if (!bigger && bigger !== 0) return arr;
+  // if (bigger === undefined) return arr;
   }
   return arr;
 }
 
-const unsortedArr = [-3, -2, -1, 2, 1, 2, 3, 0];
-console.log(bubbleSort(unsortedArr)); // -> [-3, -2, -1, 0, 1, 2, 2, 3]
+const sortedArr = [7, 8, 9, 10, 11]
+const unsortedArr = [3, 1, 0, 2, -1, 2, -3, -2];
+console.log(bubbleSort(sortedArr)); // -> [-3, -2, -1, 0, 1, 2, 2, 3]

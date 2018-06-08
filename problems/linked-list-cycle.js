@@ -17,9 +17,10 @@ However, linked lists can also have cyclical references:
 
 
 /*
+n = 
 RUNTIME Complexity [WST]: O(n)
 SPACE Complexity [WST]: O(1)
-NOTE: Create two references, which will both initially point to the head of the list. Every iteration, pointer 'A' takes one step, and pointer 'B' two steps down the list. If the given list includes a "cycle", pointer 'A' and pointer 'B' will eventually point to the same node.
+NOTE: Create two references, which both initially point to the head of the list. Every iteration, pointer 'A' takes one step, and pointer 'B' two steps down the list. If the given list includes a loop/"cycle", pointer 'A' and pointer 'B' will eventually point to the same node.
 */
 
 function Node(val, nxt) {
