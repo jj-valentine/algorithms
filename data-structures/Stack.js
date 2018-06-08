@@ -2,11 +2,11 @@
 
 
 /*
-[AVG/WST] RUNTIME Complexity
-  * Access: O(n)
-  * Search: O(n)
-  * Insertion: O(1)
-  * Deletion: O(1)
+[AVG/WST] RUNTIME Complexity:
+  * Access -- O(n)
+  * Search -- O(n)
+  * Insertion -- O(1)
+  * Deletion -- O(1)
 [WST] SPACE Complexity: O(n)
 */
 
@@ -38,6 +38,7 @@ function Stack() {
   Stack.prototype.isEmpty = () => this.index === 0;
 }
 
+// TESTING:
 const stack = new Stack();
 stack.push(1);
 stack.push(2);

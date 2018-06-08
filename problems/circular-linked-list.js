@@ -51,7 +51,7 @@ function circularLinkedList2(head) {
 }
 
 
-// // TESTING:
+// TESTING:
 let nodeA = new Node('A');
 let nodeB = nodeA.next = new Node('B');
 let nodeC = nodeB.next = new Node('C');

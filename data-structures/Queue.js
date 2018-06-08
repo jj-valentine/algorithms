@@ -2,11 +2,11 @@
 
 
 /*
-[AVG/WST] RUNTIME Complexity
-  * Access: O(n)
-  * Search: O(n)
-  * Insertion: O(1)
-  * Deletion: O(1)
+[AVG/WST] RUNTIME Complexity:
+  * Access -- O(n)
+  * Search -- O(n)
+  * Insertion -- O(1)
+  * Deletion -- O(1)
 [WST] SPACE Complexity: O(n)
 */
 
@@ -22,7 +22,7 @@ function Queue() {
   }
 
   // removes element from the beginning of the queue
-  // NOTE: if we don't care to re-index through iterating over our queue everytime we remove an element, we can save on time complexity by adding another reference property to our Queue object (i.e. first)
+  // NOTE: If we don't care to re-index through iterating over our queue everytime we remove an element, we can save on time complexity by adding another reference property to our Queue object (i.e. first)
   Queue.prototype.dequeue = () => {
     if (this.index - this.first === 0) return 'queue empty!';
     let dequeued = this.storage[this.first];
