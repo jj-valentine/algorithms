@@ -1,6 +1,5 @@
 'use strict';
 
-
 /* Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
 
 For example, if this array were passed as an argument:
@@ -16,8 +15,8 @@ All of the strings in the array passed to your function will be of different len
 /*
 SOLUTION #1:
 n = # of elements in array
-[BST/WST] RUNTIME Complexity: O(n)
-[BST/WST] SPACE Complexity: O(n)
++ RUNTIME Complexity: O(n) [BST/WST]
++ SPACE Complexity: O(n) [BST/WST]
 NOTE:
 */
 
@@ -29,8 +28,8 @@ function sortByLength(array, obj ={}) {
 /*
 SOLUTION #2:
 n = # of elements in array
-[WST] RUNTIME Complexity: O(n * log(n))
-[WST] SPACE Complexity: O(1)
++ RUNTIME Complexity: O(n * log(n)) [WST]
++ SPACE Complexity: O(1) [WST]
 NOTE:
 */
 

@@ -1,8 +1,6 @@
 'use strict';
 
-
 /* Create a stack. Then create a queue using two stacks. */
-
 
 function Stack() {
 
@@ -22,7 +20,6 @@ function Stack() {
     return popped;
   }
 }
-
 
 function Queue() {
 
@@ -47,6 +44,7 @@ function Queue() {
   }
 }
 
+// TESTING:
 let q = new Queue();
 q.enqueue(1);
 q.enqueue(2);

@@ -32,9 +32,10 @@ NOTE: The sum of all numbers from 1 to n can be represented by the equation: n(n
 */
 
 function missingNum(arr) {
-  let sum = ((arr.length  + 1 ) * (arr.length + 2)) / 2;
+  let sum = ((arr.length + 1 ) * (arr.length + 2)) / 2;
   return arr.reduce((sum, el) => sum -= el, sum);
 }
 
+// TESTING:
 const array = [2, 3, 7, 1, 5, 6, 10, 8, 4];
 console.log(missingNum(array)); // -> 9

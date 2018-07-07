@@ -10,8 +10,8 @@
 /*
 SOLUTION #1:
 n = # of nodes in list
-RUNTIME Complexity [WST]: O(n)
-SPACE Complexity [BST/WST]: O(n)
+RUNTIME Complexity: O(n) [WST]
+SPACE Complexity: O(n) [BST/WST]
 NOTE: Initialize a cache object (for nodes), and a reference to the head of the given list (so we can avoid mutating our original list). Then, iterate through the list, checking to see if the current node is stored in our cache. If the node hasn't been stored yet, add it to cache (with current node's "value" property as the key, and its "next" property as the value). If the node exists in our cache, return the current node.
 */
 
@@ -49,7 +49,6 @@ function circularLinkedList2(head) {
     if (refA === refB) return curr;
   }
 }
-
 
 // TESTING:
 let nodeA = new Node('A');
