@@ -26,13 +26,13 @@ Challenge:
 
 /*
 n = # of elements in array
-[WST] RUNTIME Complexity: O(n)
-[WST] SPACE Complexity: O(1)
+RUNTIME Complexity: O(n) [WST]
+SPACE Complexity: O(1) [WST]
 NOTE: The sum of all numbers from 1 to n can be represented by the equation: n(n + 1) / 2. Calculate the sum of all the numbers from 1 to array.length + 1. Then, iterate through the elements in the array, subtracting each element from the sum. Afterwards, the value of sum will reflect the value of the missing element.
 */
 
-function missingNum(arr) {
-  let sum = ((arr.length + 1 ) * (arr.length + 2)) / 2;
+const missingNum = arr => {
+  const sum = ((arr.length + 1 ) * (arr.length + 2)) / 2;
   return arr.reduce((sum, el) => sum -= el, sum);
 }
 

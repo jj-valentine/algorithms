@@ -1,6 +1,5 @@
 'use strict';
 
-
 /* PART #1:
 You are given an array of arrays called a 'jBook'. The subarrays in a jBook are first names and phone numbers. jBooks are not always sorted...
 
@@ -27,13 +26,12 @@ Develop a function that takes in the poorly constructed jBook and returns a prop
 /*
 PART #1: findName
 n = # of elements/entries in array/phonebook
-[WST] RUNTIME Complexity: O(n)
-[WST] SPACE Complexity: O(1)
-NOTE:
++ RUNTIME Complexity: O(n) [WST]
++ SPACE Complexity: O(1) [WST]
 */
 
 // returns the number associated with the name in the jBook
-function findName(jBook, name) {
+const findName = (jBook, name) => {
   for (let i = 0; i < jBook.length; i++) {
     if (jBook[i][0] === name) return jBook[i][1];
   }
@@ -43,19 +41,19 @@ function findName(jBook, name) {
 /*
 PART #2: findEntry
 n = # of elements/entries in array/phonebook
-[WST] RUNTIME Complexity: O(1)
-[WST] SPACE Complexity: O(1)
-NOTE:
++ RUNTIME Complexity: O(1) [WST]
++ SPACE Complexity: O(1) [WST]
 */
 
 // returns an object literal representing the jBook
-function makePhoneBookObject(jBook){
-  const newBook = jBook.reduce((newBook, entry) => {
+const makePhoneBookObject = jBook => {
+
+  const newBook = jBook
+    .reduce((newBook, entry) => {
     newBook[entry[0]] = entry[1];
     return newBook;
-  }, {});
+    }, {});
 
-  //
   const findEntry = name => newBook[name] ? newBook[name] : 'entry DNE!';
 
   const addEntry = (name, number) => newBook[name] = number;
@@ -77,6 +75,8 @@ function makePhoneBookObject(jBook){
   };
 }
 
+
+// TESTING:
 const jBook = [
   ['TJ','301-844-3421'],
   ['Max','301-844-1211'],

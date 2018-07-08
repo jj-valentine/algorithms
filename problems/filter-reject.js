@@ -1,8 +1,6 @@
 'use strict';
 
-
 /* FILTER: Iterates over elements of collection returning an array of all the elements the  callback returns truthy for. */
-
 
 /*
 RUNTIME Complexity: O()
@@ -27,7 +25,6 @@ function filter(collection, callback, filter = true) {
   return 'Collection must be an Array or Object';
 }
 
-
 // TESTING:
 console.log('filter (array):', filter([1, 2, 3, 4], function(element, index, array) {
   return element % 2 === 0;
@@ -38,7 +35,6 @@ console.log('filter (object):', filter({'a': 1, 'b': 2, 'c': 3, 'd': 4}, functio
 
 
 /* REJECT: Removes all elements from array that callback returns truthy for and returns an array of the remaining elements. CHALLENGE: use filter. */
-
 
 /*
 RUNTIME Complexity: O()
@@ -64,7 +60,6 @@ function difference(a1, a2, diff = []) {
   a1.forEach(el => { if (!a2.includes(el)) diff.push(el) });
   return diff;
 }
-
 
 // TESTING:
 console.log('reject (array):', reject([1, 2, 3, 4], function(element, index, collection) {
