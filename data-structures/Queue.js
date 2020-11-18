@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 
 /*
@@ -11,18 +11,18 @@
 */
 
 function Queue() {
-
   this.storage = {};
   this.index = 0;
   this.first = 0;
 
   // adds element to the end of the queue
-  Queue.prototype.enqueue = (value) => {
+  Queue.prototype.enqueue = value => {
     this.storage[this.index++] = value;
   }
 
   // removes element from the beginning of the queue
-  // NOTE: If we don't care to re-index through iterating over our queue everytime we remove an element, we can save on time complexity by adding another reference property to our Queue object (i.e. first)
+  // NOTE: If we don't care to re-index through iterating over our queue everytime we remove an element, 
+  // we can save on time complexity by adding another reference property to our Queue object (i.e. first)
   Queue.prototype.dequeue = () => {
     if (this.index - this.first === 0) return 'queue empty!';
     let dequeued = this.storage[this.first];
@@ -54,4 +54,4 @@ console.log(q.dequeue());
 console.log(q.dequeue());
 console.log(q.dequeue());
 
-console.log(q)
+

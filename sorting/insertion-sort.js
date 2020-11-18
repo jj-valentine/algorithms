@@ -1,11 +1,10 @@
-'use strict';
-
+"use strict";
 
 /*
 n = # of elements in array
-[BST] RUNTIME Complexity: O(n) -- if array is already sorted
-[AVG/WST] RUNTIME Complexity: O(n^2)
-[WST] SPACE Complexity: O(1)
+ + RUNTIME Complexity: O(n) -- if array is already sorted [BST]
+ + RUNTIME Complexity: O(n^2) [AVG/WST]
+ + SPACE Complexity: O(1) [WST]
 NOTE:
 */
 

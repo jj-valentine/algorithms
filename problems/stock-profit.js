@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* You a given an array of stock prices where (a) the indices are the time in minutes past trade opening time (i.e. 9:30a) and (b) the values are the current prices in dollars of Amazon stock.
 

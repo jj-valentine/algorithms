@@ -1,13 +1,13 @@
-'use strict';
+"use strict";
 
 
 /*
-[AVG/WST] RUNTIME Complexity
++ RUNTIME Complexity [WST]
   * Access: O(n)
   * Search: O(n)
   * Insertion: O(1)
   * Deletion: O(1)
-[WST] SPACE Complexity: O(n)
++ SPACE Complexity: O(n)
 */
 
 function Node(val, nxt) {

@@ -1,11 +1,13 @@
-'use strict';
+"use strict";
 
-/* Given an array of numbers and a target value, return true if there are two numbers in the array that sum up to the target value. Otherwise, return false. */
+/*
+Given an array of numbers and a target value, return true if there are two numbers in the array that sum up to the target value. Otherwise, return false. 
+*/
 
 /*
 n = # of elements in array
-RUNTIME Complexity: O(n) [WST]
-SPACE Complexity: O(n) [WST]
++ RUNTIME Complexity: O(n) [WST]
++ SPACE Complexity: O(n) [WST]
 NOTE: Iterate through array checking to see if an element equal to the difference between the target and the current value (in array) exists in the cache. If it does, return true. If it doesn't, add the current element in the array to the cache. Return false upon reaching the end of the array.
 */
 

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 
 /*
@@ -11,7 +11,6 @@
 */
 
 function Stack() {
-
   this.storage = {};
   this.index = 0;
 

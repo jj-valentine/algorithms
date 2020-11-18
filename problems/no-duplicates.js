@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 /* Given an array of integers, write a function that returns an array with all duplicates removed...
 
   EX:
-    [1, 2, 3, 3, 4, 5, 6, 1, 1] => [1, 2, 3, 4, 5, 6]
+    [1, 2, 3, 3, 4, 5, 6, 1, 1] → [1, 2, 3, 4, 5, 6]
 */
 
 /*
@@ -22,7 +22,7 @@ const noDuplicates = arr => {
 /*
 SOLUTION #2:
 n = # of elements in input array
-+ RUNTIME Complexity: O(1) [BST/WST]
++ RUNTIME Complexity: O(n) [BST/WST]
 + SPACE Complexity: O(n) [WST]
 NOTE: Using a cache/object (HT)
 */
@@ -43,4 +43,4 @@ const noDuplicates3 = arr => [...new Set(arr)];
 
 // TESTING:
 const array = [1, 2, 3, 3, 4, 5, 6, 1, 1];
-console.log(noDuplicates3(array));
+console.log(noDuplicates2(array));

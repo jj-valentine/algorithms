@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 Write a function to reverse an array in place, where "in place" means "without creating a new object in memory".
@@ -13,9 +13,9 @@ DO NOT USE THE BUILT IN REVERSE METHOD!
 */
 
 /*
-n = # of characters in input array
-+ RUNTIME Complexity: O(n/2) -> O(n)
-+ SPACE Complexity: O(1) [BST/WST]
+n: # of characters in input array
+RUNTIME Complexity: O(n/2) → O(n)
+SPACE Complexity: O(1) [BST/WST]
 NOTE:
 */
 
@@ -28,5 +28,6 @@ const reverseInPlace = arr => {
   return arr;
 }
 
+// TESTING:
 const array = ['a', 'b', 'c', 'd', 'e'];
 console.log(reverseInPlace(array)); // -> ['e', 'd', 'c', 'b', 'a']

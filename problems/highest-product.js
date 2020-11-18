@@ -1,10 +1,12 @@
-'use strict';
+"use strict";
 
-/* Given an array of integers, find the highest product you can get from three of the integers.*/
+/*
+Given an array of integers, find the highest product you can get from three of the integers.
+*/
 
 
 /*
-SOLUTION #1:
+SOLUTION #1
 RUNTIME Complexity: O()
 SPACE Complexity: O()
 NOTE:
@@ -17,13 +19,13 @@ function highestProduct(arr, end = arr.length - 1) {
 }
 
 /*
-SOLUTION #2:
+SOLUTION #2
 RUNTIME COMPLEXITY: O()
 SPACE Complexity: O()
 NOTE:
 */
 
-function highestProduct2(arr) {
+function highestProductV2(arr) {
   if (!Array.isArray(arr) || arr.length < 3) return 0
   const sorted = arr.sort((a, b) => a - b);
   const end = arr.length - 1;

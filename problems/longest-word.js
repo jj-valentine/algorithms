@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 /*
 Given a list of words, write a program to find the longest word made of other words in the list.
   EX:
-    ['dog', 'dogwalker', 'cat', 'walker'] -> 'dogwalker'
+    words = ['dog', 'dogwalker', 'cat', 'walker'], longestWord(words) = 'dogwalker'
 */
 
 /*
