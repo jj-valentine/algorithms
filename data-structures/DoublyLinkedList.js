@@ -7,22 +7,23 @@ function Node(val, nxt) {
 }
 
 function DoublyLinkedList() {
+
   this.head = null;
   this.tail = null;
   this.length = 0
 
   /* add node to end (tail) of list */  
-  DoublyLinkedList.prototype.push = value => {
-    let node = new Node(value);
+    DoublyLinkedList.prototype.push = value => {
+    let newNode = new Node(value);
     // list is empty (no nodes)
     if (!this.head) {
-      this.head = node;
-      this.tail = node;
+      this.head = newNode;
+      this.tail = newNode;
     } else { // have at least one node in list
       let temp = this.tail;
-      this.tail = node;
-      node.prev = temp;
-      temp.next = node;
+      this.tail = newNode;
+      newNode.prev = temp;
+      temp.next = newNode;
     }
     this.length++;
     return this;
@@ -69,57 +70,91 @@ function DoublyLinkedList() {
 
   /* add node to front (head) of list */  
   DoublyLinkedList.prototype.unshift = value => {
-    let node = new Node(value, this.head);
+    let newNode = new Node(value, this.head);
     // list is empty (no nodes) 
     if (!this.head) {
-      this.head = node;
-      this.tail = node;
+      this.head = newNode;
+      this.tail = newNode;
     } else { // have at least one node in list
       let prevHead = this.head;
-      prevHead.prev = node;
-      this.head = node;
+      prevHead.prev = newNode;
+      this.head = newNode;
     }
     this.length++;
     return this;
   }
 
-  DoublyLinkedList.prototype.insert = (index, value) => {
-
+  DoublyLinkedList.prototype.insert = (value, index) => {
+    // list is empty, or index is "out of bounds"
+    if (!this.head || index > this.length - 1 || index < 0) return undefined;
+    // replace single node with new node
+    if (this.length === 1) {
+      this.pop();
+      return this.push(value);
+    }
+    let newNode = new Node(value);
+    // insert new node at beginning of list
+    if (index === 0) {
+      let nextNode = this.head.next;
+      this.head.next = null;
+      nextNode.prev = newNode;
+      newNode.next = nextNode;
+      this.head = newNode;
+    } else if (index === list.length - 1) { // insert new node at end of list
+      let prevNode = this.tail.prev;
+      this.tail.prev = null;
+      prevNode.next = newNode;
+      newNode.prev = prevNode;
+      this.tail = newNode;
+    } else { // insert new node in the middle of list (between head and tail, at 'index')
+      let curr = this.head.next;
+      let currIndex = 1;
+      while (curr) {
+        if (currIndex === index) {
+          let prevNode = curr.prev;
+          let nextNode = curr.next;
+          curr.prev = null;
+          curr.next = null;
+          prevNode.next = newNode;
+          nextNode.prev = newNode;
+          newNode.prev = prevNode;
+          newNode.next = nextNode;
+          break;
+        }
+        curr = curr.next;
+        currIndex++;
+      }
+    }
+    return this;
   }
 
   DoublyLinkedList.prototype.remove = index => {
-    // index is "out of bounds"
-    if (index > this.length - 1 || index < 0) return undefined;
+    // list is empty, or index is "out of bounds"
+    if (!this.head || index > this.length - 1 || index < 0) return undefined;
     else if (index === 0) { // remove first node from list
-      this.shift();
+      return this.shift();
     } else if (index === this.length - 1) { // remove last node from list
-      this.pop();
-    } else { // remove node from "inside" list (somewhere between head and tail)
-      // loop through list until we find index
+      return this.pop();
+    } else { // remove node from middle of list (between head and tail, at 'index')
+      let removed = this.head.next;
+      let currIndex = 1;
+      while (removed) {
+        if (currIndex === index) {
+          let prevNode = removed.prev;
+          let nextNode = removed.next;
+          prevNode.next = nextNode;
+          nextNode.prev = prevNode;
+          removed.next = null;
+          removed.prev = null;
+          this.length--;
+          return removed;
+        }
+        removed = removed.next;
+        currIndex++;
+      }
+      return undefined;
     }
   }
-    
 }
-
-
-let list = new DoublyLinkedList();
-list.push(1);
-console.log(list.push(2));
-console.log(list.pop());
-console.log(list);
-console.log(list.pop());
-console.log(list);
-console.log(list.pop());
-list.push(1);
-list.push(2);
-console.log(list.shift());
-console.log(list);
-console.log(list.shift());
-console.log(list.shift());
-console.log(list);
-console.log(list.unshift(2));
-console.log(list.unshift(1));
-console.log(list.unshift(0));
-
 
 
