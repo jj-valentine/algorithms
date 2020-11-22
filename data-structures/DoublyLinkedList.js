@@ -1,9 +1,9 @@
 "use strict";
 
-function Node(val, nxt) {
-  this.value = val;
+function Node(value, next) {
+  this.value = value;
   this.prev = null;
-  this.next = nxt || null;
+  this.next = next || null;
 }
 
 function DoublyLinkedList() {
