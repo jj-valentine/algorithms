@@ -59,9 +59,6 @@ function LinkedList() {
     return ++this.size;
   };
 
-
-
-
   // inserts element into list at the specified position
   LinkedList.prototype.insert = (value, position) => {
     let newNode = new Node(value);
@@ -89,9 +86,3 @@ function LinkedList() {
   };
 }
 
-const list = new LinkedList();
-list.push(1);
-list.push(2);
-list.push(3);
-console.log(`contains '3':`, list.contains(3)); // -> true
-console.log(`size after adding '0' to head:`, list.addToHead(0)); // -> 4

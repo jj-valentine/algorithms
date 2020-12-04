@@ -1,31 +1,49 @@
 "use strict";
 
-function missingNumber(arr) {
-  let total = ((arr.length + 1) / 2) * (2 + arr.length);
-  return arr.reduce((sum, n) => {
-    return sum - n;
-  }, total);
-}
 
-// console.log(missingNumber([3, 7, 1, 2, 8, 4, 5]));
+// design a runtime cache -- a "byte buffer": 
+  // 2 methods, and a size
+  // write(bits) -- input is an array of bits -- 
+  // read(bits, size) -- input is an array of bits -- start from beginning and ends at idx = size - 1
 
-function findSumOfTwo(arr, value) {
-  let lib = {};
-  for (let i = 0; i < arr.length; i++) {
-    if (lib[value - arr[i]]) return true
-    lib[arr[i]] = true;
+// a structure that can read bytes 
+// 00000001 (byte: 8 bits)
+
+
+function ByteBuffer(size) {
+  this.size = size;
+  this.store = new Array(this.size).fill(0);
+  this.idx = 0;
+
+  function write(bytes) {
+    for (var i = 0; i < bytes.length; i++) {
+      this.store[i + this.idx] = bytes[i];
+    }
+    this.idx += i;
   }
-  return false;
+
+  function read(bytes, readAmount) {
+
+  }
+
 }
 
-// console.log(findSumOfTwo([5, 7, 1, 2, 8, 4, 3], 10));
-// console.log(findSumOfTwo([5, 7, 1, 2, 8, 4, 3], 19));
 
-// function mergeSorted(head1, head2) {
-//   let sorted = head1;
-//   while (head2.next !== null) {
-//     if (head2.next >
-//   }
-// }
+// let bb = new ByteBuffer(10);
+// let bits = [1, 2, 3, 4];
+// let bits2 = [5, 6, 7, 8];
+// let writeInto = [0, 0, 0, 0, 0];
+// bb.write(bits);
+// bb.write(bits2);
+// bb.read(writeInto, 5);
+// console.log(writeInto); // [1, 2, 3, 4, 5]
+// bb.read(writeInfo, 3); 
+// console.log(writeInto); // [6, 7, 8, 4, 5]
+
+/* 
+Implement an algorithm to determine if a string has all unique characters. 
+What if you cannot use additional data structures? 
+*/
+
 
 
