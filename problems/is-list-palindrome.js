@@ -44,7 +44,7 @@ const isListPalindrome = list => {
 }
 
 /*
-SOLUTION #2:
+SOLUTION #2
 n = # of integers in list
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
