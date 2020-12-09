@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/problems/rotate-image.js"
+      "program": "${workspaceFolder}/problems/rotate-imag.js"
     }
   ]
 }
