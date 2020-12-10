@@ -4,7 +4,7 @@
 Given a singly linked list of integers 'list' and an integer 'k', remove all elements from 'list' that have a value equal to 'k'.
 
 NOTE: Try to solve this task in O(n) time using O(1) additional space, where 'n' is the number of elements in the list.
- */
+*/
 
 /*
 SOLUTION #1:

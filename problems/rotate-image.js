@@ -1,7 +1,5 @@
 "use strict";
 
-// NOTE: works for outside of image, but need to fix inside
-
 function rotateImage(img) {
   const n = img.length;
   for (let lvl = 0; lvl < Math.floor(n / 2); lvl++) {

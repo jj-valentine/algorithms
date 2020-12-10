@@ -6,10 +6,8 @@ lucky if the sum of the first half of the digits is equal to the sum of the seco
 Given a ticket number n, determine if it's lucky or not.
 
   EX:
-    For n = 1230, 
-    isLucky(n) = true;
-    For n = 239017, 
-    isLucky(n) = false.
+    n = 1230 → isLucky(n) = true
+    n = 239017 → isLucky(n) = false
 */
 
 const isLucky = n => {

@@ -7,10 +7,10 @@ Your task is to add up these huge integers and return the result in the same for
   
   EXs:
     a = [9876, 5432, 1999], b = [1, 8001] → addTwoHugeNumbers(a, b) = [9876, 5434, 0]
-    Because, 987654321999 + 18001 = 987654340000
+    Because → 987654321999 + 18001 = 987654340000
 
     a = [123, 4, 5], b = [100, 100, 100] → addTwoHugeNumbers(a, b) = [223, 104, 105]
-    Because, 12300040005 + 10001000100 = 22301040105.
+    Because → 12300040005 + 10001000100 = 22301040105
 */
 
 
