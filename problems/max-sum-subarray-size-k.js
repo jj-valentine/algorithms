@@ -15,7 +15,7 @@ Given an array of positive numbers and a positive number ‘k,’ find the maxim
 n = # of elements in array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: "Sliding Window" pattern allows us to bypass the brute force approach of iterating through each subarray of 'k' elements in array, 
+NOTE: "Sliding Window" pattern allows us to bypass the brute force approach of iterating through each subarray of 'k' elements, 
 which would give us a time complexity of O(n * k)
 */
 

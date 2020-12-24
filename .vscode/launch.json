@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/problems/smallest-subarray-with-sum.js"
+    "program": "${workspaceFolder}/problems/fruits-in-baskets.js"
     }
   ]
 }
