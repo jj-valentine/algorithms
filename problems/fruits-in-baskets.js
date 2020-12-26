@@ -11,14 +11,14 @@ You will pick one fruit from each tree until you cannot (i.e. you will stop when
 Write a function to return the maximum number of fruits in both the baskets. 
 
   EX's:
-  fruit = ['A', 'B', 'C', 'A', 'C'] → fruitsInBasket(fruit) = 3
-  Explanation -- We can put 2 'C' in one basket and one 'A' in the other → from subarray ['C', 'A', 'C']
+    fruit = ['A', 'B', 'C', 'A', 'C'] → fruitsInBasket(fruit) = 3
+    Explanation -- We can put 2 'C' in one basket and one 'A' in the other → from subarray ['C', 'A', 'C']
 
-  fruit = ['A', 'B', 'C', 'B', 'B', 'C'] → fruitsInBasket(fruit) = 5
-  Explanation -- We can put 3 'B' in one basket and two 'C' in the other → start with the second letter: ['B', 'C', 'B', 'B', 'C']
+    fruit = ['A', 'B', 'C', 'B', 'B', 'C'] → fruitsInBasket(fruit) = 5
+    Explanation -- We can put 3 'B' in one basket and two 'C' in the other → start with the second letter: ['B', 'C', 'B', 'B', 'C']
 
-  fruit = ['A', 'B', 'C', 'A', 'C', 'D', 'D', 'D'] → fruitsInBasket(fruit) = 4
-  Explanation -- We can put 1 'C' in one basket and three 'D' in the other → from subarray ['C', 'D', 'D', 'D']
+    fruit = ['A', 'B', 'C', 'A', 'C', 'D', 'D', 'D'] → fruitsInBasket(fruit) = 4
+    Explanation -- We can put 1 'C' in one basket and three 'D' in the other → from subarray ['C', 'D', 'D', 'D']
 */
 
 /*
