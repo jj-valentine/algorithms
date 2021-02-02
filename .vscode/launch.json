@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-    "program": "${workspaceFolder}/problems/non-repeating-substring.js"
+    "program": "${workspaceFolder}/problems/practice.js"
     }
   ]
 }
