@@ -19,7 +19,7 @@ subarray whose sum is greater than or equal to ‘s’. Return '0' if no such su
 n = # of elements in array
 + RUNTIME Complexity: O(n + n) → O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Implement "Sliding Window" pattern -- In this solutions, we occasionally parse over groups of elements 
+NOTE: Implement "Sliding Window" pattern -- In this solution, we occasionally parse over groups of elements 
   a second time before incrementing 'windowEnd' but never more than twice -- hence, the O(n + n) time complexity.
 */
 

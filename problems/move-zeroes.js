@@ -9,14 +9,6 @@ and attempt to minimize the total number of operations.
     arr = [0, 1, 0, 3, 12] → moveZeroes(arr) = [1, 3, 12, 0, 0]
  */
 
- // original = [0, 1, 0, 3, 12]
-// [1, 3, 12, 0, 0]
-
-// i = 4
-// zeroes = 2
-// headZero = 3
-// nextZero = 4
-
 /*
 SOLUTION #1 
 n = # of elements in array

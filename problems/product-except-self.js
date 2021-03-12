@@ -1,12 +1,11 @@
 "use strict";
 
 /*   
-Given an array (arr) of (n) integers where n > 1, return an array (output) 
-such that output[i] is equal to the product of all the elements of arr except arr[i]
+Given an array of 'n' integers (where n > 1), return an array (output) such that output[i] 
+is equal to the product of all the elements of arr except arr[i]
 
   EX:
-    arr = [1, 2, 3, 4]
-    product = [24, 12, 8, 6]
+    arr = [1, 2, 3, 4] → productExceptSelf(arr) = [24, 12, 8, 6]
 */
 
 /*
@@ -57,7 +56,7 @@ const productExceptSelfV2 = arr => {
 SOLUTION #3 (constant SPACE complexity):
 n = # of elements in input array
 + RUNTIME Complexity: O(2n) → O(n) [WST]
-+ SPACE Complexity: O(1 [)BST/WST]
++ SPACE Complexity: O(1) [BST/WST]
 NOTE: 
 */
 

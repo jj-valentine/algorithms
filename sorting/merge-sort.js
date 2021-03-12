@@ -1,30 +1,28 @@
-"use strict";
-
+"use strict;"
 
 /*
-RUNTIME Complexity: O()
-SPACE Complexity: O()
+SOLUTION #1
+n = # of elements in input
++ RUNTIME Complexity: O() [WST]
++ SPACE Complexity: O() [WST]
 NOTE:
 */
 
-/* Takes in an array that has two sorted subarrays,
-from [a, ..., b] and [b + 1, ..., c], and merges the arrays into a single sorted subarray */
-const merge = (arr, a, b, c) => {
-
+const merge = (left, right) => {
+  let arr = [];
+  while (left.length && right.length) {
+    arr.push(left[0] < right[0] ? left.shift() : right.shift());
+  }
+  return [...arr, ...left, ...right];
 }
 
-// Takes in an array and recursively merge sorts it
-const mergeSort = (arr, a, c) => {
-    if (a < c) {
-        let b = Math.floor((c + a) / 2);
-        console.log(a, b, c);
-        mergeSort(arr, 0, b);
-        console.log("asfasdfasfasfsaf")
-        mergeSort(arr, b + 1, c);
-        // merge(array, p, q, r);
-    }
-    return arr;
+const mergeSort = arr => {
+    const half = arr.length / 2;
+    if (arr.length < 2) return arr;
+    const left = arr.splice(0, half);
+    merge(mergeSort(left), mergeSort(arr));
 };
 
-var array = [14, 7, 3, 12, 9, 11, 6, 2];
-console.log(mergeSort(array, 0, array.length - 1));
+
+let arr = [14, 7, 3, 12, 9, 11, 6, 2];
+console.log(mergeSort(arr));
