@@ -5,7 +5,6 @@ Given an array of sorted numbers, remove all duplicates from it. You should not 
 after removing the duplicates in-place return the length of the subarray that has no duplicate in it.
 
   EX's:
-
     arr = [2, 3, 3, 3, 6, 9, 9] → removeDuplicates(arr) = 4
     Explanation: the first four elements after removing the duplicates will be [2, 3, 6, 9]
 
@@ -13,7 +12,6 @@ after removing the duplicates in-place return the length of the subarray that ha
     Explanation: the first two elements after removing the duplicates will be [2, 11]
 */
 
-// [2, 3, 3, 3, 6, 9, 9]
 /*
 SOLUTION #1
 n = # of elements in input
