@@ -1,8 +1,8 @@
-"use strict;"
+"use strict";
 
 /* 
-Given an array of positive numbers and a positive number ‘s,’ find the length of the smallest contiguous 
-subarray whose sum is greater than or equal to ‘s’. Return '0' if no such subarray exists
+Given an array of positive numbers and a positive number 's', find the length of the smallest contiguous 
+subarray whose sum is greater than or equal to 's'. Return '0' if no such subarray exists
 
   EX's:
     arr = [2, 1, 5, 2, 3, 2], s = 7 → smallestSubarrayForGivenSum(arr, s) = 2
@@ -16,11 +16,11 @@ subarray whose sum is greater than or equal to ‘s’. Return '0' if no such su
 */
 
 /*
-n = # of elements in array
+n = # of elements in input array
 + RUNTIME Complexity: O(n + n) → O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Implement "Sliding Window" pattern -- In this solution, we occasionally parse over groups of elements 
-  a second time before incrementing 'windowEnd' but never more than twice -- hence, the O(n + n) time complexity.
+NOTE: Using the "Sliding Window" pattern, in this solution we occasionally parse over groups of elements 
+a second time before incrementing 'windowEnd' but never more than twice -- hence, the O(n + n) time complexity.
 */
 
 const smallestSubarrayForGivenSum = (arr, s) => {
@@ -37,6 +37,6 @@ const smallestSubarrayForGivenSum = (arr, s) => {
 };
 
 // TESTING:
-console.log(smallestSubarrayForGivenSum([2, 1, 5, 2, 3, 2], 7)); // Expected: 2
-console.log(smallestSubarrayForGivenSum([2, 1, 5, 2, 8], 7)); // Expected: 1
-console.log(smallestSubarrayForGivenSum([3, 4, 1, 1, 6], 8)); // Expected: 3
+console.log(smallestSubarrayForGivenSum([2, 1, 5, 2, 3, 2], 7)); // Expec: 2
+console.log(smallestSubarrayForGivenSum([2, 1, 5, 2, 8], 7)); // Expect: 1
+console.log(smallestSubarrayForGivenSum([3, 4, 1, 1, 6], 8)); // Expect: 3

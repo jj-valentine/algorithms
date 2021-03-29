@@ -1,4 +1,4 @@
-"use strict;"
+"use strict";
 
 /* 
 Given a string, find the length of the longest substring with no repeating characters.

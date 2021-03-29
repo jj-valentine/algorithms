@@ -7,18 +7,17 @@ return the sum of the triplet with the smallest sum.
 
   EX's:
     arr = [1, 2, -2, 0], k = 2 → tripletSumCloseToTarget(arr, k) = 1
-    Explanation: the triplet [-2, 1, 2] has the closest sum to the target
+    EXPLANATION -- triplet [-2, 1, 2] has the closest sum to the target
 
     arr = [1, 2, -3, -1], k = 1 → tripletSumCloseToTarget(arr, k) = 0
-    Explanation: the triplet [-3, 1, 2] has the closest sum to the target
+    EXPLANATION -- triplet [-3, 1, 2] has the closest sum to the target
 
     arr = [1, 0, 1, 1], k = 100 → tripletSumCloseToTarget(arr, k) = 3
-    Explanation: the triplet [1, 1, 1] has the closest sum to the target 
+    EXPLANATION -- triplet [1, 1, 1] has the closest sum to the target 
 */
 
 /*
-SOLUTION #1
-n = # of elements in input
+n = # of elements in input array
 + RUNTIME Complexity: O(nlog(n) * n^2) → O(n^2) [WST]
 + SPACE Complexity: O(n) [WST]
 NOTE: This is much like the "Triplet Sum" question, in part due to both problems benefiting 

@@ -10,7 +10,6 @@ Given an array of unsorted numbers, find all unique triplets in it that add up t
 */
 
 /*
-SOLUTION #1
 n = # of elements in input array
 + RUNTIME Complexity: O(nlog(n) * n^2) → O(n^2) [WST]
 + SPACE Complexity: O(n) [WST]
@@ -57,6 +56,3 @@ console.log(tripletSumToZero([2, 1, -1, 0, 3, -2])); // Expect: [[-2, -1, 3], [-
 console.log(tripletSumToZero([-5, 2, -1, -2, 3, -1])); // Expect: [[-5, 2, 3], [-2, -1, 3], [-1, -1, 2]]
 console.log(tripletSumToZero([0, 0, 5, 1, 2, 1, 3])); // Expect: []
 console.log(tripletSumToZero([-2, -4, -1, -3, -1, -3])); // Expect: []
-
-
-
