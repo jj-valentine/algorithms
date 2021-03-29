@@ -5,6 +5,7 @@ Given an array of unsorted numbers, find all unique triplets in it that add up t
 
   EX's:
     arr = [-3, 0, 1, 2, -1, 1, -2] → tripletSumToZero(arr) = [[-3, 1, 2], [-2, 0, 2], [-2, 1, 1], [-1, 0, 1]]
+
     arr = [-5, 2, -1, -2, 3] → tripletSumToZero(arr) = [[-5, 2, 3], [-2, -1, 3]]
 */
 
@@ -25,8 +26,9 @@ the sorted array according to our outer loop.
 */
 
 const tripletSumToZero = arr => {
-  const sort = arr.sort((a, b) => a - b);
+  arr.sort((a, b) => a - b);
   let triplets = [];
+
   for (let i = 0; i < arr.length; i++) {
     if (i > 0 && arr[i] === arr[i - 1]) continue;
     searchPairs(-arr[i], i + 1);

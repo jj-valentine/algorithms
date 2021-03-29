@@ -3,8 +3,8 @@
 /*
 SOLUTION #1
 n = # of elements in input
-+ RUNTIME Complexity: O() [WST]
-+ SPACE Complexity: O() [WST]
++ RUNTIME Complexity: O(nlog(n)) [WST]
++ SPACE Complexity: O(n) [WST]
 NOTE:
 */
 
@@ -19,8 +19,8 @@ const merge = (left, right) => {
 const mergeSort = arr => {
     const half = arr.length / 2;
     if (arr.length < 2) return arr;
-    const left = arr.splice(0, half);
-    merge(mergeSort(left), mergeSort(arr));
+    let left = arr.splice(0, half);
+    return merge(mergeSort(left), mergeSort(arr));
 };
 
 
