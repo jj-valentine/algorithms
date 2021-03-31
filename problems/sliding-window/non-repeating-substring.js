@@ -1,24 +1,23 @@
 "use strict";
 
 /* 
-Given a string, find the length of the longest substring with no repeating characters.
+Given a string, find the length of the longest substring with no repeating characters
 
   EX's:
     str = "aabccbb" → nonRepeatingSubstring(str) = 3
-    Explanation -- the longest substring without any repeating characters is "abc"
+    EXPLANATION -- the longest substring without any repeating characters is "abc"
 
     str = "abbbb" → nonRepeatingSubstring(str) = 2
-    Explanation -- the longest substring without any repeating characters is "ab"
+    EXPLANATION -- the longest substring without any repeating characters is "ab"
 
     str = "abcacde" → nonRepeatingSubstring(str) = 4
-    Explanation -- the longest substring without any repeating characters is "acde"
+    EXPLANATION -- the longest substring without any repeating characters is "acde"
 */
 
 /*
-n = # of characters in string
+n = # of characters in input string
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(26) → O(1) [WST]
-NOTE:
 */
 
 const nonRepeatingSubstring = str => {
@@ -35,6 +34,7 @@ const nonRepeatingSubstring = str => {
   return Math.max(longestSub, windowEnd - windowStart);
 };
 
+// TESTING:
 console.log(nonRepeatingSubstring("aabccbb")); // Expect: 3
 console.log(nonRepeatingSubstring("aabfcbdeb")); // Expect: 5
 console.log(nonRepeatingSubstring("abbbb")); // Expect: 2
