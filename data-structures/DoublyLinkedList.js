@@ -12,7 +12,7 @@ function DoublyLinkedList() {
   this.tail = null;
   this.length = 0
 
-  /* add node to end (tail) of list */  
+    /* add node to end (tail) of list   */
     DoublyLinkedList.prototype.push = value => {
     let newNode = new Node(value);
     // list is empty (no nodes)
@@ -84,6 +84,7 @@ function DoublyLinkedList() {
     return this;
   }
 
+  /* insert node with given value at given index/position */
   DoublyLinkedList.prototype.insert = (value, index) => {
     // list is empty, or index is "out of bounds"
     if (!this.head || index > this.length - 1 || index < 0) return undefined;
@@ -128,6 +129,7 @@ function DoublyLinkedList() {
     return this;
   }
 
+  /* remove node at given index */
   DoublyLinkedList.prototype.remove = index => {
     // list is empty, or index is "out of bounds"
     if (!this.head || index > this.length - 1 || index < 0) return undefined;

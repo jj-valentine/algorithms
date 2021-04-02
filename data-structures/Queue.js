@@ -15,7 +15,7 @@ function Queue() {
   this.index = 0;
   this.first = 0;
 
-  // adds element to the end of the queue
+  // add element to the end of the queue
   Queue.prototype.enqueue = value => {
     this.storage[this.index++] = value;
   }
@@ -41,6 +41,7 @@ function Queue() {
   // }
 }
 
+// TESTING:
 const q = new Queue();
 q.enqueue(1);
 q.enqueue(2);

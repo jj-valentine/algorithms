@@ -21,7 +21,7 @@ Create a function that accepts a linked list and returns true if the linked list
 
 
 /*
-n =
+n = # of nodes/elements in list
 RUNTIME Complexity [WST]: O(n)
 SPACE Complexity [WST]: O(1)
 NOTE: Create two references, which both initially point to the head of the list. Every iteration, pointer 'A' takes 
@@ -45,17 +45,25 @@ function hasCycle(head) {
   return false;
 }
 
+const linkedListCycle = list => {
+  if (!list) return false;
+  let p1 = list, p2 = list;
+  while (p1 && p2) {
+    p1 = p1.next;
+    if (!p2.next) return false;
+    p2 = p2.next.next;
+    if (p1 === p2) return true;
+  }
+  return false;
+}
+
+
+
+
 // TESTING:
-let n1 = new Node('a');
-let n2 = n1.next = new Node('b');
-let n3 = n2.next = new Node('c');
-let n4 = n3.next = new Node('d');
-let n5 = n4.next = new Node('e');
-let n6 = n5.next = new Node('f');
-let n7 = n6.next = new Node('g');
-// console.log(JSON.stringify(n1, null, 2));
+let list = new Node("A", new Node("B", new Node("C", new Node("D", new Node("E", new Node("F", new Node("G")))))));
 
-console.log('no cycle:', hasCycle(n1)); // -> false
-
-n7.next = n2;
-console.log(`cycle (from 'g' to 'b'):`, hasCycle(n2)); // -> true
+console.log(linkedListCycle(list)); // Expect: false
+// create "cycle" from "E" to "A"
+list.next.next.next.next.next.next.next = list; 
+console.log(hasCycle(list)); // Expect: true
