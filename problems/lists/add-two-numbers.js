@@ -22,9 +22,9 @@ function Node(value, next) {
 }
 
 /*
-n = # of elements in input
-+ RUNTIME Complexity: O() [WST]
-+ SPACE Complexity: O() [WST]
+n = # of nodes/elements in the longest list [i.e. Math.max(l1.length, l2.length)]
++ RUNTIME Complexity: O(n) [WST]
++ SPACE Complexity: O(n) [WST]
 NOTE:
 */
 
@@ -58,7 +58,7 @@ const addTwoNumbers = (l1, l2) => {
 // TESTING:
 let l1 = new Node(2, new Node(4, new Node(3)));
 let l2 = new Node(5, new Node(6, new Node(4)));
-// console.log(JSON.stringify(addTwoNumbers(l1, l2))); // Expect: list (7 → 0 → 8)
+console.log(JSON.stringify(addTwoNumbers(l1, l2))); // Expect: list (7 → 0 → 8)
 l1 = new Node(5, new Node(8, new Node(6, new Node(9, new Node(9, new Node(9))))));
 l2 = new Node(5, new Node(3, new Node(4)));
-console.log(JSON.stringify(addTwoNumbers(l1, l2))); // Expect: list (0 → 3 → 1 → 0 → 0 → 0 → 1)
+console.log(JSON.stringify(addTwoNumbers(l1, l2))); // Expect: list (0 → 2 → 1 → 0 → 0 → 0 → 1)

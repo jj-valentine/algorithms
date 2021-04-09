@@ -34,7 +34,8 @@ function Node(val, nxt) {
   this.next = nxt || null;
 }
 
-function hasCycle(head) {
+const hasCycle = head => {
+  if (!head) return false;
   let refA = head, refB = head;
   while (refA && refB) {
     refA = refA.next;
@@ -45,25 +46,10 @@ function hasCycle(head) {
   return false;
 }
 
-const linkedListCycle = list => {
-  if (!list) return false;
-  let p1 = list, p2 = list;
-  while (p1 && p2) {
-    p1 = p1.next;
-    if (!p2.next) return false;
-    p2 = p2.next.next;
-    if (p1 === p2) return true;
-  }
-  return false;
-}
-
-
-
 
 // TESTING:
 let list = new Node("A", new Node("B", new Node("C", new Node("D", new Node("E", new Node("F", new Node("G")))))));
-
-console.log(linkedListCycle(list)); // Expect: false
+console.log(hasCycle(list)); // Expect: false
 // create "cycle" from "E" to "A"
 list.next.next.next.next.next.next.next = list; 
 console.log(hasCycle(list)); // Expect: true

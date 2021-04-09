@@ -1,13 +1,12 @@
 "use strict";
 
-
 /*
-[AVG/WST] RUNTIME Complexity:
-  * Access -- O(n)
-  * Search -- O(n)
-  * Insertion -- O(1)
-  * Deletion -- O(1)
-[WST] SPACE Complexity: O(n)
++ RUNTIME Complexity:
+  * Access -- O(n) [AVG/WST]
+  * Search -- O(n) [AVG/WST]
+  * Insertion -- O(1) [AVG/WST]
+  * Deletion -- O(1) [AVG/WST]
++ SPACE Complexity: O(n) [WST] 
 */
 
 function Queue() {

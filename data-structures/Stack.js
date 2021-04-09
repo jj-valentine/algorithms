@@ -1,20 +1,19 @@
 "use strict";
 
-
 /*
-[AVG/WST] RUNTIME Complexity:
-  * Access -- O(n)
-  * Search -- O(n)
-  * Insertion -- O(1)
-  * Deletion -- O(1)
-[WST] SPACE Complexity: O(n)
++ RUNTIME Complexity:
+  * Access -- O(n) [AVG/WST]
+  * Search -- O(n) [AVG/WST]
+  * Insertion -- O(1) [AVG/WST]
+  * Deletion -- O(1) [AVG/WST]
++ SPACE Complexity: O(n) [WST] 
 */
 
 function Stack() {
   this.storage = {};
   this.index = 0;
 
-  // adds element to the top of the stack
+  /* adds element to the top of the stack */
   Stack.prototype.push = value => {
     this.storage[this.index++] = value;
   }
@@ -27,13 +26,13 @@ function Stack() {
     return popped;
   }
 
-  // returns element at the top of stack without changing stack
+  /* returns element at the top of stack without changing stack */  
   Stack.prototype.peek = () => this.storage[this.index - 1];
 
-  // returns size of stack -- # of elements in stack
+  /* returns size of stack -- # of elements in stack */
   Stack.prototype.size = () => this.index;
 
-  // checks to see if stack is empty
+  /* checks to see if stack is empty */
   Stack.prototype.isEmpty = () => this.index === 0;
 }
 
