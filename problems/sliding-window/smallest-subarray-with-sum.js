@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; // TAGS: Sliding Window
 
 /* 
 Given an array of positive numbers and a positive number 's', find the length of the smallest contiguous 

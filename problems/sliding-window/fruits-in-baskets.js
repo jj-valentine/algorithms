@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; // TAGS: Sliding Window
 
 /* 
 Given an array of characters where each character represents a fruit tree, you are provided two baskets, 

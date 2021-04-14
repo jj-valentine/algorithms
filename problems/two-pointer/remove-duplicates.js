@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; // TAGS: Two Pointers
 
 /* 
 Given an array of sorted numbers, remove all duplicates from it. You should not use any extra space; 

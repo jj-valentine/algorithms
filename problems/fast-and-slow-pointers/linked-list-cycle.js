@@ -1,9 +1,9 @@
-"use strict";
+"use strict"; // TAGS: LinkedList, Fast & Slow Pointers
 
 /* 
 We are familar with linked lists being linear and terminating as such:
 
-  A->B->C->D
+  A → B → C → D
 
 However, linked lists can also have cyclical references:
 
@@ -18,7 +18,6 @@ Create a function that accepts a linked list and returns true if the linked list
  * Challenge #2: Do this in constant space
  * Challenge #3: Do not mutate the original nodes in any way 
 */
-
 
 /*
 n = # of nodes/elements in list
@@ -45,7 +44,6 @@ const hasCycle = head => {
   }
   return false;
 }
-
 
 // TESTING:
 let list = new Node("A", new Node("B", new Node("C", new Node("D", new Node("E", new Node("F", new Node("G")))))));

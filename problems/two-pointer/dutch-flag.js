@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; // TAGS: Two Pointers
 
 /*
 Given an array containing 0's, 1's and 2's, sort the array in-place. You should treat numbers of the array as objects
@@ -13,8 +13,6 @@ different numbers, that's why it is called Dutch National Flag problem.
     arr = [2, 2, 0, 1, 2, 0] → dutchNationalFlagProblem(arr) = [0, 0, 1, 2, 2, 2]
 */
 
-// l = 2, h = 3, idx = 3
-// [0, 0, 1, 1, 2]
 /*
 n = # of elements in input array
 + RUNTIME Complexity: O() [WST]

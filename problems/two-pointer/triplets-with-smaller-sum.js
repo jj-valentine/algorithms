@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; // TAGS: Two Pointers
 
 /*
 Given an array arr of unsorted numbers and a target sum, count all triplets in it such that 

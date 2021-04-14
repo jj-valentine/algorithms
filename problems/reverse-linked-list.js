@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; // TAGS: LinkedList, Recursion
 
 /*
 Given the head of a singly linked list, reverse the list, and return the reversed list
@@ -30,7 +30,7 @@ SOLUTION #2
 n = # of nodes/elements in list
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Recurse through list
+NOTE: Recurse through list...
 */
 
 const reverseLinkedListV2 = list => {

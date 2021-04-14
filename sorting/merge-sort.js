@@ -1,11 +1,9 @@
 "use strict";
 
 /*
-SOLUTION #1
 n = # of elements in input
 + RUNTIME Complexity: O(nlog(n)) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE:
 */
 
 const merge = (left, right) => {
@@ -23,6 +21,6 @@ const mergeSort = arr => {
     return merge(mergeSort(left), mergeSort(arr));
 };
 
-
+// TESTING:
 let arr = [14, 7, 3, 12, 9, 11, 6, 2];
 console.log(mergeSort(arr));
