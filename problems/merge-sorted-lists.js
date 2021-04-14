@@ -1,10 +1,5 @@
 "use strict";
 
-function Node(value, next) {
-  this.value = value;
-  this.next = next || null;
-}
-
 function mergeSortedLists(l1, l2) {
   if (!l1) return l2;
   else if (!l2) return l1;
@@ -39,6 +34,11 @@ function mergeSortedLists(l1, l2) {
   return mergedHead;
 }
 
+// TESTING:
+function Node(value, next) {
+  this.value = value;
+  this.next = next || null;
+}
 
 let l1 = new Node(4, new Node(8, new Node(15, new Node(19))));
 let l2 = new Node(7, new Node(9, new Node(10, new Node(16))));

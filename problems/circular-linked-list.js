@@ -17,11 +17,6 @@ n: # of nodes in list
 NOTE: Initialize a cache object (for nodes), and a reference to the head of the given list (so we can avoid mutating our original list). Then, iterate through the list, checking to see if the current node is stored in our cache. If the node hasn't been stored yet, add it to cache (with current node's "value" property as the key, and its "next" property as the value). If the node exists in our cache, return the current node.
 */
 
-function Node(val, nxt) {
-  this.value = val;
-  this.next = nxt || null;
-}
-
 function circularLinkedList(head) {
   let nodes = {};
   let ref = head;
@@ -53,6 +48,11 @@ function circularLinkedListV2(head) {
 }
 
 // TESTING:
+function Node(value, next) {
+  this.value = value;
+  this.next = next || null;
+}
+
 let nodeA = new Node('A');
 let nodeB = nodeA.next = new Node('B');
 let nodeC = nodeB.next = new Node('C');

@@ -1,7 +1,9 @@
 "use strict"; // TAGS: Fast & Slow Pointers
 
 /*
-Any number will be called a happy number if, after repeatedly replacing it with a number equal to the sum of the square of all of its digits, leads us to number ‘1’. All other (not-happy) numbers will never reach ‘1’. Instead, they will be stuck in a cycle of numbers which does not include ‘1’.
+Any number will be called a happy number if, after repeatedly replacing it with a number equal to the sum of the 
+square of all of its digits, leads us to number ‘1’. All other (not-happy) numbers will never reach ‘1’. 
+Instead, they will be stuck in a cycle of numbers which does not include ‘1’.
 
   EX:
     n = 23 → happyNumber(n) = true (23 is a happy number)  
@@ -31,8 +33,8 @@ const happyNumber = (n, allSums = {}) => {
 /*
 SOLUTION #2
 n = input number
-+ RUNTIME Complexity: O() [WST]
-+ SPACE Complexity: O() [WST]
++ RUNTIME Complexity: O(log(n)) [WST]
++ SPACE Complexity: O(1) [WST]
 NOTE:
 */
 
@@ -59,6 +61,4 @@ const happyNumberV2 = n => {
 
 // TESTING:
 console.log(happyNumberV2(23)); // Expect: true (happy number)
-console.log(happyNumberV2(12)); // Expect: false (NOT happy number)
-
-
+console.log(happyNumberV2(15)); // Expect: false (NOT happy number)

@@ -1,5 +1,7 @@
 "use strict";
 
+// TODO: Add "removeNode" function
+
 /*
 + RUNTIME Complexity 
   * Access -- O(nlog(n)) [AVG] / O(n) [WST]

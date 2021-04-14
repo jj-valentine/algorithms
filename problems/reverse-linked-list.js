@@ -20,7 +20,6 @@ const reverseLinkedList = list => {
     curr.next = previous;
     previous = curr;
     curr = restOfList
-    // console.log(previous);
   }
   return previous;
 };

@@ -4,11 +4,6 @@
 Given the head of a single LinkedList that contains a cycle, write a function to find the starting node of the cycle.
 */
 
-function Node(value, next) {
-  this.value = value;
-  this.next = next || null;
-}
-
 /*
 n = # of nodes in input list
 + RUNTIME Complexity: O(3n) → O(n) [WST]
@@ -53,6 +48,11 @@ const findCycleLength = list => {
 };
 
 // TESTING:
+function Node(value, next) {
+  this.value = value;
+  this.next = next || null;
+}
+
 let list = new Node("A", new Node("B", new Node("C", new Node("D", new Node("E", new Node("F", new Node("G")))))));
 // create "cycle" from "G" to "C"
 list.next.next.next.next.next.next.next = list.next.next; 

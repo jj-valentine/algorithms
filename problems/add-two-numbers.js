@@ -17,11 +17,6 @@ You may assume the two numbers do not contain any leading zero, except the numbe
     l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9] → addTwoNumbers([8,9,9,9,0,0,0,1])
 */
 
-function Node(value, next) {
-  this.value = value;
-  this.next = next || null;
-}
-
 /*
 n = # of nodes/elements in the longest list [i.e. Math.max(l1.length, l2.length)]
 + RUNTIME Complexity: O(n) [WST]
@@ -57,6 +52,11 @@ const addTwoNumbers = (l1, l2) => {
 };
 
 // TESTING:
+function Node(value, next) {
+  this.value = value;
+  this.next = next || null;
+}
+
 let l1 = new Node(2, new Node(4, new Node(3)));
 let l2 = new Node(5, new Node(6, new Node(4)));
 console.log(JSON.stringify(addTwoNumbers(l1, l2))); // Expect: list (7 → 0 → 8)

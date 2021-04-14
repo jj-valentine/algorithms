@@ -13,11 +13,6 @@ n = # of integers in list
 + SPACE Complexity: O(1) [WST]
 */
 
-function Node(value, next) {
-  this.value = value;
-  this.next = next || null;
-}
-
 function removeKFromList(list, k) {
   // remove matching nodes from front of list
   while (list && list.value === k) list = list.next;
@@ -49,8 +44,13 @@ const removeKFromListV2 = (list, k) => {
 }
 
 // TESTING:
-// let list = new Node(3, new Node(1, new Node(2, new Node(3, new Node(4, new Node(3))))));
-// console.log(JSON.stringify(list));
-// console.log(JSON.stringify(removeKFromList(list, 3)));
+function Node(value, next) {
+  this.value = value;
+  this.next = next || null;
+}
+
+let list = new Node(3, new Node(1, new Node(2, new Node(3, new Node(4, new Node(3))))));
+console.log(JSON.stringify(list));
+console.log(JSON.stringify(removeKFromList(list, 3)));
 
 

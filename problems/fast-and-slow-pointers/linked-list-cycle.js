@@ -28,11 +28,6 @@ one step, and pointer 'B' two steps down the list. If the given list includes a 
 and pointer 'B' will eventually point to the same node.
 */
 
-function Node(val, nxt) {
-  this.value = val;
-  this.next = nxt || null;
-}
-
 const hasCycle = head => {
   if (!head) return false;
   let refA = head, refB = head;
@@ -46,6 +41,11 @@ const hasCycle = head => {
 }
 
 // TESTING:
+function Node(val, nxt) {
+  this.value = val;
+  this.next = nxt || null;
+}
+
 let list = new Node("A", new Node("B", new Node("C", new Node("D", new Node("E", new Node("F", new Node("G")))))));
 console.log(hasCycle(list)); // Expect: false
 // create "cycle" from "E" to "A"
