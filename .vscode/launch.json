@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-    "program": "${workspaceFolder}/problems/lists/add-two-numbers.js"
+    "program": "${workspaceFolder}/practice.js"
     }
   ]
 }

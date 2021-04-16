@@ -24,7 +24,10 @@ const nonRepeatingSubstring = str => {
   if (str == null || str.length === 0) return 0;
   else if (str.length === 1) return 1;
   let windowStart = 0, chars = {}, longestSub = 0;
-  for (var windowEnd = 0; windowEnd < str.length; windowEnd++) {    
+  for (var windowEnd = 0; windowEnd < str.length; windowEnd++) { 
+    // if we've seen the character before AND the index at which we've seen it isn't OUTSIDE (before) the left edge of our window
+    // (this happens when we've seen the character before, so it's stored in our object, but the index that we've
+    // seen it isn't relevant because our window has already moved past it)
     if (chars[str[windowEnd]] !== undefined && chars[str[windowEnd]] >= windowStart) {
       longestSub = Math.max(longestSub, windowEnd - windowStart);
       windowStart = chars[str[windowEnd]] + 1;
