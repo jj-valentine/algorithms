@@ -5,9 +5,9 @@ Given a positive integer, return it as a string in Roman Numeral form.
 */
 
 /*
-n: # of characters in numbers/numerals array
-RUNTIME Complexity: O(1) [WST] -- scales with size of input value/number (but our upper range is 3999)
-SPACE Complexity: O(1) [BST/WST]
+n =  # of characters in numbers/numerals array
++ RUNTIME Complexity: O(1) [WST] -- scales with size of input value/number (but our upper range is 3999)
++ SPACE Complexity: O(1) [BST/WST]
 */
 
 const integerToRomanNumeral = n => {

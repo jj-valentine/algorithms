@@ -19,7 +19,7 @@ NOTE: What happens if you call get(key) on a key which doesn't exist in the cach
 
 /*
 SOLUTION #1
-n: current length of cache
+n = current length of cache
 + RUNTIME Complexity 
   * Access [get(key)]: O(1)
   * Insertion [put(key, value)]: O(n) 
@@ -33,7 +33,6 @@ NOTE: BRUTE FORCE method -- Using an array for the cache would force us to loop 
 */
 
 function LRUCache(capacity) {
-
   let cache = {};
   let length = 0;
 
@@ -85,9 +84,10 @@ function LRUCache(capacity) {
   }
 }
 
+
 /*
 SOLUTION #2
-n: current length of cache
+n = current length of cache
 + RUNTIME Complexity 
   * Access [get(key)]: O(1)
   * Insertion [put(key, value)]: O(1) 
@@ -96,7 +96,6 @@ NOTE: Using DOUBLY LINKED LIST alongside an object/hashmap for our cache allows 
 */
 
 function LRUCacheV2(capacity) {
-
   function Node(value, key, next) {
     this.value = value;
     this.key = key;
@@ -182,6 +181,7 @@ function LRUCacheV2(capacity) {
   }
 }
 
+// TESTING:
 let lru = new LRUCacheV2(2);
 lru.put(1, "hey");
 lru.put(2, "ho");

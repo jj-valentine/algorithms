@@ -2,7 +2,7 @@
 
 /*
 n = # of elements in input
-+ RUNTIME Complexity: O(nlog(n)) [WST]
++ RUNTIME Complexity: O(n*log(n)) [BST/AVG/WST]
 + SPACE Complexity: O(n) [WST]
 */
 

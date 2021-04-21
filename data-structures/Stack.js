@@ -40,13 +40,13 @@ function Stack() {
 const stack = new Stack();
 stack.push(1);
 stack.push(2);
-console.log('stack size:', stack.size()); // -> 2
+console.log('stack size:', stack.size()); // Expect: 2
 stack.push(3);
-console.log('peeking:', stack.peek()); // -> 3
-console.log('is stack empty?:', stack.isEmpty()); // false
-console.log('1st pop:', stack.pop()); // -> 3
-console.log('2nd pop:', stack.pop()); // -> 2
-console.log('peeking:', stack.peek()); // -> 1
-console.log('3rd pop:', stack.pop()); // -> 1
-console.log('4th pop:', stack.pop()); // -> "stack empty -- no elements to pop!"
-console.log('is stack empty?:', stack.isEmpty()); // -> true
+console.log('peeking:', stack.peek()); // Expect: 2
+console.log('is stack empty?:', stack.isEmpty()); // Expect: false
+console.log('1st pop:', stack.pop()); // Expect: 3
+console.log('2nd pop:', stack.pop()); // Expect: 2
+console.log('peeking:', stack.peek()); // Expect: 1
+console.log('3rd pop:', stack.pop()); // Expect: 1
+console.log('4th pop:', stack.pop()); // Expect: "stack empty -- no elements to pop!"
+console.log('is stack empty?:', stack.isEmpty()); // Expect: true

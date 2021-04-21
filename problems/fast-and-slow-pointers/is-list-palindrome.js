@@ -13,7 +13,6 @@ SOLUTION #1:
 n = # of elements/nodes in list
 + RUNTIME Complexity: O(n) [BST/WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: 
 */
 
 const isListPalindrome = list => {

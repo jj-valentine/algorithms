@@ -2,10 +2,8 @@
 
 /*
 n = # of elements in array
- + RUNTIME Complexity: O(n) -- if array is already sorted [BST]
- + RUNTIME Complexity: O(n^2) [AVG/WST]
- + SPACE Complexity: O(1) [WST]
-NOTE:
++ RUNTIME Complexity: O(n) (if array is sorted) [BST] + O(n^2) [AVG/WST]
++ SPACE Complexity: O(1) [WST]
 */
 
 const insertionSort = arr => {
@@ -15,8 +13,8 @@ const insertionSort = arr => {
   return arr;
 }
 
-/* Inserts value into a section of a given array that's already been sorted from array[0] to rightBound (and "unsorted" from rightBound + 1 to array.length - 1), then returns array. */
-
+/* Inserts value into a section of a given array that's already been sorted from array[0] to rightBound 
+(and "unsorted" from rightBound + 1 to array.length - 1), then returns array. */
 function insert(arr, rB, value) {
   let i;
   for (i = rB; i >= 0 && arr[i] > value; i--) {
@@ -26,7 +24,7 @@ function insert(arr, rB, value) {
   return arr;
 }
 
-
-
-const unsortedArr = [0, -1, 2, 3, -3, -2, 1, 2];
+// TESTING:
+let unsortedArr = [0, -1, 2, 3, -3, -2, 1, 2];
+let sortedArr = [...unsortedArr].sort((a, b) => a - b);
 console.log(insertionSort(unsortedArr)); // -> [-3, -2, -1, 0, 1, 2, 2, 3]

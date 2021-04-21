@@ -9,8 +9,7 @@ n = # of nodes in input list
 + RUNTIME Complexity: O(3n) → O(n) [WST]
 + SPACE Complexity: O(1) [WST]
 NOTE: Find the length of the cycle in the list, then create two pointers, the second of which is spaced ahead by 
-the same number of nodes in the cycle. When the nodes first meet, they will both be pointing at the head node of the cycle.
-Side Note -- the difference between the number of nodes in cycle, and the number of nodes before head of cycle, is the length of the list!
+the same number of nodes as there are in the cycle. When the nodes first meet, they will both be pointing to the head node of the cycle.
 */
 
 const findCycleHeadInLinkedList = list => {

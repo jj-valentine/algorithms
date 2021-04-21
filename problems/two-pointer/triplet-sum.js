@@ -11,7 +11,7 @@ Given an array of unsorted numbers, find all unique triplets in it that add up t
 
 /*
 n = # of elements in input array
-+ RUNTIME Complexity: O(nlog(n) * n^2) → O(n^2) [WST]
++ RUNTIME Complexity: O(n*log(n) + n^2) → O(n^2) [WST]
 + SPACE Complexity: O(n) [WST]
 NOTE: First, we sort our input array, and then loop through that sorted array. For every UNIQUE element that we iterate over, 
 we search the rest of the array (all numbers to the RIGHT of the current element) for pairs that sum up to the given element, 

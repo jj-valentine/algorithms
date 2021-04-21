@@ -80,8 +80,9 @@ let BinarySearchTree = {
 let bst = BinarySearchTree.create();
 console.log(bst);
 console.log(JSON.stringify(bst.insert(20)));
-console.log(JSON.stringify(bst.insert(17)));
-console.log(JSON.stringify(bst.insert(13)));
-console.log(JSON.stringify(bst.insert(18)));
-console.log(JSON.stringify(bst.insert(25), null, 2));
-console.log(JSON.stringify(bst.find(17), null, 2));
+// console.log(JSON.stringify(bst.insert(17)));
+// console.log(JSON.stringify(bst.insert(13)));
+// console.log(JSON.stringify(bst.insert(18)));
+// console.log(JSON.stringify(bst.insert(25), null, 2));
+// console.log(JSON.stringify(bst.find(17), null, 2));
+console.log(bst);
