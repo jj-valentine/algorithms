@@ -1,4 +1,4 @@
-"use strict"; // TAGS:
+"use strict"; // TAGS: Cyclic Sort, Missing Number
 
 /*
 We are given an unsorted array containing numbers taken from the range 1 to ‘n’. 
@@ -31,24 +31,20 @@ SOLUTION #2
 n = # of elements in input array
 + RUNTIME Complexity: O(n + (n - 1) + n) → O(3n) → O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Employ 'Cyclic Sort' pattern/approach -- Loop over elements in array, swapping those that don't match their index,
-and moving to the next element if we find a duplicate that's already been placed in it's appropriate position.
-Afterward, loop over the now "sorted" (with the exception of duplicate elements) array, and if the number doesn't
-match it's index ('i' + 1), we know that number ('i' + 1) is a missing number.
+NOTE: Employ 'Cyclic Sort' pattern/approach -- Loop over elements in array, swapping those numbers whose associated
+index (arr[i] - 1) doesn't have the correct element (arr[i]). While iterating, those elements whose associated index 
+DOES in fact already have the correct element are considered to be in their appropriate place, or duplicates of an element
+who is in it's correct place. When iterating over this newly "sorted" array, those elements' indexes that don't match their 
+appropriate index (arr[i] - 1) must be missing numbers. 
 */
 
 const findMissingNumbersV2 = arr => {
   let i = 0;
   while (i < arr.length) {
     let idx = arr[i] - 1;
-    if (arr[idx] === arr[i]) {
-      i++;
-      continue;
-    }
-    if (idx !== i) [arr[i], arr[idx]] = [arr[idx], arr[i]];
-    if (arr[i] === i + 1) i++;
+    if (arr[i] !== arr[idx]) [arr[i], arr[idx]] = [arr[idx], arr[i]];
+    else i++;
   }
-
   return arr.reduce((missing, n, i) => n !== i + 1 ? missing.concat([i + 1]) : missing, []);
 }
 
