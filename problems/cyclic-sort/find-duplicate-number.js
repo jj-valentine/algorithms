@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Cyclic Sort, Duplicates
+"use strict"; // TAGS: Cyclic Sort, Duplicate, Difficulty: Easy
 
 /*
 We are given an unsorted array containing 'n' + 1 numbers taken from the range 1 to 'n'. 
