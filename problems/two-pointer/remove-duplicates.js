@@ -16,7 +16,7 @@ after removing the duplicates in-place return the length of the subarray that ha
 n = # of elements in input array
 + RUNTIME Complexity: O(n) → O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Employ the 'Two Pointer' pattern/approach: When two adjacent elements are found to be equal to each other, 
+NOTE: Employ the 'Two Pointer' pattern/approach -- When two adjacent elements are found to be equal to each other, 
 assign the first element in the array to the index of the first pointer and then shift off the first element
 in the array. If the two elements aren't equal, shift both pointers to the right.
 */

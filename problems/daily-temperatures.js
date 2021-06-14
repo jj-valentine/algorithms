@@ -1,18 +1,19 @@
 "use strict"; // TAGS: Stack
 
-
 /*
 Given a list of daily temperatures 'T', return a list that, for each day in the input, tells you how many days you
 would have to wait until you might experience a "warmer" temperature. If there is no future day for which this is possible,
 add a '0' to the input at the given index instead.
 */
+
 /*
 n = # of elements in input array
-+ RUNTIME Complexity: O(n) [WST]
++ RUNTIME Complexity: O(2n) → O(n) [WST]
 + SPACE Complexity: O(n) [WST]
 NOTE: We can use a stack to keep track of the indexes of temperatures that we still haven't found counterparts for 
 (i.e. temperatures that are higher/"warmer" than )
 */
+
 const dailyTemperatures = temps => {
   let days = new Array(temps.length).fill(0);
   let stack = [];
@@ -37,4 +38,4 @@ const dailyTemperatures = temps => {
 };
 
 // TESTING:
-console.log(dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73])); // Expect: [1, 2, 4, 2, 1, 1, 0, 0]
+console.log(dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73])); // Expect: [1, 1, 4, 2, 1, 1, 0, 0]

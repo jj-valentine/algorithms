@@ -1,7 +1,7 @@
 "use strict";
 
 /*
-n = # of elements in input
+n = # of elements in input array
 + RUNTIME Complexity: O(n*log(n)) [BST/AVG/WST]
 + SPACE Complexity: O(n) [WST]
 */
