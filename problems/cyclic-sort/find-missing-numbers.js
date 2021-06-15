@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Cyclic Sort, Missing Number
+"use strict"; // TAGS: Cyclic Sort, Missing Number, Difficulty: Easy
 
 /*
 We are given an unsorted array containing numbers taken from the range 1 to ‘n’. 
