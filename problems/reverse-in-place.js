@@ -31,3 +31,14 @@ const reverseInPlace = arr => {
 // TESTING:
 const array = ['a', 'b', 'c', 'd', 'e'];
 console.log(reverseInPlace(array)); // -> ['e', 'd', 'c', 'b', 'a']
+
+const reverseString = str => {
+  for (let i = 0; i < str.length / 2; i++) {
+    let temp = str[i];
+    str[i] = str[str.length - i - 1];
+    str[str.length - i - 1] = temp;
+  }
+  return str;
+}
+
+console.log(reverseString("triangle"));

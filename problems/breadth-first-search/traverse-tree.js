@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Breadth First Search, BFS, Tree, Node, Traverse
+"use strict"; // TAGS: Breadth First Search (BFS), Tree, Node, Traverse, Difficulty: Easy
 
 /*
 Given a binary tree, populate an array to represent its "level-by-level" traversal. 
@@ -14,8 +14,7 @@ NOTE: Do a 'Breadth First' ("level-by-level") traversal of the given tree.
 */
 
 const traverseTree = root => {
-  let curr = root;
-  let queue = [curr], allLevels = [];
+  let queue = [root], allLevels = [];
   while (queue.length) {
     let currLevel = [], levelSize = queue.length;
     for (let i = 0; i < levelSize; i++) {
@@ -42,4 +41,4 @@ tree.right = new Node(1);
 tree.left.left = new Node(9);
 tree.right.left = new Node(10);
 tree.right.right = new Node(5);
-console.log(traverseTree(tree)); // Expect [[12], [7, 1], [9, 10, 5]]
+console.log(traverseTree(tree)); // Expect: [[12], [7, 1], [9, 10, 5]]

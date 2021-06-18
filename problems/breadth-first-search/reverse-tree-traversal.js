@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Breadth First Search, Tree, Node, Traverse, Reverse
+"use strict"; // TAGS: Breadth First Search (BFS), Tree, Node, Traverse, Reverse, Difficulty: Easy
 
 /*
 Given a binary tree, populate an array to represent its "level-by-level" traversal in reverse order
@@ -43,4 +43,4 @@ tree.right = new Node(1);
 tree.left.left = new Node(9);
 tree.right.left = new Node(10);
 tree.right.right = new Node(5);
-console.log(reverseTreeTraversal(tree)); // Expect [[9, 10, 5], [7, 1], [12]]
+console.log(reverseTreeTraversal(tree)); // Expect: [[9, 10, 5], [7, 1], [12]]

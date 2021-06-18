@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-    "program": "${workspaceFolder}/problems/needle-in-haystack.js"
+    "program": "${workspaceFolder}/problems/merge-sorted-lists.js"
     }
   ]
 }
