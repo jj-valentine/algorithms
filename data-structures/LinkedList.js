@@ -127,9 +127,6 @@ function LinkedList() {
         count++;
       }
     }
-
-    
-    
   };
 }
 

@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Sliding Window
+"use strict"; // TAGS: Sliding Window, Contiguous Subarray
 
 /* 
 Given an array of positive numbers and a positive number ‘k,’ find the maximum sum of any contiguous subarray of size ‘k’
@@ -34,3 +34,5 @@ const maxSumOfSubarraySizeK = (arr, k) => {
 // TESTING:
 console.log(maxSumOfSubarraySizeK([2, 1, 5, 1, 3, 2], 3)); // Expect: 9
 console.log(maxSumOfSubarraySizeK([2, 3, 4, 1, 5], 2)); // Expect: 7
+
+

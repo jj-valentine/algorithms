@@ -13,16 +13,15 @@ NOTE: Iterate through list, individually reversing pointer of each node
 */
 
 const reverseLinkedList = list => {
-  let curr = list;
-  let previous = null;
-  while (curr !== null) {
-    let restOfList = curr.next;
-    curr.next = previous;
-    previous = curr;
-    curr = restOfList
+  let prev = null, temp = list;
+  while (list) {
+    temp = list.next;
+    list.next = prev;
+    prev = list;
+    list = temp;
   }
-  return previous;
-};
+  return prev;
+}
 
 /*
 SOLUTION #2
@@ -32,10 +31,8 @@ n = # of nodes/elements in list
 NOTE: Recurse through list...
 */
 
-const reverseLinkedListV2 = list => {
-  let curr = list;
 
-}
+
 // TESTING:
 function Node(value, next) {
   this.value = value;
@@ -44,4 +41,4 @@ function Node(value, next) {
 
 let list = new Node(1, new Node(2, new Node(3, new Node(4, new Node(5)))));
 // console.log(JSON.stringify(list));
-console.log(reverseLinkedList(list));
+console.log(JSON.stringify(reverseLinkedList(list), null, 2));

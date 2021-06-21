@@ -9,14 +9,13 @@ Write a function to reverse an array in place, where "in place" means "without c
 
   Since strings are immutable in JS, we will be reversing an array of characters instead.
 
-DO NOT USE THE BUILT IN REVERSE METHOD!
+NOTE: DO NOT USE THE BUILT IN REVERSE METHOD!
 */
 
 /*
 n: # of characters in input array
 RUNTIME Complexity: O(n/2) → O(n)
 SPACE Complexity: O(1) [BST/WST]
-NOTE:
 */
 
 const reverseInPlace = arr => {
@@ -31,14 +30,3 @@ const reverseInPlace = arr => {
 // TESTING:
 const array = ['a', 'b', 'c', 'd', 'e'];
 console.log(reverseInPlace(array)); // -> ['e', 'd', 'c', 'b', 'a']
-
-const reverseString = str => {
-  for (let i = 0; i < str.length / 2; i++) {
-    let temp = str[i];
-    str[i] = str[str.length - i - 1];
-    str[str.length - i - 1] = temp;
-  }
-  return str;
-}
-
-console.log(reverseString("triangle"));
