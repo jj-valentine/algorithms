@@ -40,14 +40,14 @@ const findMiddleNode = list => {
 };
 
 const reverseLinkedList = list => {
-  let curr = list, last = null;
+  let curr = list, prev = null;
   while (curr !== null) {
     let temp = curr.next;
-    curr.next = last;
-    last = curr;
+    curr.next = prev;
+    prev = curr;
     curr = temp;
   }
-  return last;
+  return prev;
 };
 
 

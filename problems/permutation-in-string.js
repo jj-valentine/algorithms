@@ -67,8 +67,6 @@ const permutationInString = (str, pattern) => {
   return false;
 };
 
-
-
 // TESTING:
 console.log(permutationInString("aact", "cat")); // Expect: true
 console.log(permutationInString("oidbcaf", "abc")); // Expect: true

@@ -32,7 +32,7 @@ const maxSumOfSubarraySizeK = (arr, k) => {
 };
 
 // TESTING:
-console.log(maxSumOfSubarraySizeK([2, 1, 5, 1, 3, 2], 3)); // Expect: 9
-console.log(maxSumOfSubarraySizeK([2, 3, 4, 1, 5], 2)); // Expect: 7
+console.log(maxSum([2, 1, 5, 1, 3, 2], 3)); // Expect: 9
+console.log(maxSum([2, 3, 4, 1, 5], 2)); // Expect: 7
 
 

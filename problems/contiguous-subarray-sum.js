@@ -26,4 +26,4 @@ const contiguousSubarraySum = (arr, k) => {
 };
 
 // TESTING:
-console.log(contiguousSubarraySum([5 , 3, 6, 2, 1, 3, 2], 8));
+console.log(contiguousSubarraySum([5, 3, 6, 2, 1, 3, 2], 8)); // Expect: true

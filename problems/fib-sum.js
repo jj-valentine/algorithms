@@ -1,8 +1,10 @@
-/* Find the sum of all of the even Fibonacci integers that are less 4 million */
+/* 
+Find the sum of all of the even Fibonacci integers that are less than 4 million 
+*/
 
 // 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
 
-const fib = (n) => {
+const fib = n => {
   let a = 0, b = 1, temp;
   let sum = 0;
   while (n >= 0) {

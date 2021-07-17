@@ -51,15 +51,11 @@ SOLUTION #2
 */
 
 let MinStackV2 = {
-  stack: {},
-  size: 0,
-  min: null,
-
   create: function() {
     let minStack = Object.create(this);
-    minStack.stack = this.stack;
-    minStack.size = this.size;
-    minStack.min = this.min;
+    minStack.stack = {};
+    minStack.size = 0;
+    minStack.min = null;
     return minStack;
   },
 
@@ -68,7 +64,7 @@ let MinStackV2 = {
     if (this.size === 0) {
       this.min = n;
     } if (n < this.min) {
-      pushed = (2 * pushed) - this.min;
+      pushed = (2 * n) - this.min;
       this.min = n;
     }
     this.stack[this.size++] = pushed; 

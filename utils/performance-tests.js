@@ -18,3 +18,4 @@ function getAveragePerformanceTime(fn, precision = 6, iterations = 1000) {
 module.exports = { 
   getAveragePerformanceTime
 };
+
