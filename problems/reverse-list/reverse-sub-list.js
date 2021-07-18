@@ -1,6 +1,6 @@
 "use strict"; // TAGS: LinkedList, Node, Reverse, Sub-List, Difficulty: Medium
 
-import { listGenerator } from "../../utils/helper-methods.js";
+import { generateList } from "../../utils/helper-methods.js";
 
 /*
 Given the head of a LinkedList and two positions ‘p’ and ‘q’, reverse the LinkedList from position ‘p’ to ‘q’.
@@ -50,7 +50,7 @@ const reverseSubList = (head, p, q) => {
 };
 
 // TESTING:
-let list = listGenerator(5); 
+let list = generateList(5); 
 // console.log(JSON.stringify(reverseSubList(list, 3, 4), null, 2)); // Expect: 1 → 2 → 4 → 3 → 5 
 // console.log(JSON.stringify(reverseSubList(list, 1, 1), null, 2)); // Expect: 1 → 2 → 3 → 4 → 5
 // console.log(JSON.stringify(reverseSubList(list, 1, 3), null, 2)); // Expect: 3 → 2 → 1 → 4 → 5

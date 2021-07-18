@@ -1,6 +1,6 @@
-"use strict"; // TAGS: LinkedList, Node, Sub-List, Reverse, Alternate, Difficulty: Medium
+"use strict"; // TAGS: LinkedList, Node, Sub-List, Reverse, Alternate, K-Elements, Difficulty: Medium
 
-import { listGenerator } from "../../utils/helper-methods.js";
+import { generateList } from "../../utils/helper-methods.js";
 import { reverseSubList } from "./reverse-sub-list.js";
 
 /*
@@ -8,7 +8,7 @@ Given the head of a LinkedList and a number ‘k’, reverse every alternating �
 If, in the end, you are left with a sub-list with less than ‘k’ elements, reverse it too.
 
   EX:
-    list = 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → null, k = 3  → reverseEveryKElements(list, k) = 3 → 2 → 1 → 6 → 5 → 4 → 8 → 7 → null
+    list = 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → null, k = 3  → reverseAlternateKElements(list, k) = 3 → 2 → 1 → 4 → 5 → 6 → 8 → 7 → null
 */
 
 /*
@@ -80,5 +80,5 @@ const reverseAlternateKElementsV2 = (head, k) => {
 };
 
 // TESTING:
-let list = listGenerator(8);
+let list = generateList(8);
 console.log(JSON.stringify(reverseAlternateKElementsV2(list, 2), null, 2)); // Expect: 3 → 2 → 1 → 4 → 5 → 6 → 8 → 7

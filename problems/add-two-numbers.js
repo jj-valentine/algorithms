@@ -1,7 +1,7 @@
 
 "use strict"; // TAGS: LinkedList
 
-import { listGenerator } from "../utils/helper-methods.js";
+import { generateList } from "../utils/helper-methods.js";
 
 /*
 You are given two non-empty linked lists representing two non-negative integers. 
@@ -59,9 +59,9 @@ function Node(value, next) {
   this.next = next || null;
 }
 
-let l1 = listGenerator([2, 4, 3]);
-let l2 = listGenerator([5, 6, 4]);
+let l1 = generateList([2, 4, 3]);
+let l2 = generateList([5, 6, 4]);
 console.log(JSON.stringify(addTwoNumbers(l1, l2))); // Expect: list (7 → 0 → 8)
-l1 = listGenerator([5, 8, 6, 9, 9, 9]);
-l2 = listGenerator([5, 3, 4]);
+l1 = generateList([5, 8, 6, 9, 9, 9]);
+l2 = generateList([5, 3, 4]);
 console.log(JSON.stringify(addTwoNumbers(l1, l2))); // Expect: list (0 → 2 → 1 → 0 → 0 → 0 → 1)

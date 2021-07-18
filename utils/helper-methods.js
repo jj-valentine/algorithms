@@ -5,7 +5,7 @@ function Node(value, next) {
   this.next = next || null;
 }
 
-const listGenerator = nodeValues => {
+const generateList = nodeValues => {
   let isArray = Array.isArray(nodeValues);
   if ((isArray ? nodeValues.length : nodeValues) < 0) return "There Must Be At Least 1 Node in Your List";
   let list = null, curr = list;
@@ -23,5 +23,5 @@ const listGenerator = nodeValues => {
 };
 
 export {
-  listGenerator
+  generateList
 };

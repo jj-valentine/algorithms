@@ -1,6 +1,6 @@
 "use strict"; // TAGS: LinkedList, Node, Two Pointers, Delete, Nth, Difficulty: Medium
 
-import { listGenerator } from "../utils/helper-methods.js";
+import { generateList } from "../utils/helper-methods.js";
 
 /*
 Given the head of a linked list, remove the 'n'th node from the end of the list and return its head 
@@ -33,7 +33,7 @@ const deleteNthNode = (head, n) => {
 };
 
 // TESTING:
-let list = listGenerator([1, 2, 3])
+let list = generateList([1, 2, 3])
 console.log(deleteNthNode(list, 3)); // Expect: 2 → 3
 list.next.next = null;
 console.log(deleteNthNode(list, 1)); // Expect: 1

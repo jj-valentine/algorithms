@@ -1,6 +1,6 @@
 "use strict"; // TAGS: LinkedList, Reverse, Recursion
 
-import { listGenerator } from "../../utils/helper-methods.js";
+import { generateList } from "../../utils/helper-methods.js";
 
 /*
 Given the head of a singly linked list, reverse the list, and return the reversed list
@@ -35,6 +35,6 @@ NOTE: Recurse through list...
 
 
 // TESTING:
-let list = listGenerator(5);
+let list = generateList(5);
 // console.log(JSON.stringify(list));
 console.log(JSON.stringify(reverseLinkedList(list), null, 2));

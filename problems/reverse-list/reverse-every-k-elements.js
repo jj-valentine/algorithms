@@ -1,6 +1,6 @@
 "use strict"; // TAGS: LinkedList, Node, Reverse, Sub-List, Difficulty: Medium
 
-import { listGenerator } from "../../utils/helper-methods.js";
+import { generateList } from "../../utils/helper-methods.js";
 
 /*
 Given the head of a LinkedList and a number ‘k’, reverse every ‘k’ sized sub-list starting from the head.
@@ -45,5 +45,5 @@ const reverseEveryKElements = (head, k) => {
 };
 
 // TESTING:
-let list = listGenerator(8); 
+let list = generateList(8); 
 console.log(JSON.stringify(reverseEveryKElements(list, 3), null, 2)); // Expect: 3 → 2 → 1 → 6 → 5 → 4 → 8 → 7
