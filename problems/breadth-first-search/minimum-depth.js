@@ -1,5 +1,7 @@
 "use strict"; // TAGS: Breadth First Search (BFS), Tree, Node, Traverse, Minimum, Depth, Difficulty: Easy
 
+import { generateTree } from "../../utils/helper-methods.js";
+
 /*
 Find the minimum depth of a binary tree. The minimum depth is the number of nodes along the 
 shortest path from the root node to the nearest leaf node.
@@ -32,20 +34,5 @@ const minimumDepth = root => {
 };
 
 // TESTING:
-function Node(value, left, right) {
-  this.value = value;
-  this.left = left || null;
-  this.right = right || null;
-}
-
-let tree = new Node(1)
-tree.left = new Node(2);
-tree.right = new Node(3);
-tree.left.left = new Node(4);
-tree.left.right = new Node(5)
-tree.right.left = new Node(6);
-tree.right.right = new Node(7);
-tree.left.left.left = new Node(8);
-tree.right.right.right = new Node(9)
-tree.left.right.left = new Node(10)
+let tree = generateTree([[1], [2, 3], [4, 5, 6, 7], [8, null, 10, null, null, null, null, 9]]);
 console.log(minimumDepth(tree)); // Expect: 4

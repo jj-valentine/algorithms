@@ -1,5 +1,7 @@
 "use strict"; // TAGS: Breadth First Search (BFS), Tree, Node, Traverse, Difficulty: Easy
 
+import { generateTree } from "../../utils/helper-methods.js";
+
 /*
 Given a binary tree, populate an array to represent its "level-by-level" traversal. 
 You should populate the values of all nodes of each level from left to right in separate sub-arrays,
@@ -35,10 +37,11 @@ function Node(value, left, right) {
   this.right = right || null;
 }
 
-let tree = new Node(12)
-tree.left = new Node(7);
-tree.right = new Node(1);
-tree.left.left = new Node(9);
-tree.right.left = new Node(10);
-tree.right.right = new Node(5);
+// let tree = new Node(12);
+// tree.left = new Node(7);
+// tree.right = new Node(1);
+// tree.left.left = new Node(9);
+// tree.right.left = new Node(10);
+// tree.right.right = new Node(5);
+let tree = generateTree([[12], [7, 1], [9, null, 10, 5]])
 console.log(traverseTree(tree)); // Expect: [[12], [7, 1], [9, 10, 5]]

@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-    "program": "${workspaceFolder}/problems/reverse-list/reverse-every-k-elements.js"
+    "program": "${workspaceFolder}/problems/depth-first-search/has-path-sum.js"
     }
   ]
 }

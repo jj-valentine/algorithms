@@ -38,7 +38,7 @@ function Node(value, left, right) {
   this.right = right || null;
 }
 
-let tree = new Node(1)
+let tree = new Node(1);
 tree.left = new Node(2);
 tree.right = new Node(3);
 tree.left.left = new Node(4);

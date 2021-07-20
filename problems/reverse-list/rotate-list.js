@@ -10,8 +10,8 @@ Assume that 'k' is smaller than the count of nodes in a linked list.
 /*
 
 n = # of nodes in list
-+ RUNTIME Complexity: O(2n) → O(n)  [WST]
-+ SPACE Complexity: O() [WST]
++ RUNTIME Complexity: O(2n) → O(n) [WST]
++ SPACE Complexity: O(1) [WST]
 */
 
 const rotateList = (head, k) => {

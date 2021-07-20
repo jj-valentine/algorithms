@@ -1,5 +1,7 @@
 "use strict"; // TAGS: Breadth First Search (BFS), Tree, Node, Traverse, Reverse, Difficulty: Easy
 
+import { generateTree } from "../../utils/helper-methods.js";
+
 /*
 Given a binary tree, populate an array to represent its "level-by-level" traversal in reverse order
 (i.e. lowest level comes first). You should populate the values of all nodes in each level 
@@ -31,16 +33,5 @@ const reverseTreeTraversal = root => {
 };
 
 // TESTING:
-function Node(value, left, right) {
-  this.value = value;
-  this.left = left || null;
-  this.right = right || null;
-}
-
-let tree = new Node(12)
-tree.left = new Node(7);
-tree.right = new Node(1);
-tree.left.left = new Node(9);
-tree.right.left = new Node(10);
-tree.right.right = new Node(5);
+let tree = generateTree([[12], [7, 1], [9, null, 10, 5]]);
 console.log(reverseTreeTraversal(tree)); // Expect: [[9, 10, 5], [7, 1], [12]]

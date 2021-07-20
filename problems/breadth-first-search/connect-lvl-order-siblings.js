@@ -1,4 +1,7 @@
 "use strict"; // TAGS: Breadth First Search (BFS), Tree, Node, Siblings, Depth, Level Order, Difficulty: Medium
+
+import { generateTree } from "../../utils/helper-methods.js";
+
 /*
 Given a binary tree, connect each node with its level order successor. 
 The last node of each level should point to a null node.
@@ -6,48 +9,31 @@ The last node of each level should point to a null node.
 
 /*
 n = # of nodes in tree  
-+ RUNTIME Complexity: O() [WST]
-+ SPACE Complexity: O() [WST]
-NOTE:
++ RUNTIME Complexity: O(n) [WST]
++ SPACE Complexity: O(n/2) → O(n) [WST]
 */
 
 const connectLevelOrderSiblings = root => {
   let queue = [root];
   while (queue.length) {
-    let levelSize = queue.length;
-    let curr = null;
+    let levelSize = queue.length, nodesLeft = levelSize;
     for (let i = 0; i < levelSize; i++) {
+      // NOTE: "OTHER" Way (must declare 'let previous = null' outside of for loop):
+        // currentNode = queue.shift();
+        // if (previousNode !== null) {
+        //   previousNode.next = currentNode;
+        // }
+        // previousNode = currentNode;
       let dequeued = queue.shift();
-      if (i === 0) curr = dequeued;
-      if (i === levelSize - 1) curr.next = null;
-      else curr.next = queue[0];
+      nodesLeft--;
+      dequeued.next = nodesLeft ? queue[0]: null;
       if (dequeued.left !== null) queue.push(dequeued.left);
       if (dequeued.right !== null) queue.push(dequeued.right);
-
     }
-    
   }
-  return tree;
+  return root;
 };
 
 // TESTING:
-function Node(value, left, right, next) {
-  this.value = value;
-  this.left = left || null;
-  this.right = right || null;
-  this.next = next || null;
-}
-
-let tree = new Node(1)
-tree.left = new Node(2);
-tree.right = new Node(3);
-tree.left.left = new Node(4);
-tree.left.right = new Node(5)
-tree.right.right = new Node(6);
+let tree = generateTree([[1], [2, 3], [4, 5, null, 6]]); 
 console.log(JSON.stringify(connectLevelOrderSiblings(tree), null, 2));
-
-/* 
-    1
-  2   3
-4  5    6
- */
