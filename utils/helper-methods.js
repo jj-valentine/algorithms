@@ -5,19 +5,20 @@ let node = {
 
   create: function(value) {
     let node = Object.create(this);
-    node.value = value;
+    // we have to do this check in case value is 0...
+    node.value = (value != null ? value : null);
     return node;
   }
 };
 
 function listNode(value, next) {
-  let newNode = node.create(value || null);
+  let newNode = node.create(value);
   newNode.next = next || null;
   return newNode;
 }
 
 function treeNode(value, left, right) {
-  let newNode = node.create(value || null);
+  let newNode = node.create(value);
   newNode.left = left || null;
   newNode.right = right || null;
   return newNode;

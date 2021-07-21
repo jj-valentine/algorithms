@@ -44,6 +44,6 @@ const findPathsWithSum = (root, sum) => {
 
 // TESTING:
 let tree = generateTree([[1], [7, 9], [4, 5, 2, 7]]);
-console.log(JSON.stringify(findPathsWithSum(tree, 12), null, 2));  // Expect: [[1, 7, 4], [1, 9, 2]]
+console.log(findPathsWithSum(tree, 12));  // Expect: [[1, 7, 4], [1, 9, 2]]
 tree = generateTree([[12], [7, 1], [null, 4, 10, 5]]);
-console.log(JSON.stringify(findPathsWithSum(tree, 23), null, 2)); // Expect: [[12, 7, 4], [12, 1, 10]]
+console.log(findPathsWithSum(tree, 23)); // Expect: [[12, 7, 4], [12, 1, 10]]
