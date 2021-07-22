@@ -42,6 +42,6 @@ const countPathsThatSum = (root, sum) => {
 
 // TESTING:
 let tree = generateTree([[1], [7, 9], [6, 5, 2, 3]]);
-console.log(JSON.stringify(countPathsThatSum(tree, 12), null, 2)); // Expect: 3
+console.log(countPathsThatSum(tree, 12), null, 2); // Expect: 3
 tree = generateTree([[10], [7, 1], [null, 4, 10, 5]]);
-console.log(JSON.stringify(countPathsThatSum(tree, 11), null, 2)); // Expect: 3
+console.log(countPathsThatSum(tree)); // Expect: 3

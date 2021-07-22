@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-    "program": "${workspaceFolder}/problems/depth-first-search/find-paths-with-sum.js"
+    "program": "${workspaceFolder}/problems/depth-first-search/find-tree-diameter.js"
     }
   ]
 }

@@ -12,7 +12,6 @@ n = # of nodes in tree
 + SPACE Complexity: O(n) [WST]
 NOTE: Space complexity is O(n), since in the worst case, the tree is a LinkedList and we'll therefore end
 up with O(n) calls on the call stack at once at some point during the algorithms lifecycle
-
 */
 
 const sumOfPathNumbers = root => {
