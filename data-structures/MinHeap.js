@@ -47,4 +47,5 @@ minHeap.insert(4);
 minHeap.insert(2);
 minHeap.insert(0);
 minHeap.insert(3);
+maxHeap.insert(5);
 console.log(JSON.stringify(minHeap, null, 2));

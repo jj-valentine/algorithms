@@ -16,14 +16,14 @@ n = # of nodes in tree
 
 const findMaximumSumOfPaths = root => {
   let maxSum = 0;
-  function findPathSums(node) {
+  function findPathSum(node) {
     if (node === null) return 0;
-    let leftPathSum = findPathSums(node.left);
-    let rightPathSum = findPathSums(node.right);
+    let leftPathSum = findPathSum(node.left);
+    let rightPathSum = findPathSum(node.right);
     if (leftPathSum !== 0 && rightPathSum !== 0) maxSum = Math.max(leftPathSum + rightPathSum + node.value, maxSum);
     return Math.max(leftPathSum, rightPathSum) + node.value;
   }
-  findPathSums(root);
+  findPathSum(root);
   return maxSum;
 };
 

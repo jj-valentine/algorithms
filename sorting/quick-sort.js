@@ -2,9 +2,9 @@
 
 /*
 n = # of elements in input array
-+ RUNTIME Complexity: O(n*log(n)) [BST/AVG] + O(n^2) [WST]
-+ SPACE Complexity: O(log(n)) [BST] + O(n) [WST]
-NOTE: Speed with which quickSort is executed depends on the pivot element that we choose
++ RUNTIME Complexity: O(n*log(n)) [BST/AVG] / O(n^2) [WST]
++ SPACE Complexity: O(log(n)) [BST] / O(n) [WST]
+NOTE: Speed with which "Quick Sort" is executed depends on the pivot element that we choose
 */
 
 function quickSort(arr) {

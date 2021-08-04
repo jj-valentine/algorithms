@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Two Pointers
+"use strict"; // TAGS: Two Pointers, Squares, Sorted
 
 /* 
 Given a sorted array, create a new array containing squares of all the numbers of the input array in the sorted order.

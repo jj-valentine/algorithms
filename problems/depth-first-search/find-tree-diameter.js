@@ -16,14 +16,14 @@ n = # of nodes in tree
 
 const findTreeDiameter = root => {
   let longestDiameter = 0;
-  function traversePaths(node) {
+  function findLengthOfPath(node) {
     if (node === null) return 0;
-    let leftPath = traversePaths(node.left);
-    let rightPath = traversePaths(node.right);
+    let leftPath = findLengthOfPath(node.left);
+    let rightPath = findLengthOfPath(node.right);
     if (leftPath !== 0 && rightPath !== 0) longestDiameter = Math.max(leftPath + rightPath + 1, longestDiameter);
     return Math.max(leftPath, rightPath) + 1;
   }
-  traversePaths(root);
+  findLengthOfPath(root);
   return longestDiameter;
 };
 

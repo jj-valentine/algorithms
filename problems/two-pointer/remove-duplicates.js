@@ -33,7 +33,7 @@ const removeDuplicates = arr => {
       right++;
     }
   }
-  return arr.length;
+  return arr;
 };
 
 // TESTING:

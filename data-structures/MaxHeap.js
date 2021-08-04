@@ -13,20 +13,11 @@ NOTE: Heaps are primarily used for retrieving a min/max value in O(1) time --
 Arrays/LinkedLists can get you these values in O(n) time, while a BST can get you such a value in O(log(n))
 */
 
-let MinHeap = {
-  heap: null,
+function MaxHeap(heap) {
+  this.heap = heap || [];
+  MaxHeap.prototype.peek = () => this.heap[0];
 
-  create: function(heap) {
-    let maxHeap = Object.create(this);
-    maxHeap.heap = heap || [];
-    return maxHeap;
-  },
-
-  getMax: function() {
-    return this.heap[0];
-  },
-
-  insert: function(value) {
+  MaxHeap.prototype.insert = value => {
     this.heap.push(value);
     if (this.heap.length > 1) {
       let curr = this.heap.length - 1;
@@ -36,4 +27,17 @@ let MinHeap = {
       }
     }
   }
+
+  MaxHeap.prototype.remove = () => {
+
+  }
 }
+
+let maxHeap = new MaxHeap();
+maxHeap.insert(3);
+maxHeap.insert(4);
+maxHeap.insert(1);
+maxHeap.insert(5);
+console.table(maxHeap);
+
+export default MaxHeap;
