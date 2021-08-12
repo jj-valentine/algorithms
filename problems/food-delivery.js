@@ -26,14 +26,15 @@ for each gift card amount so you can prepare food ahead of time.
 */
 
 /*
-n = ???
-+ RUNTIME Complexity: O() [WST]
-+ SPACE Complexity: O() [WST]
-NOTE:
+PART #1:
+c = # of integers in input 'giftCards' array
+m = # of key/value pairs in 'menuItems' object
++ RUNTIME Complexity: O(c * m^m) [WST]
++ SPACE Complexity: O(m) [WST]
+NOTE: TASK -- Print out FIRST combo found for EACH giftcard
+TODO: figure out TIME and SPACE complexity
 */
 
-
-// Part #1: Print out first combo found for each giftcard
 const prepareFoodDelivery = (menu, giftCards) => {
   let menuItems = Object.keys(menu);
   giftCards.forEach(cardAmount => {
@@ -57,7 +58,17 @@ const prepareFoodDelivery = (menu, giftCards) => {
   }
 }
 
-// Part #2: Print out smallest possible combo for each giftcard
+
+/*
+PART #2:
+c = # of integers in input 'giftCards' array
+n = # of key/value pairs in 'menuItems' object
++ RUNTIME Complexity: O(c * ) [WST]
++ SPACE Complexity: O() [WST]
+NOTE: TASK -- Print out SMALLEST possible combo for EACH/EVERY giftcard
+TODO: figure out TIME and SPACE complexity
+*/
+
 const prepareFoodDeliveryP2 = (menu, giftCards) => {
   let menuItems = Object.keys(menu);
   giftCards.forEach(cardAmount => {
@@ -85,7 +96,17 @@ const prepareFoodDeliveryP2 = (menu, giftCards) => {
   }
 }
 
-// Print out all combos for each gift card
+
+/*
+PART #3:
+c = # of integers in input 'giftCards' array
+n = # of key/value pairs in 'menuItems' object
++ RUNTIME Complexity: O(c * ) [WST]
++ SPACE Complexity: O() [WST]
+NOTE: TASK -- Print out ALL combos for EACH gift card
+TODO: figure out TIME and SPACE complexity
+*/
+
 const prepareFoodDeliveryAll = (menu, giftCards) => {
   let menuItems = Object.keys(menu);
   giftCards.forEach(cardAmount => {

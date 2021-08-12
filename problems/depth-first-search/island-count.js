@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Depth First Search (DFS), Grid, Island, Land, Water, LeetCode: #200, Companies: Amazon + Snap, Difficulty: Medium
+"use strict"; // TAGS: Depth First Search (DFS), Grid, Island, Land, Water, LeetCode: #200, Difficulty: Medium, Companies: Amazon, Snap
 
 /*
 Given an 'm'x'n' 2-D binary grid ('grid') which represents a map of '1's (land) and '0's (water), return the number of islands.
@@ -87,7 +87,6 @@ let grid = [
   ["0","0","0","0","0"]
 ] 
 console.log(islandCountDFS(grid)); // Expect: 1
-
 grid = [
   ["1","1","0","0","0"],
   ["1","1","0","0","0"],
