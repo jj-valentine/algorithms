@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Depth First Search (DFS), Tree, Node, Root, Leaf, Recursive, Path, Sum, Difficulty: Medium
+"use strict"; // TAGS: Depth First Search (DFS), Tree, Node, Root, Leaf, Recursion, Path, Sum, Difficulty: Medium
 
 import { generateTree } from "../../utils/helper-methods.js";
 
@@ -45,5 +45,5 @@ const findPathsWithSum = (root, sum) => {
 // TESTING:
 let tree = generateTree([[1], [7, 9], [4, 5, 2, 7]]);
 console.log(findPathsWithSum(tree, 12));  // Expect: [[1, 7, 4], [1, 9, 2]]
-tree = generateTree([[12], [7, 1], [null, 4, 10, 5]]);
-console.log(findPathsWithSum(tree, 23)); // Expect: [[12, 7, 4], [12, 1, 10]]
+// tree = generateTree([[12], [7, 1], [null, 4, 10, 5]]);
+// console.log(findPathsWithSum(tree, 23)); // Expect: [[12, 7, 4], [12, 1, 10]]

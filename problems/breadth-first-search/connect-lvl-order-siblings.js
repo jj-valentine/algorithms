@@ -26,7 +26,7 @@ const connectLevelOrderSiblings = root => {
         // previousNode = currentNode;
       let dequeued = queue.shift();
       nodesLeft--;
-      dequeued.next = nodesLeft ? queue[0]: null;
+      dequeued.next = nodesLeft ? queue[0] : null;
       if (dequeued.left !== null) queue.push(dequeued.left);
       if (dequeued.right !== null) queue.push(dequeued.right);
     }

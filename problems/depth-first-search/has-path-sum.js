@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Depth First Search (DFS), Tree, Node, Root, Leaf, Recursive, Path, Sum, Difficulty: Easy
+"use strict"; // TAGS: Depth First Search (DFS), Tree, Node, Root, Leaf, Recursion, Path, Sum, Difficulty: Easy
 
 import { generateTree } from "../../utils/helper-methods.js";
 

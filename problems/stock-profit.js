@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Stock Prices, Profit, Max, Companies: Snap, Difficulty: Easy
+"use strict"; // TAGS: Stock Prices, Profit, Max, LeetCode: #121, Difficulty: Easy, Companies: Snap
 
 /*
 You are given an array prices where prices[i] is the price of a given stock on the 'i'th day.

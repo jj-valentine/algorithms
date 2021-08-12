@@ -32,13 +32,13 @@ const tripletSumCloseToTarget = (arr, k) => {
     let perfectTriplet = findPairs(arr[i], i + 1);
     if (perfectTriplet) return k;
   }
-// [-2, 0, 1, 2] k = 2
+
   function findPairs(firstNum, left) {
     let right = arr.length - 1;
     while (left < right) {
       let totalSum = firstNum + arr[left] + arr[right];
       let diff = Math.abs(totalSum - k);
-      if (totalSum ===) return true;
+      if (totalSum === diff) return true;
       else if (diff < smallestDiff) {
         smallestSum = totalSum;
         smallestDiff = diff;
@@ -58,7 +58,7 @@ const tripletSumCloseToTarget = (arr, k) => {
 }
 
 // TESTING:
-console.log(tripletSumCloseToTarget([1, 1, -1, -1, 3)); // Expect: 1
+console.log(tripletSumCloseToTarget([1, 1, -1, -1, 3])); // Expect: 1
 // console.log(tripletSumCloseToTarget([1, 2, -2, 0], 2)); // Expect: 1
 // console.log(tripletSumCloseToTarget([1, 2, -3, -1], 1)); // Expect: 0
 // console.log(tripletSumCloseToTarget([1, 1, 1], 100)); // Expect: 3

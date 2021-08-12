@@ -12,7 +12,7 @@ whose product is less than the target number.
 /*
 n = # of elements in input array
 + RUNTIME Complexity: O(n^2) [WST]
-+ SPACE Complexity: O(n) [for temp. array] & O(n^2 * n) → O(n^3) [WST]
++ SPACE Complexity: O(n) [for temp. array] → O(n^2 * n + n) → O(n^3) [WST]
 NOTE: At worst, our space complexity will be O(n^3) because there will be potentially 
 n + (n-1) + (n-2) + ... + 2 + 1 = n*(n + 1)/2 contiguous arrays and again, in the worst case 
 (not one element is smaller than the target), n elements in each array.

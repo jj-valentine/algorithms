@@ -9,7 +9,7 @@ The right view of a binary tree is the set of nodes visible when the tree is see
 
 n = # of nodes in tree
 + RUNTIME Complexity: O(n) [WST]
-+ SPACE Complexity: O(n/2 + log(n)) → O(n) [WST]
++ SPACE Complexity: O(n/2 + n) → O(n) [WST]
 */
 
 const rightViewBST = root => {
@@ -18,6 +18,7 @@ const rightViewBST = root => {
     let levelSize = queue.length; 
     for (let i = 0; i < levelSize; i++) {
       let dequeued = queue.shift();
+      // if we wanted the LEFT view, our conditional would be: "i === 0"
       if (i === levelSize - 1) rightNodes.push(dequeued.value);
       if (dequeued.left) queue.push(dequeued.left);
       if (dequeued.right) queue.push(dequeued.right);

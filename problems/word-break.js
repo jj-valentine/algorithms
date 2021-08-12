@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Word, Dictionary, Split, Segment, Recursive, Memoize, Companies: Snap, Difficulty: Medium (Hard)
+"use strict"; // TAGS: Word, Dictionary, Split, Segment, Recursive, Memoize, LeetCode: #139, Difficulty: Medium (Hard), Companies: Snap
 
 /*
 Given a string 'str' and a dictionary of strings, return 'true' if 'str' can be segmented into a space-separated 
