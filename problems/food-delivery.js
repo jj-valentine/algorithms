@@ -28,21 +28,21 @@ for each gift card amount so you can prepare food ahead of time.
 /*
 PART #1:
 c = # of integers in input 'giftCards' array
-m = # of key/value pairs in 'menuItems' object
-+ RUNTIME Complexity: O(c * m^m) [WST]
-+ SPACE Complexity: O(m) [WST]
+gcv = largest value in 'giftCards' array
+l = lowest cost item value in the 'menu' input object
++ RUNTIME Complexity: O(c^gcv/l) [WST]
++ SPACE Complexity: O(gcv/l) [WST]
 NOTE: TASK -- Print out FIRST combo found for EACH giftcard
-TODO: figure out TIME and SPACE complexity
 */
 
 const prepareFoodDelivery = (menu, giftCards) => {
   let menuItems = Object.keys(menu);
   giftCards.forEach(cardAmount => {
-    let foundCombo = backtrackToFindItemCombos(cardAmount, 0, []);
+    let foundCombo = backtrackToFindItemCombos(cardAmount);
     if (foundCombo && foundCombo.length) console.log(foundCombo);
   });
 
-  function backtrackToFindItemCombos(cashLeft, idx, combo) {
+  function backtrackToFindItemCombos(cashLeft, idx = 0, combo = []) {
     if (cashLeft === 0) return combo;
 
     for (let i = idx; i < menuItems.length; i++) {
@@ -62,22 +62,22 @@ const prepareFoodDelivery = (menu, giftCards) => {
 /*
 PART #2:
 c = # of integers in input 'giftCards' array
-n = # of key/value pairs in 'menuItems' object
-+ RUNTIME Complexity: O(c * ) [WST]
-+ SPACE Complexity: O() [WST]
+gcv = largest value in 'giftCards' array
+l = lowest cost item value in the 'menu' input object
++ RUNTIME Complexity: O(c^gcv/l) [WST]
++ SPACE Complexity: O(gcv/l) [WST]
 NOTE: TASK -- Print out SMALLEST possible combo for EACH/EVERY giftcard
-TODO: figure out TIME and SPACE complexity
 */
 
 const prepareFoodDeliveryP2 = (menu, giftCards) => {
   let menuItems = Object.keys(menu);
   giftCards.forEach(cardAmount => {
-    let minCombo = backtrackToFindItemCombos(cardAmount, 0, [], null);
+    let minCombo = backtrackToFindItemCombos(cardAmount);
     console.log(minCombo ? minCombo : "no combos found!") 
   });
 
-  function backtrackToFindItemCombos(cashLeft, idx, combo, minCombo) {
-    if (cashLeft === 0) return (minCombo === null || combo.length < minCombo.length) ?  combo : minCombo;
+  function backtrackToFindItemCombos(cashLeft, idx = 0, combo = [], minCombo = null) {
+    if (cashLeft === 0) return (minCombo === null || combo.length < minCombo.length) ? combo : minCombo;
 
     for (let i = idx; i < menuItems.length; i++) {
       let itemName = menuItems[i], itemCost = menu[itemName];
@@ -100,9 +100,10 @@ const prepareFoodDeliveryP2 = (menu, giftCards) => {
 /*
 PART #3:
 c = # of integers in input 'giftCards' array
-n = # of key/value pairs in 'menuItems' object
-+ RUNTIME Complexity: O(c * ) [WST]
-+ SPACE Complexity: O() [WST]
+gcv = largest value in 'giftCards' array
+l = lowest cost item value in the 'menu' input object
++ RUNTIME Complexity: O(c^gcv/l) [WST]
++ SPACE Complexity: O(gcv/l) [WST]
 NOTE: TASK -- Print out ALL combos for EACH gift card
 TODO: figure out TIME and SPACE complexity
 */
@@ -110,10 +111,10 @@ TODO: figure out TIME and SPACE complexity
 const prepareFoodDeliveryAll = (menu, giftCards) => {
   let menuItems = Object.keys(menu);
   giftCards.forEach(cardAmount => {
-    backtrackToFindItemCombos(cardAmount, 0, []);
+    backtrackToFindItemCombos(cardAmount);
   });
 
-  function backtrackToFindItemCombos(cashLeft, idx, combo) {
+  function backtrackToFindItemCombos(cashLeft, idx = 0, combo = []) {
     if (cashLeft === 0) console.log(combo);
 
     for (let i = idx; i < menuItems.length; i++) {

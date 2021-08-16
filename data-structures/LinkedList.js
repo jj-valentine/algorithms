@@ -132,6 +132,7 @@ function LinkedList() {
 
 // TESTING:
 let list = new LinkedList();
+console.log(list);
 list.push(1);
 list.push(2);
 list.push(3);
