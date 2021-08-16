@@ -8,7 +8,9 @@ Given a string, check whether it is beautiful.
 
   EX's:
     str = "bbbaacdafe" → isBeautifulString(str) = true
+
     str = "aabbb" → isBeautifulString(str) = false
+
     str = "bbc" → isBeautifulString(str) = false, since 'b' occurs more times than 'a'
 */
 
@@ -24,6 +26,7 @@ const isBeautifulString = str => {
   return true;
 }
 
+// TESTING:
 console.log(isBeautifulString('bbbaacdafe'));
 console.log(isBeautifulString('aabbb'));
 console.log(isBeautifulString('bbc'));

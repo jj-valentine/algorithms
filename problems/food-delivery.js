@@ -84,10 +84,9 @@ const prepareFoodDeliveryP2 = (menu, giftCards) => {
       if (cashLeft < itemCost) continue;
       combo.push(itemName);
       let foundSmallerCombo = false;
-      if (minCombo === null || combo.length < minCombo.length) {
+      if (minCombo === null || combo.length < minCombo) {
         foundSmallerCombo = backtrackToFindItemCombos(Math.round((cashLeft - itemCost) * 100) / 100, i, combo, minCombo);
       }
-      
       if (foundSmallerCombo) minCombo = [...foundSmallerCombo];
       combo.pop();
     }
