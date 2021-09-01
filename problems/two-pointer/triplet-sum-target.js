@@ -42,9 +42,7 @@ const tripletSumCloseToTarget = (arr, k) => {
       else if (diff < smallestDiff) {
         smallestSum = totalSum;
         smallestDiff = diff;
-      } else if (diff === smallestDiff) {
-        if (totalSum < smallestSum) smallestSum = totalSum;
-      }
+      } else if (diff === smallestDiff && totalSum < smallestSum) smallestSum = totalSum;
 
       while (left < right && arr[left] === arr[left - 1]) left++;
       while (left < right && arr[right] === arr[right + 1]) right--;

@@ -1,25 +1,43 @@
-var letterCasePermutation = function(s) {
+"use strict"; // TAGS: String, Recursion, Backtracking (Not Really Though), Permutation, Lowercase, Uppercase, LeetCode: #784, Difficulty: Medium, Companies: Amazon, Apple, Facebook, Microsoft, Spotify
+
+/*
+Given a string, we can transform every letter individually to be lowercase or uppercase to create another string.
+Return a list of all possible strings we could create. You can return the output in any order.
+
+  EX's:
+    str = "a1b2" → letterCasePermuation(str) = ["a1b2","a1B2","A1b2","A1B2"]
+    
+    str = "3z4" → letterCasePermutation(str) = ["3z4","3Z4"]
+    
+    str = "12345" → letterCasePermutation(str) = ["12345"]
+*/
+
+/*
+n = # of characters in input string
++ RUNTIME Complexity: O(n * 2^n) [WST]
++ SPACE Complexity: O(n * 2^n) [WST]
+*/
+
+const letterCasePermuation = str => {
   let permutations = [];
-  
-  function permute(tempList = []) {
-    if (tempList.length === s.length) {
-      console.log(tempList);
-      permutations.push(tempList);
-    }
+  permute();
+  return permutations;
+
+  function permute(i = 0, subStr = "") {
+    if (i === str.length || subStr === str.length) permutations.push(subStr);
     else {
-      for (let i = 0; i < s.length; i++) {
-        let el = s.charAt(i);
-        if (tempList[tempList.length - 1] === el) continue;
-        if (/[a-z]/.test(el)) el = el.toUpperCase();
-        else if (/[A-Z]/.test(el)) el = el.toLowerCase();
-        tempList.push(el);
-        permute(tempList);
-        tempList.pop();
+      let c = str.charAt(i);
+      if (/[a-zA-Z]/.test(c)) {
+        permute(i + 1, subStr + c)
+        let caseChanged = /[a-z]/.test(c) ? c.toUpperCase() : c.toLowerCase();
+        permute(i + 1, subStr + caseChanged);
+      } else {
+        permute(i + 1, subStr + c);
       }
     }
   }
-  permute();
-  return permutations;
 };
 
-console.log(letterCasePermutation("a1b2"));
+// TESTING:
+console.log(letterCasePermuation("a1b2")); // Expect: ["a1b2", "a1B2", "A1b2", "A1B2"]
+console.log(letterCasePermuation("3z4")); // Expect: ["3z4", "3Z4"]

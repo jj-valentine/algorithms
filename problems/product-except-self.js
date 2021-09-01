@@ -17,7 +17,6 @@ NOTE: Loop through and find the product of all the elements in the array. Then, 
 the product by the given element (arr[i]) of the input array, adding the result to the output array (output).
 */
 
-
 const productExceptSelf = arr => {
   let product = arr.reduce((prod, el) => {
       return prod * el;
@@ -30,12 +29,12 @@ const productExceptSelf = arr => {
 
 
 /*
-SOLUTION #2 (without using division):
+SOLUTION #2 -- WITHOUT using division
 n = # of elements in input array
 + RUNTIME Complexity: O(3n) → O(n) [WST]
-+ SPACE Complexity: O(3n) [BST/WST]
-NOTE: Each element of the output array is just the product of all the elements to the right of the element
-  at the given index (in the input array), and all the elements to its left.
++ SPACE Complexity: O(3n) → O(n) [BST/WST]
+NOTE: Each element of the output array is just the product of all the elements to the right of the element at the given index 
+(in the input array), and all the elements to its left
 */
 
 const productExceptSelfV2 = arr => {
@@ -52,12 +51,13 @@ const productExceptSelfV2 = arr => {
   return leftProd[1].map((leftEl, i) => leftEl * rightProd[1][i]);
 }
 
+
 /*
-SOLUTION #3 (constant SPACE complexity):
+SOLUTION #3
 n = # of elements in input array
 + RUNTIME Complexity: O(2n) → O(n) [WST]
 + SPACE Complexity: O(1) [BST/WST]
-NOTE: 
+NOTE: Constant SPACE complexity
 */
 
 const productExceptSelfV3 = arr => {
@@ -67,12 +67,13 @@ const productExceptSelfV3 = arr => {
     prod *= el;
     return leftArr;
   }, []);
- prod = 1;
- for (let i = arr.length - 1; i >= 0; i--) {
-   output[i] = output[i] * prod;
-   prod *= arr[i];
- }
+  prod = 1;
+  for (let i = arr.length - 1; i >= 0; i--) {
+    output[i] = output[i] * prod;
+    prod *= arr[i];
+  }
   return output;
 }
 
+// TESTING:
 console.log(JSON.stringify(productExceptSelfV3([1, 2, 3, 4])));

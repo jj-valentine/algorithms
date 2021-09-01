@@ -37,7 +37,7 @@ const decodeString = str => {
     } else {
       while (/[0-9]/.test(char(idx))) n += char(idx++);
       if (n.length) {
-        stack.push({ n: n || "1", s: "" });
+        stack.push({ n , s: "" });
         idx++;
       }
       while (/[a-z]/.test(char(idx))) ss += char(idx++);
@@ -55,7 +55,7 @@ const decodeString = str => {
 // console.log(decodeString("3[z]abc")); // Expect: "zzzabc"
 // console.log(decodeString("a3[bc]d")); // Expect: "abccdcdcdxyz"
 // console.log(decodeString("c10[ab]")); // Expect: "abccdcdcdxyz"
-// console.log(decodeString("3[z]2[2[y]pq4[2[jk]e1[f]]]ef")); // Expect: "zzzyypqjkjkefjkjkefjkjkefjkjkefyypqjkjkefjkjkefjkjkefjkjkefef"
+// console.log(decodeString("3[z]2[2[y]pq4[2[jk]e1[f]]]ef") === "zzzyypqjkjkefjkjkefjkjkefjkjkefyypqjkjkefjkjkefjkjkefjkjkefef"); // Expect: true 
 
 /*
 SOLUTION #2

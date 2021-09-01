@@ -87,6 +87,7 @@ let grid = [
   ["0","0","0","0","0"]
 ] 
 console.log(islandCountDFS(grid)); // Expect: 1
+
 grid = [
   ["1","1","0","0","0"],
   ["1","1","0","0","0"],

@@ -1,5 +1,7 @@
 "use strict"; // TAGS: Dynamic Programming (DP), Bottom-Up, Top-Down, Backtracking, Recursive, Permutations, Subsets, Minimum, Fewest, Money, Coins, Change, LeetCode: #322, Difficulty: Medium, Companies: Amazon, Apple, Google, Microsoft, Uber, Zoom
 
+import { perf } from "../utils/performance-tests.js";
+
 /*
 You are given an integer array 'coins' representing coins of different denominations and an integer amount representing a total amount of money.
 Return the fewest number of coins that you need to make up that amount. If that amount of money CANNOT be made up by any combination of the coins, return '-1'.
@@ -50,9 +52,7 @@ NOTE: Memoization approach ("Top-Down")...
 
 const coinChangeV2 = (coins, total) => {
   let cache = {};
-  return backtrackToFindCombos();
-
-  function backtrackToFindCombos(moneyLeft = total) {
+  return (function backtrackToFindCombos(moneyLeft = total) {
     if (moneyLeft < 0) return -1;
     if (moneyLeft === 0) return 0;
     if (cache[moneyLeft] !== undefined) return cache[moneyLeft];
@@ -66,14 +66,14 @@ const coinChangeV2 = (coins, total) => {
 
     cache[moneyLeft] = (minCoins === Infinity ? -1 : minCoins);
     return cache[moneyLeft];
-  }
+  })();
 };
 
 
 /*
 SOLUTION #3 -- This takes far too long (times out on LC)
-n = # of integer values in input array: 'coins'
-t = total amount of money represented by the input integer: 'total'
+n = # of integer values in input array (i.e. 'coins) AKA # of different denominations of coins
+t = total amount of money represented by the input integer (i.e. 'total')
 + RUNTIME Complexity: O(total^n) [WST]
 + SPACE Complexity: O(t) [WST]
 NOTE: Backtracking like this would be considered a "BRUTE FORCE" method, compared to the memoization approach above (i.e. SOLUTION #2) and even 
@@ -114,3 +114,7 @@ const coinChangeV3 = (coins, total) => {
 // TESTING:
 console.log(coinChange([1, 2, 5], 11)); // Expect: 3
 console.log(coinChange([411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422], 9864)); // Expect: 24
+
+perf(coinChange, [[411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422], 9864]);
+perf(coinChangeV2, [[411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422], 9864]);
+// perf(coinChangeV3, [[411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422], 9864]); // NOTE: takes forever...

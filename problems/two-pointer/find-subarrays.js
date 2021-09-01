@@ -1,14 +1,14 @@
 "use strict"; // TAGS: Two Pointers
 
 /*
-Given an array with positive numbers and a target number 'k', find all of its contiguous subarrays 
-whose product is less than the target number.
+Given an array with positive numbers and a target number 'k', find all of its contiguous subarrays whose product is less than the target number.
 
  EX's
   arr = [2, 5, 3, 10], k = 30 → findSubarrays = [[2], [5], [2, 5], [3], [5, 3], [10]]
 
   arr = [8, 2, 6, 5], k = 50 → findSubarrays = [[8], [2], [8, 2], [6], [2, 6], [5], [6, 5]]
 */
+
 /*
 n = # of elements in input array
 + RUNTIME Complexity: O(n^2) [WST]
