@@ -1,4 +1,8 @@
 .vscode 
+.nvmrc
+.babelrc
 .todo
+
+node_modules
 
 practice.js

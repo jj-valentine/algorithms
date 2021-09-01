@@ -27,12 +27,10 @@ const letterCasePermuation = str => {
     if (i === str.length || subStr === str.length) permutations.push(subStr);
     else {
       let c = str.charAt(i);
+      permute(i + 1, subStr + c)
       if (/[a-zA-Z]/.test(c)) {
-        permute(i + 1, subStr + c)
         let caseChanged = /[a-z]/.test(c) ? c.toUpperCase() : c.toLowerCase();
         permute(i + 1, subStr + caseChanged);
-      } else {
-        permute(i + 1, subStr + c);
       }
     }
   }

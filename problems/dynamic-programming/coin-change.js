@@ -1,6 +1,6 @@
 "use strict"; // TAGS: Dynamic Programming (DP), Bottom-Up, Top-Down, Backtracking, Recursive, Permutations, Subsets, Minimum, Fewest, Money, Coins, Change, LeetCode: #322, Difficulty: Medium, Companies: Amazon, Apple, Google, Microsoft, Uber, Zoom
 
-import { perf } from "../utils/performance-tests.js";
+import { perf } from "../../utils/performance-tests.js";
 
 /*
 You are given an integer array 'coins' representing coins of different denominations and an integer amount representing a total amount of money.

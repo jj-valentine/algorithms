@@ -5,7 +5,12 @@
   "main": "performance-tests.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
@@ -17,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/jj-valentine/algorithms/issues"
   },
-  "homepage": "https://github.com/jj-valentine/algorithms#readme"
+  "homepage": "https://github.com/jj-valentine/algorithms#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.0",
+    "babel-jest": "^27.1.0",
+    "jest": "^27.1.0"
+  }
 }

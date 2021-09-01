@@ -40,7 +40,7 @@ const wordSearch = (grid, word) => {
 
     let found = false, offset = [0, 1, 0, -1];
     grid[currRow][currCol] = "@";
-    // save time by cutting off our backtracking when we find a match
+    // save time by pruning (i.e. cutting off our backtracking when we find a match)
     for (let i = 0; i < 4; i++) {
       found = backtrackWithDFS(currRow + offset[3 - i], currCol + offset[i], idx + 1);
       if (found) break;

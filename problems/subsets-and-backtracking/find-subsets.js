@@ -37,7 +37,7 @@ const findSubsets = arr => {
     subsets.push([...combo]);
     for (let i = first; i < arr.length; i++) {
       combo.push(arr[i]);
-      // iterate over all other integers in array (i.e. other than 'arr[i]' to create combos that start with 'arr[i]'
+      // iterate over all other integers in array (i.e. other than 'arr[i]') to create combos that start with 'arr[i]'
       backtrackToFindSubsets(i + 1, combo);
       combo.pop()
     }
@@ -143,7 +143,7 @@ n = # of integers in input array
 + SPACE Complexity: O(log(n) + n) → O(n) [WST]
 */
 
-const findSubsetsP2V2 = arr => {
+export const findSubsetsP2V2 = arr => {
   arr = arr.sort((a, b) => a - b);
   let subsets = [];
   backtrackToFindSubsets();
