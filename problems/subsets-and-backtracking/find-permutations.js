@@ -16,7 +16,6 @@ SOLUTION #1
 n = # of elements in input array
 + RUNTIME Complexity: O(n!) [WST]
 + SPACE Complexity: O(n + n) → O(n) [WST]
-NOTE:
 */
 
 const findPermutations = arr => {
@@ -43,9 +42,11 @@ const findPermutations = arr => {
 /*
 SOLUTION #2
 n = # of elements in input array
-+ RUNTIME Complexity: O(n!) [WST]
++ RUNTIME Complexity: O(n * n!) → O(n!) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE:
+NOTE: When calculating the time complexity of this algorith, consider that we are generating 'n!' permutations,
+however, it will take 'n' recursive calls to reach each permutation: O(n * n!) → O(n!). For that same reason, our space complexity 
+(excluding the output array) would be O(n).
 */
 
 const findPermutationsV2 = arr => {
@@ -69,6 +70,7 @@ const findPermutationsV2 = arr => {
 
 // TESTING:
 console.log(findPermutationsV2([1, 2, 3])); // Expect: [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
-console.log(findPermutationsV2([0, 1])); // Expect: [[0, 1], [1, 0]]
-console.log(findPermutationsV2([1])); // Expect: [[1]]
+// console.log(findPermutationsV2([0, 1])); // Expect: [[0, 1], [1, 0]]
+// console.log(findPermutationsV2([1])); // Expect: [[1]]
+
 

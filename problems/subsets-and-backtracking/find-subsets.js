@@ -31,7 +31,6 @@ n = # of integers in input array
 const findSubsets = arr => {
   let subsets = [];
   backtrackToFindSubsets();
-  return subsets;
 
   function backtrackToFindSubsets(first = 0, combo = []) {
     subsets.push([...combo]);
@@ -60,7 +59,7 @@ const findSubsetsV2 = arr => {
   }
   return subsets;
 
-  // Q: this feels like a redundant and inefficient way of doing this because we're generating the same multiple times (right?)
+  // Q: this feels like a redundant and inefficient way of doing this because we're generating the same subsets multiple times (right?)
   function backtrackToFindSubsets(first = 0, combo = []) {
     // consecutively add subsets of same length as the index in original array we're iterating over
     if (first === len) {
@@ -100,14 +99,14 @@ const findSubsetsV3 = arr => {
 };
 
 // TESTING:
-// console.table(findSubsets([1, 2, 3])); // Expect: [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
-// console.log(findSubsets([0])); // Expect: [[], [0]]`
+// console.table(findSubsetsV2([1, 2, 3])); // Expect: [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
+// console.log(findSubsetsV2([0])); // Expect: [[], [0]]`
 
 
 /*
 SOLUTION #1 (Part #2)
 n = # of integers in input array
-+ RUNTIME Complexity: O(nlog(n) + n * 2^n) → O(n * (log(n) + 2^n)) → O(n * 2^n) [WST] (i.e. since 2^n >>> log(n))
++ RUNTIME Complexity: O(nlog(n) + n * 2^n) → O(n * (log(n) + 2^n)) → O(n * 2^n) [WST] (i.e. since 2^n >> log(n))
 + SPACE Complexity: O(n + log(n)) → O(n) [WST] / O(log(n)) [BST]
 NOTE: In this iterative approach, to skip duplicate subsets, as we iterate through the array we can check to see if there are adjacent
 integers that equal each other. For this to work, we must first SORT our array. Once we verify that an element is a duplicate of the 
@@ -136,6 +135,7 @@ const findSubsetsP2 = arr => {
   return subsets;
 }
 
+
 /*
 SOLUTION #2 (Part #2)
 n = # of integers in input array
@@ -143,7 +143,7 @@ n = # of integers in input array
 + SPACE Complexity: O(log(n) + n) → O(n) [WST]
 */
 
-export const findSubsetsP2V2 = arr => {
+const findSubsetsP2V2 = arr => {
   arr = arr.sort((a, b) => a - b);
   let subsets = [];
   backtrackToFindSubsets();
@@ -159,7 +159,6 @@ export const findSubsetsP2V2 = arr => {
     }
   }
 };
-
 
 // TESTING:
 // console.table(findSubsetsP2V2([2, 1, 2])); // // Expect:  [[], [1], [2], [1, 2], [2, 2] [1, 2, 2]]

@@ -7,17 +7,16 @@ The same letter cell may not be used more than once.
 */
 
 /*
-n = # of columns/elements in a grid row
-m = # of rows in grid
+k = # of characters/letters in the input grid (i.e. n * m)
 l = # of characters in input 'word'/string
-+ RUNTIME Complexity: O(n * 4 * 3^min(n, l)) [WST]
++ RUNTIME Complexity: O(k * 4 * 3^min(k, l)) [WST]
 + SPACE Complexity: O(l) [WST]
 NOTE: In order to calculate our time complexity, we can first focus on the DFS backtracking path that we will take. After the first character/cell,
 we will only have '3' available directions to travel since we avoid going backward. So aside from the very first cell (our "root"),
 which has '4' options available (i.e. 4^1), 
 */
 
-// NOTE: FOLLOW UP: Could you use search pruning to make your solution faster with a larger board?
+// Q: Could you use search pruning to make your solution faster with a larger board?
 const wordSearch = (grid, word) => {  
   let numRows = grid.length, numCols = grid[0].length;
   if (numRows * numCols < word.length) return false;
@@ -54,6 +53,6 @@ const wordSearch = (grid, word) => {
 
 // TESTING:
 let board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
-console.log(wordSearch(board, "ABCCED")); // Expect: true
-console.log(wordSearch(board, "SEE")); // Expect: true
-console.log(wordSearch(board, "ABCB")); // Expect: false
+console.log(wordSearchYa(board, "ABCCED")); // Expect: true
+console.log(wordSearchYa(board, "SEE")); // Expect: true
+console.log(wordSearchYa(board, "ABCB")); // Expect: false

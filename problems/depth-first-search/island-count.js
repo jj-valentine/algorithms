@@ -32,7 +32,7 @@ that represents a piece of land (i.e. '1'), initialize a DFS on that piece of la
 every other piece of land "connected" (i.e. vertically or horizontally adjacent to it) to it, submerging the pieces "connected" to
 those adjacent pieces as well. 
 
-NOTE: It would be pretty cool if we could save some time by memorizihng every piece/element that we submerge so we could save ourselves 
+NOTE: It would be pretty cool if we could save some time by memorizing every piece/element that we submerge so we could save ourselves 
 from having to iterate over or "check" those pieces again to see if they're "land" or "water". This would obviously come at the expense of 
 our space complexity, but depending on what we're trying to optimize here, that could be beneficial!
 */
