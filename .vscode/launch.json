@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-    "program": "${workspaceFolder}/problems/subsets-and-backtracking/find-permutations.js"
+    "program": "${workspaceFolder}/problems/subsets-and-backtracking/find-combinations.js"
     }
   ]
 }

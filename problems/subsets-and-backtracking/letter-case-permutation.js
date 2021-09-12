@@ -15,8 +15,8 @@ Return a list of all possible strings we could create. You can return the output
 /*
 SOLUTION #1
 n = # of characters in input string
-+ RUNTIME Complexity: O(n * 2^n) [WST]
-+ SPACE Complexity: O(n * 2^n) [WST]
++ RUNTIME Complexity: O(2^n) [WST]
++ SPACE Complexity: O(n) [WST]
 NOTE: Recursive approach...
 */
 
@@ -28,8 +28,9 @@ const letterCasePermuation = str => {
   function permute(i = 0, subStr = "") {
     if (i === str.length || subStr === str.length) permutations.push(subStr);
     else {
-      let c = str.charAt(i);
-      permute(i + 1, subStr + c)
+      let c = str.charAt(i); 
+      // if 'c' isn't a letter, OR it IS and we just need to run permute here to add the combo with the current casing
+      permute(i + 1, subStr + c);
       if (/[a-zA-Z]/.test(c)) {
         let caseChanged = /[a-z]/.test(c) ? c.toUpperCase() : c.toLowerCase();
         permute(i + 1, subStr + caseChanged);
@@ -63,7 +64,7 @@ const letterCasePermuationV2 = str => {
       }
     }
   }
-  
+
   return permutations;
 }
 

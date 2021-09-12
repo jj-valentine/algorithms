@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Permutation, Combination, Tree, Recursive, Backtracking, Difficulty: Medium, Companies: Amazon, Apple, Facebook, Google, LinkedIn, Microsoft
+"use strict"; // TAGS: Array, Permutation, Combination, Recursive, Backtracking, LeetCode: #46, Difficulty: Medium, Companies: Amazon, Apple, Facebook, Google, LinkedIn, Microsoft
 
 /*
 Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
