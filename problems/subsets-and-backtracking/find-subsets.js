@@ -2,7 +2,6 @@
 
 /*
 Part #1:
-
   Given an integer array nums of unique elements, return all possible subsets (the power set). The solution set must not contain duplicate subsets. 
   Return the solution in any order.
 
@@ -11,6 +10,7 @@ Part #1:
       
       arr = [0] → findSubsets(arr) = [[], [0]]
 
+      
 Part #2:
   Given an integer array nums that may contain duplicates, return all possible subsets (the power set).
   The solution set must NOT contain duplicate subsets. Return the solution in any order.

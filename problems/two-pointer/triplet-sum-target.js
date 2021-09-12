@@ -7,13 +7,13 @@ return the sum of the triplet with the smallest sum.
 
   EX's:
     arr = [1, 2, -2, 0], k = 2 → tripletSumCloseToTarget(arr, k) = 1
-    EXPLANATION -- triplet [-2, 1, 2] has the closest sum to the target
+      EXPLANATION -- triplet [-2, 1, 2] has the closest sum to the target
 
     arr = [1, 2, -3, -1], k = 1 → tripletSumCloseToTarget(arr, k) = 0
-    EXPLANATION -- triplet [-3, 1, 2] has the closest sum to the target
+      EXPLANATION -- triplet [-3, 1, 2] has the closest sum to the target
 
     arr = [1, 0, 1, 1], k = 100 → tripletSumCloseToTarget(arr, k) = 3
-    EXPLANATION -- triplet [1, 1, 1] has the closest sum to the target 
+      EXPLANATION -- triplet [1, 1, 1] has the closest sum to the target 
 */
 
 /*

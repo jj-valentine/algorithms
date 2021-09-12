@@ -30,7 +30,7 @@ PART #1:
 c = # of integers in input 'giftCards' array
 gcv = largest value in 'giftCards' array
 l = lowest cost item value in the 'menu' input object
-+ RUNTIME Complexity: O(c^gcv/l) [WST]
++ RUNTIME Complexity: O(c^(gcv/l)) [WST]
 + SPACE Complexity: O(gcv/l) [WST]
 NOTE: TASK -- Print out FIRST combo found for EACH giftcard
 */
