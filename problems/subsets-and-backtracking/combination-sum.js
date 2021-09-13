@@ -1,4 +1,4 @@
-"use strict"; // TAGS:
+"use strict"; // TAGS: Array, Permutation, Combination, Recursive, Backtracking, Sum, Choose, Target, Frequency, Duplicates, Candidates, Sort, LeetCode: #39/#40/#216, Difficulty: Medium, Companies: Airbnb, Amazon, Apple, Facebook, Google, LinkedIn, Microsoft
 
 /*
 Given an array of distinct integers and a target integer (i.e. 'target'), return a list of all unique combinations of integers/candidates 
