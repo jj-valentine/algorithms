@@ -14,7 +14,7 @@ n = # of nodes in tree
 + SPACE Complexity: O(n + n/2) → O(n) [WST]
 NOTE: Employing the 'Breadth First Search' (BFS) pattern/model, we can emulate our approach to the 
 'Traverse Tree' problem, but instead of adding the array for each current level at the end of our results
-array, we can append it to the beginning.
+array, we can append it to the beginning
 */
 
 const reverseTreeTraversal = root => {

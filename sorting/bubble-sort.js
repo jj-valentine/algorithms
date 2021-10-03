@@ -1,12 +1,9 @@
 "use strict";
 
-
 /*
-n = # of elements in array
-[WST] RUNTIME Complexity: O(n)
-[AVG/WST] RUNTIME Complexity: O(n^2)
-[WST] SPACE Complexity: O(1)
-NOTE:
+n = # of integers in array
++ RUNTIME Complexity: O(n) [WST] / O(n^2) [AVG/WST] 
+SPACE Complexity: O(1) [WST] 
 */
 
 const bubbleSort = arr => {
@@ -24,6 +21,5 @@ const bubbleSort = arr => {
   return arr;
 }
 
-const sortedArr = [7, 8, 9, 10, 11]
-const unsortedArr = [3, 1, 0, 2, -1, 2, -3, -2];
-console.log(bubbleSort(sortedArr)); // -> [-3, -2, -1, 0, 1, 2, 2, 3]
+// TESTING:
+console.log(bubbleSort([3, 1, 0, 2, -1, 2, -3, -2])); // Expect: [-3, -2, -1, 0, 1, 2, 2, 3]

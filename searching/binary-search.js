@@ -40,7 +40,7 @@ NOTE: Recursive approach...
 const binarySearchV2 = (arr, k, low = 0, high = arr.length - 1) => {
   let mid = Math.floor((low + high) / 2);
   if (low > high) return null;
-  else if (arr[mid] ===  k) return mid;
+  else if (arr[mid] === k) return mid;
   else if (arr[mid] < k) return binarySearchV2(arr, k, mid + 1, high);
   else return binarySearchV2(arr, k, low, mid - 1);
 }

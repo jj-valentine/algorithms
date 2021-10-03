@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-    "program": "${workspaceFolder}/problems/subsets-and-backtracking/phone-number-combinations.js"
+    "program": "${workspaceFolder}/problems/pancake-sort.js"
     }
   ]
 }

@@ -9,7 +9,7 @@ is equal to the product of all the elements of arr except arr[i]
 */
 
 /*
-SOLUTION #1: 
+SOLUTION #1
 n = # of elements in input array
 + RUNTIME Complexity: O(2n) → O(n) [WST]
 + SPACE Complexity: O(n) [BST/WST]
@@ -29,7 +29,7 @@ const productExceptSelf = arr => {
 
 
 /*
-SOLUTION #2 -- WITHOUT using division
+SOLUTION #2 -- WITHOUT Using Division
 n = # of elements in input array
 + RUNTIME Complexity: O(3n) → O(n) [WST]
 + SPACE Complexity: O(3n) → O(n) [BST/WST]
@@ -53,11 +53,10 @@ const productExceptSelfV2 = arr => {
 
 
 /*
-SOLUTION #3
+SOLUTION #3 -- Constant SPACE Complexlity
 n = # of elements in input array
 + RUNTIME Complexity: O(2n) → O(n) [WST]
 + SPACE Complexity: O(1) [BST/WST]
-NOTE: Constant SPACE complexity
 */
 
 const productExceptSelfV3 = arr => {
@@ -76,4 +75,4 @@ const productExceptSelfV3 = arr => {
 }
 
 // TESTING:
-console.log(JSON.stringify(productExceptSelfV3([1, 2, 3, 4])));
+console.log(productExceptSelfV3([1, 2, 3, 4]));
