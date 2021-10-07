@@ -47,7 +47,6 @@ const decodeString = str => {
   return decoded;
 }
 
-
 // TESTING:
 // console.log(decodeString("3[a]2[bc]")); // Expect: "aaabcbc"
 // console.log(decodeString("3[a2[c2[b]]]")); // Expect: "acbbcbbacbbcbbacbbcbb" 
@@ -56,6 +55,7 @@ const decodeString = str => {
 // console.log(decodeString("a3[bc]d")); // Expect: "abccdcdcdxyz"
 // console.log(decodeString("c10[ab]")); // Expect: "abccdcdcdxyz"
 // console.log(decodeString("3[z]2[2[y]pq4[2[jk]e1[f]]]ef") === "zzzyypqjkjkefjkjkefjkjkefjkjkefyypqjkjkefjkjkefjkjkefjkjkefef"); // Expect: true 
+
 
 /*
 SOLUTION #2

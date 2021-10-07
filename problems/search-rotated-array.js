@@ -41,6 +41,7 @@ const searchSortedRotatedArray = (nums, target) => {
       let guess = nums[mid];
       if (guess === target) return mid;
       else if (guess > nums[mid + 1]) return mid + 1;
+      else if (guess < nums[mid - 1]) return mid - 1;
       else if (guess > nums[0]) left = mid + 1;
       else right = mid - 1;
     }

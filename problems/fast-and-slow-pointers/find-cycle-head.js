@@ -24,15 +24,13 @@ const findCycleHeadInLinkedList = list => {
   return second;
 };
 
-// SPACE Complexity: O(2n) [WST]
+// SC: O(2n) [WST]
 const findCycleLength = list => {
   let p1 = list, p2 = list;
   while (p2 && p2.next) {
     p1 = p1.next;
     p2 = p2.next.next;
-    if (p1 === p2) {
-      return calculateLength(p1);
-    }
+    if (p1 === p2) return calculateLength(p1);
   }
 
   function calculateLength(intersectionNode) {

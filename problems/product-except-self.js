@@ -49,7 +49,7 @@ const productExceptSelfV2 = arr => {
     return [prod, rightArr];
   }, [1, []]);
   return leftProd[1].map((leftEl, i) => leftEl * rightProd[1][i]);
-}
+};
 
 
 /*
@@ -61,18 +61,22 @@ n = # of elements in input array
 
 const productExceptSelfV3 = arr => {
   let prod = 1;
-  let output = arr.reduce((leftArr, el) => {
-    leftArr.push(prod);
-    prod *= el;
-    return leftArr;
-  }, []);
+  let leftProd = arr.reduce((prodArr, n) => {
+    prodArr.push(prod);
+    prod *= n;
+    return prodArr;
+  }, [])
+  
   prod = 1;
   for (let i = arr.length - 1; i >= 0; i--) {
-    output[i] = output[i] * prod;
+    leftProd[i] = leftProd[i] * prod;
     prod *= arr[i];
   }
-  return output;
-}
+
+  return leftProd;
+};
 
 // TESTING:
-console.log(productExceptSelfV3([1, 2, 3, 4]));
+// console.log(productExceptSelfV3([1, 2, 3, 4])); // Expect: [24, 12, 8, 6]
+console.log(productExceptSelfV3([2, 3, 4, 5])); // Expect: [60, 40, 30, 24]
+console.log(productExceptSelfV3([2, 3, 4, 5, 6])); // Expect: [360, 240, 180, 144, 120]

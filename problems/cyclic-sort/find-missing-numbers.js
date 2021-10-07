@@ -30,7 +30,7 @@ const findMissingNumbers = arr => {
 SOLUTION #2
 n = # of elements in input array
 + RUNTIME Complexity: O(n + (n - 1) + n) → O(3n) → O(n) [WST]
-+ SPACE Complexity: O(n) [WST] -- Output Array
++ SPACE Complexity: O(1) [WST] -- Output Array
 NOTE: Employ 'Cyclic Sort' pattern/approach -- Loop over elements in array, swapping those numbers whose associated
 index (arr[i] - 1) doesn't have the correct element (arr[i]). While iterating, those elements whose associated index 
 DOES in fact already have the correct element are considered to be in their appropriate place, or duplicates of an element
@@ -45,6 +45,7 @@ const findMissingNumbersV2 = arr => {
     if (arr[i] !== arr[idx]) [arr[i], arr[idx]] = [arr[idx], arr[i]];
     else i++;
   }
+  
   return arr.reduce((missing, n, i) => n !== i + 1 ? missing.concat([i + 1]) : missing, []);
 }
 
