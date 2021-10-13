@@ -43,7 +43,7 @@ const flip = (arr, k) => {
   }
 };
 
-const pancakeSortV1 = arr => {
+const pancakeSort = arr => {
   if (arr.length < 2) return arr;
   // let kValues = [];
   let unsortedEnd = arr.length;
@@ -51,14 +51,14 @@ const pancakeSortV1 = arr => {
     let max = arr[0], maxIdx = 0;
     let alreadySorted = true;
     for (let i = 1; i < unsortedEnd; i++) {
-      if (arr[i] < arr[i - 1] && alreadySorted) alreadySorted = false;
+      if (alreadySorted && arr[i] < arr[i - 1]) alreadySorted = false;
       if (arr[i] > max) {
         max = arr[i];
         maxIdx = i;
       }
     }
     
-    /* can skip "sorting"/"flipping" rest of array if "UNSORTED" portion is already sorted already sorted */
+    /* can skip "sorting"/"flipping" rest of array if "UNSORTED" portion is already sorted */
     if (alreadySorted) return arr;
     unsortedEnd--;
     /* can avoid "flipping" elements that are already positioned at their correct/sorted index */
@@ -78,7 +78,7 @@ const pancakeSortV1 = arr => {
 };
 
 // TESTING:
-console.log(pancakeSortV1([3, 2, 4, 1])); // Expect: [1, 2, 3, 4]
-// console.log(pancakeSortV1([1, 5, 4, 3, 2])); // Expect: [1, 2, 3, 4, 5]
-// console.log(pancakeSortV1([98, 76, 88, 3, 240, 19, 7])); // Expect: [3, 7, 19, 76, 88, 98, 240]
+console.log(pancakeSort([3, 2, 4, 1])); // Expect: [1, 2, 3, 4]
+// console.log(pancakeSort([1, 5, 4, 3, 2])); // Expect: [1, 2, 3, 4, 5]
+// console.log(pancakeSort([98, 76, 88, 3, 240, 19, 7])); // Expect: [3, 7, 19, 76, 88, 98, 240]
 
