@@ -181,20 +181,22 @@ function LRUCacheV2(capacity) {
 
 // TESTING:
 let lru = new LRUCacheV2(3);
-lru.put(1, "hey");
-lru.put(2, "ho");
-console.log(lru);
-lru.put(3, "hi");
-console.log(lru);
-console.log(lru.get(2));
-console.log(lru);
-lru.put(4, "hee");
-console.log(lru);
-console.log(lru.get(3));
-console.log(lru);
+// lru.put(1, "hey");
+// lru.put(2, "ho");
+// console.log(lru);
+// lru.put(3, "hi");
+// console.log(lru);
+// console.log(lru.get(2));
+// console.log(lru);
+// lru.put(4, "hee");
+// console.log(lru);
+// console.log(lru.get(3));
+// console.log(lru);
 
 
 
+
+console.log(6 % 3);
 
 
 

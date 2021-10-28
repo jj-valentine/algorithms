@@ -4,11 +4,11 @@
 Your food delivery startup wants to give out some gift cards to customers. You also want to know what kind of food they could order 
 for each gift card amount so you can prepare food ahead of time.
 
-  Part One:
+  Part #1:
     Find the first combination of food that adds up to the given gift card amount, then PRINT OUT only ONE combination 
     for that gift card, and move on to the next gift card amount
   
-  Part Two:
+  Part #2:
     Refactor your first algorithm to examine MANY/ALL matching combinations for each gift card to find the 
     combination with the FEWEST TOTAL number of items purchased
 
@@ -26,7 +26,7 @@ for each gift card amount so you can prepare food ahead of time.
 */
 
 /*
-PART #1:
+SOLUTION #1 (Part #1)
 c = # of integers in input 'giftCards' array
 gcv = largest value in 'giftCards' array
 l = lowest cost item value in the 'menu' input object
@@ -60,7 +60,7 @@ const prepareFoodDelivery = (menu, giftCards) => {
 
 
 /*
-PART #2:
+SOLUTION #1 (Part #2)
 c = # of integers in input 'giftCards' array
 gcv = largest value in 'giftCards' array
 l = lowest cost item value in the 'menu' input object
@@ -97,7 +97,7 @@ const prepareFoodDeliveryP2 = (menu, giftCards) => {
 
 
 /*
-PART #3:
+SOLUTION #1 (Part #3)
 c = # of integers in input 'giftCards' array
 gcv = largest value in 'giftCards' array
 l = lowest cost item value in the 'menu' input object

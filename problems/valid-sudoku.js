@@ -72,7 +72,6 @@ const validSudoku = board => {
       boxes[boxIdx][el] = true;
     }
   }
-  console.log(JSON.stringify(rows, null, 2));
 
   return true;
 };

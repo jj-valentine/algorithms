@@ -64,6 +64,8 @@ const generateTree = nodeValues => {
 }
 
 export {
+  listNode,
+  treeNode,
   generateList,
   generateTree
 };

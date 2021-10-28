@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Depth First Search (DFS), Tree, Node, Root, Leaf, Recursion, Path, Sum, Difficulty: Medium
+"use strict"; // TAGS: Tree, Node, Root, Leaf, Depth First Search (DFS), Backtracking, Recursion, Path, Sum, Difficulty: Medium
 
 import { generateTree } from "../../utils/helper-methods.js";
 
@@ -31,10 +31,11 @@ const countPathsThatSum = (root, sum) => {
   function traversePaths(node, currentSum = 0, prefixSums = {}) {
     if (node === null) return;
     currentSum += node.value;
-    if (currentSum === sum) pathsThatSum++;
-    // prefixSums[currentSum] = true;
+    if (currentSum === sum || prefixSums[Math.abs(sum - currentSum)] !== undefined) pathsThatSum++;
+    prefixSums[currentSum] = true;
     traversePaths(node.left, currentSum, prefixSums);
     traversePaths(node.right, currentSum, prefixSums);
+    delete prefixSums[currentSum];
   } 
   traversePaths(root);
   return pathsThatSum;
@@ -43,5 +44,7 @@ const countPathsThatSum = (root, sum) => {
 // TESTING:
 let tree = generateTree([[1], [7, 9], [6, 5, 2, 3]]);
 console.log(countPathsThatSum(tree, 12)); // Expect: 3
-tree = generateTree([[10], [7, 1], [null, 4, 10, 5]]);
-console.log(countPathsThatSum(tree)); // Expect: 3
+tree = generateTree([[12], [7, 1], [null, 4, 10, 5]]);
+console.log(countPathsThatSum(tree, 11)); // Expect: 2
+tree = generateTree([[10], [null, 1], [null, null, 9, null], [null, null, null, null, null, 9, null, null]]);
+console.log(countPathsThatSum(tree, 10)); // Expect: 2

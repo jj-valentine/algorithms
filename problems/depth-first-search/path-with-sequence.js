@@ -11,10 +11,13 @@ n = # of nodes in tree
 + SPACE Complexity: O(n) [WST]
 */
 
-const pathWithSequence = (root, sequence, idx = 0) => {
-  if (root === null || sequence[idx] !== root.value || idx >= sequence.length) return false;
-  else if (root.left === null && root.right === null && idx === sequence.length - 1) return true;
-  return pathWithSequence(root.left, sequence, idx + 1) || pathWithSequence(root.right, sequence, idx + 1);
+const pathWithSequence = (root, seq) => {
+  return checkPathsForSequence(root, seq);
+  function checkPathsForSequence(node, seq, idx = 0) {
+    if (node === null && idx === seq.length) return true;
+    else if (node === null || node.value !== seq[idx]) return false;
+    return checkPathsForSequence(node.left, seq, idx + 1) || checkPathsForSequence(node.right, seq, idx + 1);
+  }
 };
 
 // TESTING:

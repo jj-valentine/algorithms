@@ -15,17 +15,21 @@ n = # of nodes in tree
 */
 
 const findTreeDiameter = root => {
-  let longestDiameter = 0;
-  function findLengthOfPath(node) {
+  let maxDiameter = 0;
+  if (root === null) return maxDiameter;
+  calculateLengthsOfPaths(root);
+  return maxDiameter;
+
+  function calculateLengthsOfPaths(node) {
     if (node === null) return 0;
-    let leftPath = findLengthOfPath(node.left);
-    let rightPath = findLengthOfPath(node.right);
-    if (leftPath !== 0 && rightPath !== 0) longestDiameter = Math.max(leftPath + rightPath + 1, longestDiameter);
+    let leftPath = calculateLengthsOfPaths(node.left);
+    let rightPath = calculateLengthsOfPaths(node.right);
+    if (leftPath && rightPath) maxDiameter = Math.max(maxDiameter, leftPath + rightPath + 1);
     return Math.max(leftPath, rightPath) + 1;
   }
-  findLengthOfPath(root);
-  return longestDiameter;
 };
+
+
 
 // TESTING:
 let tree = generateTree([[1], [2, 3], [null, 4, 5, 6]]);

@@ -16,17 +16,21 @@ up with O(n) calls on the call stack at once at some point during the algorithms
 
 const sumOfPathNumbers = root => {
   let total = 0;
-  function findPathSums(node, currentSum = "") {
-    if (node === null) return;
-    currentSum += node.value;
-    if (node.left === null && node.right === null) total += Number(currentSum);   
-    else {
-      findPathSums(node.left, currentSum);
-      findPathSums(node.right, currentSum);
-    }
-  }
-  findPathSums(root)
+  traversePathsViaDFS(root, "");
   return total;
+
+  function traversePathsViaDFS(root, currSum) {
+    if (root === null) return;
+
+    currSum += root.value;
+    if (root.left === null && root.right === null) {
+      total += +(currSum);
+      return;
+    }
+
+    traversePathsViaDFS(root.left, currSum);
+    traversePathsViaDFS(root.right, currSum);
+  }
 };
 
 // TESTING:
@@ -34,3 +38,4 @@ let tree = generateTree([[1], [7, 9], [null, null, 2, 9]]);
 console.log(sumOfPathNumbers(tree)); // Expect: 408
 tree = generateTree([[1], [0, 1], [null, 1, 6, 5]]);
 console.log(sumOfPathNumbers(tree)); // Expect: 332
+
