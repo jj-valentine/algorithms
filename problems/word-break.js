@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Word, Dictionary, Split, Segment, Recursive, Memoize, LeetCode: #139, Difficulty: Medium (Hard), Companies: Snap
+"use strict"; // TAGS: String, Substring, Word, Dictionary, Split, Segment, Prefix/Suffix, Recursive, Backtracking, DP (Dynamic Programming), DFS (Depth First Search), BFS (Breadth First Search), Trie, Memoization, LeetCode: #139/#140, Difficulty: Medium/Hard, Companies: Amazon, Apple, Facebook, Google, Microsoft, Salesforce, Snap, Uber
 
 /*
 Given an input string and dictionary of words/strings...
@@ -8,12 +8,12 @@ Given an input string and dictionary of words/strings...
     of the dictionary words
 
       EX's:
-        str = "leetcode", dict = ["leet","code"] → wordBreak(str, dict) = true
+        str = "leetcode", dict = ["leet", "code"] → wordBreak(str, dict) = true
         Explanation -- "leetcode" can be segmented as "leet code"
 
-        str = "applepineapple", dict = ["apple","pineapple"] → wordBreak(str, dict) = true
+        str = "applepineapple", dict = ["apple", "pineapple"] → wordBreak(str, dict) = true
       
-        str = "catsandog", dict = ["cats","dog","sand","and","cat"] → wordBreak(str, dict) = false
+        str = "catsandog", dict = ["cats", "dog", "sand", "and", "cat"] → wordBreak(str, dict) = false
 
   Part #2: 
     Add spaces to the input string in order to construct a sentence where each word in the sentence is a valid dictionary word. 
@@ -40,30 +40,26 @@ NOTE: Can also solve using BFS!
 */
 
 const wordBreak = (str, dict) => {
-  let words = new Set(dict); 
-  let memo = new Map();
+  let dictWords = new Set(dict), memo = new Map();
+  return splitStringToFindWords(str);
 
-  let result = recurseToFindWords(str);
-  console.log(memo);
-  return result;
-  function recurseToFindWords(word) {
-    if (words.has(word)) return true;
+  function splitStringToFindWords(word) {
+    if (dictWords.has(word)) return true;
     else if (memo.has(word)) return memo.get(word);
-
-    for (let i = 1; i < word.length; i++) {
-      let prefix = word.slice(0, i), suffix = word.slice(i);
-      if (words.has(prefix) && (words.has(suffix) || recurseToFindWords(suffix))) {
+    for (let i = 0; i < word.length; i++) { 
+      let prefix = word.substring(0, i), suffix = word.substring(i);
+      if (dictWords.has(prefix) && (dictWords.has(suffix) || splitStringToFindWords(suffix))) {
         memo.set(word, true);
         return true;
       }
     }
 
     memo.set(word, false);
-    return false
+    return false;
   }
 };
 
-// TESTING:
+// TESTING (Part #1):
 // console.log(wordBreak("a", ["a"])); // Expect: true
 // console.log(wordBreak("leet", ["l", "e", "ee", "le", "lee"])); // Expect: false
 // console.log(wordBreak("ccbb", ["bc", "cb"])); // Expect: false
@@ -77,27 +73,40 @@ const wordBreak = (str, dict) => {
 SOLUTION #1 (Part #2)
 n = # of words in input array (i.e. the "dictionary")
 k = # of characters in (i.e. 'length' of) input string
-+ RUNTIME Complexity: O() [WST]
-+ SPACE Complexity: O() [WST]
-NOTE: 
++ RUNTIME Complexity: O(k^3 + n^k) [WST] → Q: OR is it: k^2 * 2^k (LeetCode)...
++ SPACE Complexity: O(k + k^2) [WST]
+NOTE: Employ "Top-Down" Dynamic Programming (DP)...
 */
 
 const wordBreakP2 = (str, dict) => {
-  let dictWords = new Set(dict); 
+  const memo = new Map();
 
-  function findMatchingDictionaryWords(word) {
+  return findWordsThatMakeSentences(str);
+ 
+  function findWordsThatMakeSentences(word) {
+    if (!word.length) return [""];
+    if (memo.has(word)) return memo.get(word);
     
-    for (let i = 1; i < word.length; i++) {
-      let prefix = word.slice(0, i), suffix = word.slice(i);
-      if (dict.has(prefix) && (dict.has(suffix) || findMatchingDictionaryWords(suffix))) {
+    let sentences = [];
+    dict.forEach(prefix => { // TC: O(k * n) [WST] -- Recursive Piece 
+      if (word.startsWith(prefix)) { // TC: O(k) [WST]
+        let suffix = word.slice(prefix.length); // TC: O(k) [WST]
+        let paths = findWordsThatMakeSentences(suffix);
 
+        paths.forEach(subsentence => { // TC: n^k [WST]
+          const optionalSpace = (subsentence.length ? " " : "");
+          sentences.push(prefix + optionalSpace + subsentence); // TC: O(n) [?]
+        });
       }
-    }
+    });
+
+    memo.set(word, sentences);
+    return sentences;
   }
 };
 
-
-
-
-
+// TESTING (Part #2):
+console.log(wordBreakP2("pineapplepenapple", ["apple", "pen", "applepen", "pine", "pineapple"])) // Expect: ["pine apple pen apple", "pineapple pen apple", "pine applepen apple"]
+console.log(wordBreakP2("catsanddog", ["cat", "cats", "and", "sand", "dog"])) // Expect: ["cats and dog", "cat sand dog"]
+console.log(wordBreakP2("catsandog", ["cats", "dog", "sand", "and", "cat"])) // Expect: []
 

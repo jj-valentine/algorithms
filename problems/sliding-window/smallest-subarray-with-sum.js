@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Sliding Window
+"use strict"; // TAGS: Array, Subarray, Contiguous, Positive Integers, Smallest Size, Sum, Sliding Window, Difficulty: Easy/Medium
 
 /* 
 Given an array of positive numbers and a positive number 's', find the length of the smallest contiguous 
@@ -6,13 +6,13 @@ subarray whose sum is greater than or equal to 's'. Return '0' if no such subarr
 
   EX's:
     arr = [2, 1, 5, 2, 3, 2], s = 7 → smallestSubarrayForGivenSum(arr, s) = 2
-    EXPLANATION -- smallest subarray with a sum greater than or equal to '7' is [5, 2] → length = 2
+      EXPLANATION -- smallest subarray with a sum greater than or equal to '7' is [5, 2] → length = 2
 
     arr = [2, 1, 5, 2, 8], s = 7 → smallestSubarrayForGivenSum(arr, s) = 1
-    EXPLANATION -- smallest subarray with a sum greater than or equal to '7' is [5, 2] → length = 1
+      EXPLANATION -- smallest subarray with a sum greater than or equal to '7' is [5, 2] → length = 1
     
     arr = [3, 4, 1, 1, 6], s = 8 → smallestSubarrayForGivenSum(arr, s) = 3
-    EXPLANATION -- smallest subarrays with a sum greater than or equal to '7' are [3, 4, 1] and [1, 1, 6] → length = 3
+      EXPLANATION -- smallest subarrays with a sum greater than or equal to '7' are [3, 4, 1] and [1, 1, 6] → length = 3
 */
 
 /*
@@ -24,19 +24,18 @@ a second time before incrementing 'windowEnd' but never more than twice -- hence
 */
 
 const smallestSubarrayForGivenSum = (arr, s) => {
-  let sum = 0, windowStart = 0, minSize = arr.length + 1;
-  for (let windowEnd = 0; windowEnd < arr.length; windowEnd = (sum < s ? windowEnd + 1 : windowEnd)) {
-    if (sum < s) sum += arr[windowEnd];
-    if (sum >= s) {
-      let subarrayLength = windowEnd - windowStart + 1;      
-      if (subarrayLength < minSize) minSize = subarrayLength;
-      sum -= arr[windowStart++];
+  let windowStart = 0, currSum = 0, smallestWindow = arr.length + 1;
+  for (let windowEnd = 0; windowEnd < arr.length; currSum >= s ? windowEnd : windowEnd + 1) {
+    if (currSum < s) currSum += arr[windowEnd];
+    else {
+      smallestWindow = Math.min(windowEnd - windowStart + 1, smallestWindow);
+      currSum -= arr[windowStart++];
     }
   }
-  return minSize === arr.length + 1 ? 0 : minSize;
-};
+  return smallestWindow < arr.length + 1 ? smallestWindow : 0;
+}
 
 // TESTING:
-console.log(smallestSubarrayForGivenSum([2, 1, 5, 2, 3, 2], 7)); // Expec: 2
+console.log(smallestSubarrayForGivenSum([2, 1, 5, 2, 3, 2], 7)); // Expect: 2
 console.log(smallestSubarrayForGivenSum([2, 1, 5, 2, 8], 7)); // Expect: 1
 console.log(smallestSubarrayForGivenSum([3, 4, 1, 1, 6], 8)); // Expect: 3

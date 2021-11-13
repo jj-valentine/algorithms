@@ -21,29 +21,66 @@ NOTE:
 */
 
 const findAllConcatenatedWords = words => {
-  let dict = new Set(words), memo = new Map();
-  return words.reduce((concatenatedWords, word) => {
-    if (doesPrefixAndSuffixExist(word)) concatenatedWords.push(word);
-    return concatenatedWords;
-  }, []);
-  
-  function doesPrefixAndSuffixExist(word) {
-    if (memo.has(word)) return memo.get(word);
-    for (let i = 1; i < word.length; i++) {
-      let prefix = word.slice(0, i), suffix = word.slice(i);
-      if (dict.has(prefix) && (dict.has(suffix) || doesPrefixAndSuffixExist(suffix))) {
-        memo.set(word, true);
-        return true;
+  const dict = new Map(words), memo = new Map();
+
+  function doesWordContainOtherWords() {
+
+    for (let word in words) {
+      for (let i = 1; i < word.length; i++) {
+        let prefix = word.slice(0, i), suffix = word.slice(i);
       }
     }
-    memo.set(word, false);
-    return false
   }
 };
 
-// // TESTING:
+
+
+
+
+
+// TESTING:
 console.log(findAllConcatenatedWords(["cat", "cats", "catdogkick", "catsdogcats", "dog", "dogcatsdog", "hippopotamuses", "rat", "ratcatdogcat"])); // Expect: ["catsdogcats", "dogcatsdog", "ratcatdogcat"]
 console.log(findAllConcatenatedWords(["cat", "dog", "catdog"])); // Expect: ["catdog"]
 console.log(findAllConcatenatedWords(["", "a", "b", "ab", "abc"])); // Expect: ["ab"]
 console.log(findAllConcatenatedWords(["dog", "dogratwolf", "rat", "dogratcat", "cat"])); // Expect: ["dogratcat"]
 console.log(findAllConcatenatedWords(["constructed", "constrictors", "constructor"])); // Expect: []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const findAllConcatenatedWords = words => {
+//   let dict = new Set(words), memo = new Map();
+//   return words.reduce((concatenatedWords, word) => {
+//     if (doesPrefixAndSuffixExist(word)) concatenatedWords.push(word);
+//     return concatenatedWords;
+//   }, []);
+  
+//   function doesPrefixAndSuffixExist(word) {
+//     if (memo.has(word)) return memo.get(word);
+//     for (let i = 1; i < word.length; i++) {
+//       let prefix = word.slice(0, i), suffix = word.slice(i);
+//       if (dict.has(prefix) && (dict.has(suffix) || doesPrefixAndSuffixExist(suffix))) {
+//         memo.set(word, true);
+//         return true;
+//       }
+//     }
+//     memo.set(word, false);
+//     return false
+//   }
+// };
+

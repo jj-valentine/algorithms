@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Sliding Window
+"use strict"; // TAGS: String, Substring, Longest, 'K' Distinct Characters, Hash Map, Cache, Frequency, Sliding Window, Difficulty: Medium/Hard
 
 /* 
 Given a string, find the length of the longest substring in it with no more than 'k' distinct characters
@@ -15,6 +15,41 @@ Given a string, find the length of the longest substring in it with no more than
 */
 
 /*
+SOLUTION #1
+n = # of characters in input string
++ RUNTIME Complexity: O(n) [WST]
++ SPACE Complexity: O(k + 1) → O(k) [WST]
+NOTE: Use variable to keep track of # of distinct characters (instead of having to run/call 'Object.keys()' every time 
+we need to check the length of our cache of the frequencies of distinct characters)...
+*/
+
+const longestSubstringWithKDistinctCharacters = (str, k) => {
+  let windowStart = 0, currChars = {}, distinctChars = 0, maxLength = 0;
+  for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {
+    let lastChar = str.charAt(windowEnd);
+    if (!currChars[lastChar]) {
+      distinctChars++;
+    }
+    currChars[lastChar] = (currChars[lastChar] || 0) + 1;
+    
+    while (distinctChars > k) {
+      let firstChar = str.charAt(windowStart++);
+      currChars[firstChar]--;
+      if (!currChars[firstChar]) {
+        delete currChars[firstChar];
+        distinctChars--;
+      }
+    }
+
+    maxLength = Math.max(windowEnd - windowStart + 1, maxLength);
+  }
+
+  return maxLength;
+};
+
+
+/*
+SOLUTION #2
 n = # of characters in input string
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(k + 1) → O(k) [WST]
@@ -26,7 +61,7 @@ at the beginning of our window (index: 'windowStart') and moving the start of ou
 'k' distinct letters (again).
 */
 
-const longestSubstringWithKDistinctCharacters = (s, k) => {
+const longestSubstringWithKDistinctCharactersV2 = (s, k) => {
   let freq = {}, windowStart = 0, longest = 0;
   for (let windowEnd = 0; windowEnd < s.length; windowEnd++) {
     let rightChar = s[windowEnd];

@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Breadth First Search (BFS), Tree, Node, Traverse, Difficulty: Easy
+"use strict"; // TAGS:  Binary Tree, Node, Array, Subarray, Queue, Breadth First Search (BFS), Traverse, Difficulty: Easy
 
 import { generateTree } from "../../utils/helper-methods.js";
 
@@ -11,8 +11,8 @@ then return the resulting array of arrays.
 /*
 n = # of nodes in tree 
 + RUNTIME Complexity: O(n) [WST]
-+ SPACE Complexity: O(n + n/2) → O(n) [WST]
-NOTE: Do a 'Breadth First' ("level-by-level") traversal of the given tree.
++ SPACE Complexity: O(n/2 + n/2 + 2) → O(n) [WST]
+NOTE: Do a 'Breadth First' ("level-by-level") traversal of the given tree
 */
 
 const traverseTree = root => {
@@ -31,17 +31,5 @@ const traverseTree = root => {
 }
 
 // TESTING:
-function Node(value, left, right) {
-  this.value = value;
-  this.left = left || null;
-  this.right = right || null;
-}
-
-// let tree = new Node(12);
-// tree.left = new Node(7);
-// tree.right = new Node(1);
-// tree.left.left = new Node(9);
-// tree.right.left = new Node(10);
-// tree.right.right = new Node(5);
 let tree = generateTree([[12], [7, 1], [9, null, 10, 5]])
 console.log(traverseTree(tree)); // Expect: [[12], [7, 1], [9, 10, 5]]

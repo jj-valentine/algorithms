@@ -1,14 +1,14 @@
-"use strict"; // TAGS: Sliding Window, Contiguous Subarray
+"use strict"; // TAGS: Array, Subarray, Contiguous, Size 'k', Maximum, Sum, Sliding Window, Difficulty: Easy
 
 /* 
 Given an array of positive numbers and a positive number ‘k,’ find the maximum sum of any contiguous subarray of size ‘k’
 
   EX's:
     arr = [2, 1, 5, 1, 3, 2], k = 3 → maxSumOfSubarraySizeK(arr, k) = 9
-    EXPLANATION -- [5, 1, 3] → 5 + 1 + 3 = 9
+      EXPLANATION -- [5, 1, 3] → 5 + 1 + 3 = 9
 
     arr = [2, 3, 4, 1, 5], k = 2 → maxSumOfSubarraySizeK(arr, k) = 7
-    EXPLANATION -- [3, 4] → 3 + 4 = 7 
+      EXPLANATION -- [3, 4] → 3 + 4 = 7 
 */
 
 /*

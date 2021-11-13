@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Breadth First Search (BFS), Tree, Node, Siblings, Depth, Right View, Difficulty: Easy
+"use strict"; // TAGS: Binary Tree, Node, Array, Subarray, Queue, Right-View, Levels, Breadth First Search (BFS), Depth, Difficulty: Easy
 
 import { generateTree } from "../../utils/helper-methods.js";
 
@@ -12,7 +12,7 @@ n = # of nodes in tree
 + SPACE Complexity: O(n/2 + n) → O(n) [WST]
 */
 
-const rightViewBST = root => {
+const rightViewBinaryTree = root => {
   let queue = [root], rightNodes = []
   while (queue.length) {
     let levelSize = queue.length; 
@@ -29,4 +29,4 @@ const rightViewBST = root => {
 
 // TESTING:
 let tree = generateTree([[12], [7, 1], [null, 9, 10, 5], [null, null, 3]]);
-console.log(JSON.stringify(rightViewBST(tree), null, 2)); // Expect: [12, 1, 5, 3]
+console.log(JSON.stringify(rightViewBinaryTree(tree), null, 2)); // Expect: [12, 1, 5, 3]

@@ -1,10 +1,9 @@
-"use strict"; // TAGS: Breadth First Search (BFS), Tree, Node, Traverse, Minimum, Depth, Difficulty: Easy
+"use strict"; // TAGS: Binary Tree, Node, Array, Subarray, Queue, Traverse, Minimum, Depth, Breadth First Search (BFS), Difficulty: Easy
 
 import { generateTree } from "../../utils/helper-methods.js";
 
 /*
-Find the minimum depth of a binary tree. The minimum depth is the number of nodes along the 
-shortest path from the root node to the nearest leaf node.
+Find the minimum depth of a binary tree. The minimum depth is the number of nodes along the shortest path from the root node to the nearest leaf node.
 */
 
 /*

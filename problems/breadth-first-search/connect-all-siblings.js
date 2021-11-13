@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Breadth First Search (BFS), Tree, Node, Siblings, Depth, Level Order, Difficulty: Medium
+"use strict"; // TAGS:  Binary Tree, Node, Array, Subarray, Queue, Childre, Siblings, Breadth First Search (BFS), Depth, Difficulty: Medium
 
 import { generateTree } from "../../utils/helper-methods.js";
 
