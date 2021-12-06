@@ -18,7 +18,7 @@ Your algorithm must run in O(log(n)) time.
 
 /*
 n = # of elements in input array
-+ RUNTIME Complexity: O(2 * log(n)) → O(log(n)) [WST]
++ RUNTIME Complexity: O(2*log(n)) → O(log(n)) [WST]
 + SPACE Complexity: O(1) [WST]
 NOTE: Our approach is straightforward: Use a (slightly modified) binary search algorithm to search for the "pivot" index in the array 
 (i.e. the index at which the array has been "rotated" or "shifted"). Then, depending on the value of our target integer relative to the 

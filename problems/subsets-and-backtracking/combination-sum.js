@@ -75,11 +75,11 @@ const combinationSum = (arr, target) => {
 };
 
 // TESTING:
-// console.log(combinationSum([2, 3, 6, 7], 7)); // Expect: [[2, 2, 3], [7]]
-// console.log(combinationSum([2, 3, 5], 8)); // Expect: [[2, 2, 2, 2], [2, 3, 3], [3, 5]]
-// console.log(combinationSum([2], 1)); // Expect: []
-// console.log(combinationSum([1], 1)); // Expect: [[1]]
-// console.log(combinationSum([1], 2)); // Expect: [[1, 1]]
+console.log(combinationSum([2, 3, 6, 7], 7)); // Expect: [[2, 2, 3], [7]]
+console.log(combinationSum([2, 3, 5], 8)); // Expect: [[2, 2, 2, 2], [2, 3, 3], [3, 5]]
+console.log(combinationSum([2], 1)); // Expect: []
+console.log(combinationSum([1], 1)); // Expect: [[1]]
+console.log(combinationSum([1], 2)); // Expect: [[1, 1]]
 
 
 /*
