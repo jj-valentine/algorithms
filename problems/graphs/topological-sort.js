@@ -2,7 +2,7 @@
 
 /*
 A "topological sort" of a directed graph (i.e. graph with unidirectional edges) is a linear ordering of its vertices such that for every directed edge '(U, V)'
-(i.e. from vertex 'U' to vertex 'V'), 'U' comes before 'V' in the ordering... Given a directed graph, find the topological ordering of its vertices
+(i.e. from vertex 'U' to vertex 'V'), 'U' comes before 'V' in the ordering... Given a directed graph, find the topological ordering of its vertices...
 
   EX's:
     vertices = 4, edges = [[3, 2], [3, 0], [2, 0], [2, 1]] → topologicalSort(vertices, edges) = [3, 2, 0, 1]
@@ -45,7 +45,7 @@ const topologicalSort = (vertices, edges) => {
       if (adjacencyList.get(child).inDegrees-- === 1) sources.push(child); 
     });
   }
-  console.log(adjacencyList);
+
   return sorted.length === vertices ? sorted : [];
 };
 
@@ -53,4 +53,3 @@ const topologicalSort = (vertices, edges) => {
 console.log(topologicalSort(4, [[3, 2], [3, 0], [2, 0], [2, 1]])); // Expect: [3, 2, 0, 1] 
 console.log(topologicalSort(5, [[4, 2], [4, 3], [2, 0], [2, 1], [3, 1]])); // Expect: [4, 2, 3, 0, 1] 
 console.log(topologicalSort(7, [[6, 4], [6, 2], [5, 3], [5, 4], [3, 0], [3, 1], [3, 2], [4, 1]])); // Expect: [6, 5, 3, 4, 0, 2, 1]
-

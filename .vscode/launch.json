@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-    "program": "${workspaceFolder}/problems/word-break.js"
+    "program": "${workspaceFolder}/problems/graphs/min-cost-to-connect-points.js"
     }
   ]
 }

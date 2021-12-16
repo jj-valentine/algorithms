@@ -14,7 +14,6 @@ and return it
 n = # of characters in input string
 + RUNTIME Complexity: O(n/2) → O(n) [WST]
 + SPACE Complexity: O(5 + n) → O(n) [WST]
-
 */
 
 const reverseVowels = str => {
