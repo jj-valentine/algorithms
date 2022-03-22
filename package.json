@@ -2,10 +2,13 @@
   "name": "algorithms",
   "version": "1.0.0",
   "description": "",
-  "main": "performance-tests.js",
+  "main": "utils/performance-tests.js",
   "type": "module",
   "scripts": {
     "test": "jest"
+  },
+  "quokka": {
+    "babel": true
   },
   "jest": {
     "transform": {

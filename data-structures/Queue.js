@@ -9,7 +9,7 @@
 + SPACE Complexity: O(n) [WST] 
 */
 
-function Queue() {
+function Queue () {
   this.storage = {};
   this.index = 0;
   this.first = 0;

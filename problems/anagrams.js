@@ -1,32 +1,51 @@
 "use strict";
 
 /*
-Given a single input string, write a function that produces all possible anagrams
-of a string and outputs them as an array. At first, don't worry about repeated strings. 
-What time complexity is your solution?
-
-BONUS: De-duplicate your return array without using uniq().
+Given 'n' strings of length 'k', return groups of anagrams.
 */
 
 /*
-n: length of input string
+n = # of strings in input array
+k = # of characters in each strin (i.e. string length)
 + RUNTIME Complexity: O(n!) [BST/WST]
 + SPACE Complexity: O(n!) [BST/WST]
 NOTE: This is a permutations problem. For the most efficient time complexity, we can use Heap's algorithm.
 */
 
-const anagrams = str => {
-  if (str.length < 2) return [str];
-  let perms = [];
+const groupAnagrams = arr => {
+  const groups = [];
+  if (!arr.length) return groups;
+  let n = arr.length, k = arr[0].length;
+  // iterate through array
+    // for each string make a letter count hashmap 
+      // for every other string use the letter count map to subtract said letters
+        // if a letter isn't found or it's freq goes below 0, move on
+  let freq = {};
+  arr.forEach((str, idx) => {
+    currFreq = {};
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charAt(i);
+      freq[char] = (freq.charAt(i) || 0) + 1;
+    }
 
-}
+    for (let j = idx + 1; j < arr.length; j++) {
+      for (let k = 0; k < ) 
+    }
+  });
 
+
+  const iterateOverStringsAndLetters = cb => {
+    for (let s = 0; s < n; s++) {
+      for (let c = 0; c < k; c++) {
+
+      }
+    }
+};
+
+
+/* 
+{ "c": 1, "a": 1, "t": 1 }, lettersLeft = 0
+ */
 // TESTING:
-// console.log(anagrams('abc')); // → ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
-// console.log(anagrams('pose')); // → ['pose', 'poes', 'psoe', 'pseo', 'peos', 'peso', 'opse', 'opes', 'ospe', 'osep', 'oeps', 'oesp', 'spoe', 'speo', 'sope', 'soep', 'sepo', 'seop', 'epos', 'epso', 'eosp', 'eops', 'espo', 'esop']
-
-// console.log("abc".slice(1,3));
-// let s = ["c","a","t"]
-// s.splice(0, 1)
-// console.log(s);
+console.log(groupAnagrams(["cat", "bat", "act", "tab", "tac", "toe"])); // Expect: [["cat", "act", "tac"], ["bat", "tab"], ["toe"]]
 

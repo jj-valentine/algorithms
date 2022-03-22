@@ -1,30 +1,30 @@
 "use strict";
 
 /*
-n = # of elements in array
+n = # of elements in input array
 + RUNTIME Complexity: O(n) (if array is sorted) [BST] + O(n^2) [AVG/WST]
 + SPACE Complexity: O(1) [WST]
+NOTE: 'Brute Force' sorting approach... 
 */
 
 const insertionSort = arr => {
-  for (let j = 0; j < arr.length; j++) {
-    arr = insert(arr, j - 1, arr[j]);
+  const n = arr.length;
+  for (let i = 1; i < n; i++) {
+    arr = insert(arr, i);
   }
-  return arr;
-}
 
-/* Inserts value into a section of a given array that's already been sorted from array[0] to rightBound 
-(and "unsorted" from rightBound + 1 to array.length - 1), then returns array. */
-function insert(arr, rB, value) {
-  let i;
-  for (i = rB; i >= 0 && arr[i] > value; i--) {
-    arr[i + 1] = arr[i];
+  /* inserts value at 'from' index in appropriate slot by "shifting" elements to the right */
+  function insert(arr, from) {
+    const toInsert = arr[from];
+    for (var j = from; j > 0 && arr[j - 1] > toInsert; j--) {
+      arr[j] = arr[j - 1];
+    }
+    arr[j] = toInsert;
+    return arr;
   }
-  arr[i + 1] = value;
+  
   return arr;
-}
+};
 
 // TESTING:
-let unsortedArr = [0, -1, 2, 3, -3, -2, 1, 2];
-let sortedArr = [...unsortedArr].sort((a, b) => a - b);
-console.log(insertionSort(unsortedArr)); // -> [-3, -2, -1, 0, 1, 2, 2, 3]
+console.log(insertionSort([4, 7, 2, 1, 3, 5, 6])); // Expect: [1, 2, 3, 4, 5, 6, 7]

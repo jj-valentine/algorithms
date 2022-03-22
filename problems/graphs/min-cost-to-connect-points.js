@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Subarray, Graph, Adjaceny List/Matrix, Undirected, Weighted, Minimum, Cost, Distance, Greedy, LeetCode: #1584, Companies: Amazon
+"use strict"; // TAGS: Array, Subarray, Graph, Adjaceny List/Matrix, Undirected, Weighted, Minimum, Cost, Distance, Greedy, LeetCode: #1584, Difficulty: Medium, Companies: Amazon
 
 /*
 You are given an array representing integer coordinates of some points on a 2D-plane, where 'points[i] = [x_i, y_i]'.

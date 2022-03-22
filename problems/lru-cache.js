@@ -196,7 +196,3 @@ let lru = new LRUCacheV2(3);
 
 
 
-console.log(6 % 3);
-
-
-

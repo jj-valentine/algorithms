@@ -22,8 +22,8 @@ function DoublyLinkedList() {
   this.tail = null;
   this.length = 0
 
-    /* add node to end (tail) of list */
-    DoublyLinkedList.prototype.push = value => {
+  /* add node to end (tail) of list */
+  DoublyLinkedList.prototype.push = value => {
     let newNode = new Node(value);
     // list is empty (no nodes)
     if (!this.head) {
