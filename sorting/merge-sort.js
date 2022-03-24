@@ -15,12 +15,13 @@ const merge = (left, right) => {
 }
 
 const mergeSort = arr => {
-    const half = arr.length / 2;
-    if (arr.length < 2) return arr;
-    let left = arr.splice(0, half);
-    return merge(mergeSort(left), mergeSort(arr));
-};
+  const half = arr.length / 2;
+  if (arr.length < 2) return arr;
+  let left = arr.splice(half);
+  return merge(mergeSort(left), mergeSort(arr));
+};  
 
 // TESTING:
 let arr = [14, 7, 3, 12, 9, 11, 6, 2];
-console.log(mergeSort(arr));
+console.log(arr.splice(4), arr);
+// console.log(mergeSort(arr));

@@ -1,5 +1,3 @@
-#!/usr/local/bin/node
-
 "use strict"; // TAGS: Array, Sorting, Two Pointer, In-Place, Constant Space Complexity, Linear Time Complexity, Segregate, Parity, Even, Odd, Unordered, LC: #905 (Easy), Companies: Amazon, Facebook, Google, Microsoft
 
 /*
