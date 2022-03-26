@@ -1,41 +1,37 @@
-"use strict"; // TAGS: Two Pointers
+"use strict"; // TAGS: Array, Sorting, Two Pointer, In-Place, One Pass, Constant Space, Linear Time, Segregate/Group, Colors, LC: #75 (Medium), Companies: Amazon, Apple, Facebook, Microsoft, Salesforce
 
 /*
-Given an array containing 0's, 1's and 2's, sort the array in-place. You should treat numbers of the array as objects
-(hence, we can’t count 0's, 1's, and 2's to recreate the array)
+Given a number of balls arranged in a line (each one being one of three possible colors), 
+rearrange them (IN-PLACE) so that they're grouped together by color in the following order: "R" → "G" → "B"
 
-The flag of the Netherlands consists of three colors: red, white and blue; and since our input array also consists of three 
-different numbers, that's why it is called Dutch National Flag problem.
+  EX:
+    balls = ["G", "B", "G", "G", "R", "B", "R", "G"] → dutchFlag(balls) = ["R", "R", "G", "G", "G", "G", "B", "B"]
 
-  EX's:
-    arr = [1, 0, 2, 1, 0] → dutchNationalFlagProblem(arr) = [0, 0, 1, 1, 2]
-
-    arr = [2, 2, 0, 1, 2, 0] → dutchNationalFlagProblem(arr) = [0, 0, 1, 2, 2, 2]
+NOTE: Implement an approach that only does ONE pass over the array, and doesn't use any extra space. A solution that simply "counts" colors 
+and overwrites the input array containing the colors of the balls is not allowed...
 */
 
 /*
 n = # of elements in input array
 + RUNTIME Complexity: O() [WST]
 + SPACE Complexity: O() [WST]
-NOTE:
+NOTE: Use "Two Pointers" approach...
 */
 
-const dutchNationalFlag = arr => {
-  let low = 0, high = arr.length - 1, idx = 0;
-  while (idx <= high) {
-    if (arr[idx] === 0) {
-      [arr[idx], arr[low]] = [arr[low], arr[idx]];
-      low++;
-      idx++;
-    } else if (arr[idx] === 1) idx++;
-    else {
-      [arr[idx], arr[high]] = [arr[high], arr[idx]];
-      high--;
-    }
+const dutchFlag = arr => {
+  let i = 0, r = 0, b = arr.length - 1;
+  while (i <= b) {
+    if (arr[i] === "R") [arr[r++], arr[i++]] = [arr[i], arr[r]];
+    else if (arr[i] === "B") [arr[b--], arr[i]] = [arr[i], arr[b]];
+    else if (arr[i] === "G") i++;
   }
+
   return arr;
 };
 
 // TESTING:
-console.log(dutchNationalFlag([2, 2, 0, 1, 2, 0]));
+console.log(dutchFlag(["R", "R"])); // Expect: ["R", "R"]
+console.log(dutchFlag(["B", "B", "G", "G", "R", "B", "R", "G"])); // Expect: ["R", "R", "G", "G", "G", "G", "B", "B"]
+console.log(dutchFlag(["B", "R", "B", "G", "G", "R"])); // Expect: ["R", "R", "G", "G", "B", "B"]
+
 
