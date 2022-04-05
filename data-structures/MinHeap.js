@@ -27,7 +27,11 @@ let MinHeap = {
     return this.heap[0];
   },
 
-  /* inserts new "node" into 'minHeap' (with proper placement) */
+  /* removes minimum element from (top of) heap and returns it → must 'heapify' afterward to maintain "heap property" */
+  extractMin: function() {
+
+  },
+  /* inserts new nod into heap (with proper placement) */
   insert: function(value) {
     this.heap.push(value);
     if (this.heap.length > 1) {

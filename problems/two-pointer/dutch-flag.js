@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Sorting, Two Pointer, In-Place, One Pass, Constant Space, Linear Time, Segregate/Group, Colors, LC: #75 (Medium), Companies: Amazon, Apple, Facebook, Microsoft, Salesforce
+"use strict"; // TAGS: Array, Sorting, Two Pointer, In-Place, One Pass, Constant Space, Linear Time, Segregate/Group, Colors, LC: #75 (Medium), IK: Sorting, Companies: Amazon, Apple, Facebook, Microsoft, Salesforce
 
 /*
 Given a number of balls arranged in a line (each one being one of three possible colors), 

@@ -12,7 +12,7 @@ Part #1:
 
       
 Part #2:
-  Given an integer array nums that may contain duplicates, return all possible subsets (the power set).
+  Given an integer array nums that MAY contain duplicates, return all possible subsets (the power set).
   The solution set must NOT contain duplicate subsets. Return the solution in any order.
 
     EX's:
@@ -42,7 +42,6 @@ const findSubsets = arr => {
     }
   }
 }
-
 
 /*
 SOLUTION #2 (Part #1)
@@ -86,21 +85,43 @@ be is 'n', the worst case space complexity would be: O(n)
 */
 
 const findSubsetsV3 = arr => {
-  let subsets = [[]];
-  for (let i = 0; i < arr.length; i++) {
-    let subLength = subsets.length
-    for (let j = 0; j < subLength; j++) {
-      let copy = subsets[j].slice();
-      copy.push(arr[i]);
-      subsets.push(copy);
+  const subsets = [[]];
+  for (let i = 0; i < arr.length; i++) { 
+    const s = subsets.length;
+    for (let j = 0; j < s; j++) {
+      subsets.push(subsets[j].concat(arr[i]));
     }
   }
   return subsets;
 };
 
+const findSubsetzV2 = arr => {
+
+
+
+}
+
+var majorityElement = function(nums) {
+  nums.sort();
+  let n = nums.length;
+  for (let i = 1, count = 1; i < n; i++) {
+      if (count > Math.floor(n/2)) return nums[i - 1]; 
+
+      if (nums[i - 1] === nums[i]) {
+          count++;
+      }
+      else count = 1;
+
+      
+  }
+  return nums[n - 1];
+};
+majorityElement([3,3,4]);
+
+
 // TESTING:
-// console.table(findSubsetsV2([1, 2, 3])); // Expect: [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
-// console.log(findSubsetsV2([0])); // Expect: [[], [0]]`
+// console.log(findSubsetsV3([1, 2, 3, 4])); // Expect: [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
+// console.log(findSubsetsV3([0])); // Expect: [[], [0]]`
 
 
 /*

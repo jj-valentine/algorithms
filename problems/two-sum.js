@@ -1,24 +1,27 @@
-"use strict";
+"use strict"; // TAGS: Array, Sorting (Or NOT), Index, Sum, Difference, Hash Table, Cache, Linear Scan/Runtime Complexity, LC: #1 (Easy), IK: Sorting, Companies: Amazon, Apple, Facebook, Google, Microsoft, Salesforce, Spotify, Uber
 
 /*
-Given an array of numbers and a target value, return true if there are two numbers in the array that sum up to the target value. Otherwise, return false. 
+Given an array of numbers and a target value, return an array of the indices (in any order) of the two values from the array that sum up to the given target number.
+If more than one solution exists, return either solution. No single index can be used more than once. If a solution does not exist, return '[-1, -1]'.
 */
 
 /*
 n = # of elements in array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: Iterate through array checking to see if an element equal to the difference between the target and the current value (in array) exists in the cache. If it does, return true. If it doesn't, add the current element in the array to the cache. Return false upon reaching the end of the array.
+NOTE: 'Hash Table' + 'Linear Scan'...
 */
 
-const twoSum = (arr, target, cache = {}) => {
+const twoSum = (arr, target) => {
+  let diffs = {};
   for (let i = 0; i < arr.length; i++) {
-    if (cache[target - arr[i]]) return true;
-    cache[arr[i]] = true;
+    let currDiff = target - arr[i];
+    if (diffs[currDiff] !== undefined) return [diffs[currDiff], i];
+    diffs[arr[i]] = i;
   }
-  return false;
-}
+
+  return [-1, -1];
+};
 
 // TESTING:
-const array = [9, -3, 2, -1, 0, 5, 120, -121];
-console.log(twoSum(array, 120)); // -> true
+console.log(twoSum([9, -3, 2, -1, 0, 5, 120, -121], 120)); // Expect → [4, 6]

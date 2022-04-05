@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Sorting, Two Pointer, In-Place, Constant Space Complexity, Linear Time Complexity, Segregate, Parity, Even, Odd, Unordered, LC: #905 (Easy), Companies: Amazon, Facebook, Google, Microsoft
+"use strict"; // TAGS: Array, Sorting, Two Pointer, In-Place, Constant Space Complexity, Linear Time Complexity, Segregate, Parity, Even, Odd, Unordered, LC: #905 (Easy), IK: Sorting, Companies: Amazon, Facebook, Google, Microsoft
 
 /*
 Given an array of integers, rearrange them IN-PLACE so that all of the even numbers appear before odd ones. 

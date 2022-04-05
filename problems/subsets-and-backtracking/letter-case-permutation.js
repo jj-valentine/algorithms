@@ -15,36 +15,38 @@ Return a list of all possible strings we could create. You can return the output
 /*
 SOLUTION #1
 n = # of characters in input string
-+ RUNTIME Complexity: O(2^n) [WST]
-+ SPACE Complexity: O(n) [WST]
++ RUNTIME Complexity: O(n * 2^n) [WST]
++ SPACE Complexity: O(n * 2^n) [WST]
 NOTE: Recursive approach...
 */
 
 const letterCasePermuation = str => {
-  let permutations = [];
-  permute();
+  const permutations = []
+  permuteLetters();
   return permutations;
 
-  function permute(i = 0, subStr = "") {
-    if (i === str.length || subStr === str.length) permutations.push(subStr);
-    else {
-      let c = str.charAt(i); 
-      // if 'c' isn't a letter, OR it IS and we just need to run permute here to add the combo with the current casing
-      permute(i + 1, subStr + c);
-      if (/[a-zA-Z]/.test(c)) {
-        let caseChanged = /[a-z]/.test(c) ? c.toUpperCase() : c.toLowerCase();
-        permute(i + 1, subStr + caseChanged);
-      }
+  function permuteLetters(subStr = "") {
+    const l = subStr.length;
+    if (l === str.length) {
+      permutations.push(subStr);
+      return;
     }
+
+    let char = str.charAt(l);
+    if (/[a-zA-Z]/.test(char)) {
+      const capital = char.toUpperCase();
+      permuteLetters(subStr + (char === capital ? char.toLowerCase() : capital));
+    }
+
+    permuteLetters(subStr + char);
   }
 };
-
 
 /*
 SOLUTION #2
 n = # of characters in input string
 + RUNTIME Complexity: O(n * 2^n) [WST]
-+ SPACE Complexity: O(n) [WST]
++ SPACE Complexity: O(n * 2^n) [WST]
 NOTE: Iterative approach -- Take copies of existing permutations and change the casing of the current element 
 if it's a character (i.e. a-z OR A-Z). Then add new permutations into the "results" array.
 */
@@ -68,6 +70,7 @@ const letterCasePermuationV2 = str => {
   return permutations;
 }
 
+
 // TESTING:
-console.log(letterCasePermuationV2("a1b2")); // Expect: ["a1b2", "a1B2", "A1b2", "A1B2"]
+console.log(letterCasePermuation("a1b2")); // Expect: ["a1b2", "a1B2", "A1b2", "A1B2"]
 console.log(letterCasePermuation("3z4")); // Expect: ["3z4", "3Z4"]
