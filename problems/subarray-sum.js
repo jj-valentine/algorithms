@@ -28,6 +28,6 @@ const subarraySum = (arr, k) => {
 
 // TESTING: 
 console.log(subarraySum([1, -1, 0], 0)); // Expect: 3
-// console.log(subarraySum([1, 1, 2, 2, 3, 3, 4, 5, 6, 6], 6)); // Expect: 4
-// console.log(subarraySum([1, 1, 2, 2, 3, 3, -2, -3, 6], 6)); // Expect: 5
-// console.log(subarraySum([1, 2, 3, 1, 2, -3, 3], 6)); // Expect: 5
+console.log(subarraySum([1, 1, 2, 2, 3, 3, 4, 5, 6, 6], 6)); // Expect: 4
+console.log(subarraySum([1, 1, 2, 2, 3, 3, -2, -3, 6], 6)); // Expect: 5
+console.log(subarraySum([1, 2, 3, 1, 2, -3, 3], 6)); // Expect: 5
