@@ -31,18 +31,21 @@ let MinHeap = {
   extractMin: function() {
 
   },
+
   /* inserts new nod into heap (with proper placement) */
   insert: function(value) {
     this.heap.push(value);
     if (this.heap.length > 1) {
       let curr = this.heap.length - 1;
-      // "heapifyUp"
+      // "heapify" UP
       while (curr > 0 && this.heap[Math.floor(curr / 2)] > this.heap[curr]) {
         [this.heap[Math.floor(curr / 2)], this.heap[curr]] = [this.heap[curr], this.heap[Math.floor(curr / 2)]];
         curr = Math.floor(curr / 2);
       }
     }
-  }
+  },
+
+  /*  */
 };
 
 // TESTING:

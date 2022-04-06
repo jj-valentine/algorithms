@@ -51,13 +51,13 @@ let BinarySearchTree = {
             curr.left = newNode;
             return this;
           }  
-          curr = curr.left; // if left is not null, recur until null is found
+          curr = curr.left; // if 'left' pointer is not 'null', recur until it is
         } else {
           if (curr.right == null) {
             curr.right = newNode;
             return this;
           }
-          curr = curr.right; // if right is not null, recur until null is found
+          curr = curr.right; // if 'right' pointer is not 'null', recur until it is
         }
       } 
     }
