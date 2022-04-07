@@ -13,7 +13,7 @@ NOTE: 'Hash Table' + 'Linear Scan'...
 */
 
 const twoSum = (arr, target) => {
-  let diffs = {};
+  const diffs = {};
   for (let i = 0; i < arr.length; i++) {
     let currDiff = target - arr[i];
     if (diffs[currDiff] !== undefined) return [diffs[currDiff], i];

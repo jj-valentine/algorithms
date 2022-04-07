@@ -1,19 +1,20 @@
 "use strict"; // TAGS:
 
+import { generateList } from "../../utils/helper-methods.js";
+
 /*
-Merge two sorted Linked Lists into one sorted list
+Write a function that takes as input TWO sorted linked lists, and returns a sorted list containing all the elements from both lists.
 */
 
 /*
 SOLUTION #1
-n1 = # of nodes in l1
-n2 = # of nodes in l2
-+ RUNTIME Complexity: O(n1 + n2) [WST]
+n₁ = # of nodes in input list 'l₁'
+n₂ = # of nodes in input list 'l₂'
++ RUNTIME Complexity: O(n₁ + n₂) [WST]
 + SPACE Complexity: O(1) [WST]
 NOTE: 'Iterative' approach -- Create a "sentinel"/initial node that serves as a dummy and allows us to bypass creating
 a number of other reference pointers to both save the head of the sorted list, and iterate throught the two given sorted lists.
-At the end, we must remember to return the 'next' node in the merged and sorted list so that we avoid including our 
-"dummy" node.
+At the end, we must remember to return the 'next' node in the merged and sorted list so that we avoid including our "dummy" node.
 */
 
 function mergeSortedLists(l1, l2) {
@@ -35,11 +36,11 @@ function mergeSortedLists(l1, l2) {
 
 /*
 SOLUTION #2
-n1 = # of nodes in l1
-n2 = # of nodes in l2
-+ RUNTIME Complexity: O(n1 + n2) [WST]
+n₁ = # of nodes in input list 'l₁'
+n₂ = # of nodes in input list 'l₂'
++ RUNTIME Complexity: O(n₁ + n₂) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: 'Iterative' approach #2 -- If we choose to avoid using a first "dummy" node, we can check which list's
+NOTE: 'Iterative' approach (#2) -- If we choose to avoid using a first "dummy" node, we can check which list's
 first node has the lesser value, and assign our 'head' pointer to that while iterating past that node in the given list.
 We then must also create a temporary pointer to iterate through the rest of both of the lists 
 so that at the very end, 'head' will still be pointing to the beginning of the sorted list.
@@ -67,17 +68,18 @@ function mergeSortedListsV2(l1, l2) {
     }
     curr = curr.next;
   }
-  // returns left side if "truthy", else returns right side 
+  // return "left side" if 'truthy'; else return "right side"
   curr.next = l1 || l2; 
   return head;
 }
 
+
 /*
 SOLUTION #3
-n1 = # of nodes in l1
-n2 = # of nodes in l2
-+ RUNTIME Complexity: O(n1 + n2) [WST]
-+ SPACE Complexity: O(n1 + n2) [WST]
+n₁ = # of nodes in input list 'l₁'
+n₂ = # of nodes in input list 'l₂'
++ RUNTIME Complexity: O(n₁ + n₂) [WST]
++ SPACE Complexity: O(n₁ + n₂) [WST]
 NOTE: 'Recursive' approach
 */
 
@@ -93,12 +95,8 @@ const mergeSortedListsV3 = (l1, l2) => {
   }
 }
 
-// TESTING:
-function Node(value, next) {
-  this.value = value;
-  this.next = next || null;
-}
 
-let l1 = new Node(4, new Node(5, new Node(8)));
-let l2 = new Node(3, new Node(6, new Node(7)));
-console.log(JSON.stringify(mergeSortedListsV3(l1, l2)));
+// TESTING:
+const l1 = generateList([4, 5, 8]);
+const l2 = generateList([3, 6, 7]);
+console.log(JSON.stringify(mergeSortedListsV3(l1, l2))); // Expect: [3, 4, 5, 6, 7, 8]

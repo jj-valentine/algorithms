@@ -30,11 +30,10 @@ const findTreeDiameter = root => {
 };
 
 
-
 // TESTING:
 let tree = generateTree([[1], [2, 3], [null, 4, 5, 6]]);
 console.log(findTreeDiameter(tree)); // Expect: 5 (diameter of tree is: [4, 2, 1, 3, 6])
-tree = generateTree([[1], [2, 3], [null, null, 5, 6], [null, null, null, null, 7, 8, null, 9], [null, null, null, null, null, null, null, null, null, null, null, 10, null, null, null, 11]]);
-console.log(findTreeDiameter(tree)); // Expect: 7 (diameter of tree is: [4, 2, 1, 3, 6])
-tree = generateTree([[1], [null, 3], [null, null, 5, 6], [null, null, null, null, 7, 8, null, 9]]);
-console.log(findTreeDiameter(tree)); // Expect: 5 (diameter of tree is: [8, 5, 3, 6, 9])
+// tree = generateTree([[1], [2, 3], [null, null, 5, 6], [null, null, null, null, 7, 8, null, 9], [null, null, null, null, null, null, null, null, null, null, null, 10, null, null, null, 11]]);
+// console.log(findTreeDiameter(tree)); // Expect: 7 (diameter of tree is: [4, 2, 1, 3, 6])
+// tree = generateTree([[1], [null, 3], [null, null, 5, 6], [null, null, null, null, 7, 8, null, 9]]);
+// console.log(findTreeDiameter(tree)); // Expect: 5 (diameter of tree is: [8, 5, 3, 6, 9])

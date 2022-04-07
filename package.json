@@ -7,9 +7,6 @@
   "scripts": {
     "test": "jest"
   },
-  "quokka": {
-    "babel": true
-  },
   "jest": {
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
@@ -20,13 +17,14 @@
     "url": "git+https://github.com/jj-valentine/algorithms.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "valentine",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jj-valentine/algorithms/issues"
   },
   "homepage": "https://github.com/jj-valentine/algorithms#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.15.0",
     "babel-jest": "^27.1.0",
     "jest": "^27.1.0"

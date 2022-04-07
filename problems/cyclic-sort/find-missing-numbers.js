@@ -49,5 +49,5 @@ const findMissingNumbersV2 = arr => {
   return arr.reduce((missing, n, i) => n !== i + 1 ? missing.concat([i + 1]) : missing, []);
 }
 
-// TESTING:
+// TESTING:🙋
 console.log(findMissingNumbersV2([2, 3, 1, 8, 2, 3, 5, 1]));
