@@ -1,4 +1,4 @@
-"use strict"; // TAGS: LinkedList, Fast & Slow Pointers
+"use strict"; // «TAGS» LinkedList, Fast & Slow Pointers
 
 /* 
 We are familar with linked lists being linear and terminating as such:
@@ -23,7 +23,7 @@ Create a function that accepts a linked list and returns true if the linked list
 n = # of nodes/elements in list
 RUNTIME Complexity [WST]: O(n)
 SPACE Complexity [WST]: O(1)
-NOTE: Create two references, which both initially point to the head of the list. Every iteration, pointer 'A' takes 
+⇲ note Create two references, which both initially point to the head of the list. Every iteration, pointer 'A' takes 
 one step, and pointer 'B' two steps down the list. If the given list includes a loop/"cycle", pointer 'A' 
 and pointer 'B' will eventually point to the same node.
 */

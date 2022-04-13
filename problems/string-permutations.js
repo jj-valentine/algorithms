@@ -8,7 +8,7 @@ Write a function that logs all the permutations of a string
 n = # of elements in input array
 + RUNTIME Complexity: O() [WST]
 + SPACE Complexity: O() [WST]
-NOTE:
+⇲ note
 */
   function findStringPermutations(str, prefix = "") {
     let perms = new Set();

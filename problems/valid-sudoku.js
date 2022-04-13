@@ -7,7 +7,7 @@ Determine if a '9'x'9' Sudoku board is valid. Only the filled cells need to be v
   2) Each column must contain the digits: 1-9 (without repetition)
   3) Each of the nine '3'x'3' sub-boxes of the grid must contain the digits: 1-9 (without repetition)
 
-  NOTE: A Sudoku board (partially filled) could be valid but is not necessarily solvable. 
+  ⇲ note A Sudoku board (partially filled) could be valid but is not necessarily solvable. 
     Only the filled cells need to be validated according to the mentioned rules.
  
   EX's:
@@ -42,8 +42,8 @@ Determine if a '9'x'9' Sudoku board is valid. Only the filled cells need to be v
 n = # of rows/columns in input grid (9)
 + RUNTIME Complexity: O(n^2) → O(1) [WST]
 + SPACE Complexity: O(n^2) → O(1) [WST]
-NOTE: Could also use arrays with fixed lengths (instead of hashmaps). Yet another approach involves "bitmasking"
-TODO: Look into BITMASKING
+⇲ note Could also use arrays with fixed lengths (instead of hashmaps). Yet another approach involves "bitmasking"
+☞ TODO: Look into BITMASKING
 */
 
 const validSudoku = board => {

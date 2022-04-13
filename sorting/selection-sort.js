@@ -1,12 +1,12 @@
 #!/usr/local/bin/node 
 
-"use strict"; // TAGS: Sorting, Brute Force, Minimum Swap, Selection
+"use strict"; // «TAGS» Sorting, Brute Force, Minimum Swap, Selection
 
 /*
 n = # of elements in input array
 + RUNTIME Complexity: O(n^2) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: 'Brute Force' approach to sorting...
+⇲ note 'Brute Force' approach to sorting...
 */
 
 const selectionSort = arr => {

@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Two Pointer, Max, Elevation Map, Trap, Rain Water, LeetCode: #42, Difficulty: Hard, Companies: Amazon, Apple, Facebook, Google, Microsoft, Snap
+"use strict"; // «TAGS» Two Pointer, Max, Elevation Map, Trap, Rain Water, LeetCode: #42, Difficulty: Hard, Companies: Amazon, Apple, Facebook, Google, Microsoft, Snap
 
 /*
 Given 'n' non-negative integers representing an elevation map where the width of each bar is '1', compute how much water it can trap after it rains
@@ -14,7 +14,7 @@ SOLUTION #1
 n = # of elements in input array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Most "intuitive" approach
+⇲ note Most "intuitive" approach
 */
 
 const trapRainWater = heights => {
@@ -41,7 +41,7 @@ SOLUTION #2
 n = # of elements in input array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Less expensive (no 'indexOf' OR Math.max(...heights)), but slightly less "intuitive" approach
+⇲ note Less expensive (no 'indexOf' OR Math.max(...heights)), but slightly less "intuitive" approach
 */
 
 const trapRainWaterV2 = heights => {

@@ -9,7 +9,7 @@ n = # of strings in input array
 k = # of characters in each strin (i.e. string length)
 + RUNTIME Complexity: O(n!) [BST/WST]
 + SPACE Complexity: O(n!) [BST/WST]
-NOTE: This is a permutations problem. For the most efficient time complexity, we can use Heap's algorithm.
+⇲ note This is a permutations problem. For the most efficient time complexity, we can use Heap's algorithm.
 */
 
 const groupAnagrams = arr => {

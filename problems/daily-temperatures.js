@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Stack
+"use strict"; // «TAGS» Stack
 
 /*
 Given a list of daily temperatures 'T', return a list that, for each day in the input, tells you how many days you
@@ -10,7 +10,7 @@ add a '0' to the input at the given index instead.
 n = # of elements in input array
 + RUNTIME Complexity: O(2n) → O(n) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: We can use a stack to keep track of the indexes of temperatures that we still haven't found counterparts for 
+⇲ note We can use a stack to keep track of the indexes of temperatures that we still haven't found counterparts for 
 (i.e. temperatures that are higher/"warmer" than )
 */
 

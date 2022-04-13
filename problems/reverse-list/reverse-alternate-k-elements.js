@@ -1,4 +1,4 @@
-"use strict"; // TAGS: LinkedList, Node, Sub-List, Reverse, Alternate, K-Elements, Difficulty: Medium
+"use strict"; // «TAGS» LinkedList, Node, Sub-List, Reverse, Alternate, K-Elements, Difficulty: Medium
 
 import { generateList } from "../../utils/helper-methods.js";
 import { reverseSubList } from "./reverse-sub-list.js";
@@ -16,7 +16,7 @@ SOLUTION #1
 n = # nodes in input list
 + RUNTIME Complexity: O(n + n ^ 2) → O(n ^ 2) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Using the 'reverseSubList' is fun, but inefficient, because the method has to parse up to 'q' elements 
+⇲ note Using the 'reverseSubList' is fun, but inefficient, because the method has to parse up to 'q' elements 
 up to 'k'/'n' times 
 */
 
@@ -45,7 +45,7 @@ SOLUTION #2
 n = # nodes in input list
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Here, we are reversing every 'k' segments without doing the extra work of "SOLUTION #1" 
+⇲ note Here, we are reversing every 'k' segments without doing the extra work of "SOLUTION #1" 
 (i.e. re-iterating through the beginning of the list up to the newest sub-list for every sub-list we regerse). 
 Instead, we only iterate through the list and hit every node once!
 */

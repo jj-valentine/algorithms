@@ -17,7 +17,7 @@ Otherwise a[i] is the height of a person standing in the ith position.
 n = # of elements in input array (including "trees" (i.e. -1))
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: First, filter all the heights of the people (discluding trees) into a new array and sort it. 
+⇲ note First, filter all the heights of the people (discluding trees) into a new array and sort it. 
 Then, loop through the input array and replace every element in a "height slot" (those without trees) with 
 the first element of the sorted array (simultaneously shifting said element off the sorted array). 
 */

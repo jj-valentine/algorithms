@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Backtracking, Recursion, Food, Delivery, Menu, Giftcard, Mock Interview: interviewing.IO (Ian Douglas), Difficulty: Medium
+"use strict"; // «TAGS» Backtracking, Recursion, Food, Delivery, Menu, Giftcard, Mock Interview: interviewing.IO (Ian Douglas), Difficulty: Medium
 
 /*
 Your food delivery startup wants to give out some gift cards to customers. You also want to know what kind of food they could order 
@@ -22,7 +22,7 @@ for each gift card amount so you can prepare food ahead of time.
     menu = { "toast": 2.20, "cheese": 1.25, "coffee": 1.40 }, giftCardAmounts = [5.00] → 
       prepareFoodDelivery(menu, giftCardAmounts) = ['coffee', 'coffee', 'toast'], ['cheese', 'cheese', 'cheese', 'cheese']
   
-  NOTE: This problem is similar to "Coin Change #2" (LC: #518)
+  ⇲ note This problem is similar to "Coin Change #2" (LC: #518)
 */
 
 /*
@@ -32,7 +32,7 @@ gcv = largest value in 'giftCards' array
 l = lowest cost item value in the 'menu' input object
 + RUNTIME Complexity: O(c^(gcv/l)) [WST]
 + SPACE Complexity: O(gcv/l) [WST]
-NOTE: TASK -- Print out FIRST combo found for EACH giftcard
+⇲ note TASK -- Print out FIRST combo found for EACH giftcard
 */
 
 const prepareFoodDelivery = (menu, giftCards) => {
@@ -66,7 +66,7 @@ gcv = largest value in 'giftCards' array
 l = lowest cost item value in the 'menu' input object
 + RUNTIME Complexity: O(c^gcv/l) [WST]
 + SPACE Complexity: O(gcv/l) [WST]
-NOTE: TASK -- Print out SMALLEST possible combo for EACH/EVERY giftcard
+⇲ note TASK -- Print out SMALLEST possible combo for EACH/EVERY giftcard
 */
 
 const prepareFoodDeliveryP2 = (menu, giftCards) => {
@@ -103,7 +103,7 @@ gcv = largest value in 'giftCards' array
 l = lowest cost item value in the 'menu' input object
 + RUNTIME Complexity: O(c^gcv/l) [WST]
 + SPACE Complexity: O(gcv/l) [WST]
-NOTE: TASK -- Print out ALL combos for EACH gift card
+⇲ note TASK -- Print out ALL combos for EACH gift card
 TODO: figure out TIME and SPACE complexity
 */
 

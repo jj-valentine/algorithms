@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Depth First Search (DFS), Tree, Node, Root, Leaf, Recursion, Path, Sum, Difficulty: Easy
+"use strict"; // «TAGS» Depth First Search (DFS), Tree, Node, Root, Leaf, Recursion, Path, Sum, Difficulty: Easy
 
 import { generateTree } from "../../utils/helper-methods.js";
 
@@ -11,7 +11,7 @@ all the node values of that path equals 's'.
 n = # of nodes in tree
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: Worst case for space complexity and call stack is when tree is a LinkedList (i.e. every node has only one child).
+⇲ note Worst case for space complexity and call stack is when tree is a LinkedList (i.e. every node has only one child).
 Otherwise, it would be log(n) because the depth of the longest path would be our upper bound.
 */
 

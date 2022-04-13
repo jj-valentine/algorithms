@@ -12,7 +12,7 @@ It should support the following operations:
   + 'put(key, value)': update or insert the value if the key is not already present. When the cache has reached its capacity, 
     it should invalidate the least recently used item before inserting a new item
 
-NOTE: What happens if you call 'get(key)' on a key which doesn't exist in the cache is up to you to define!
+⇲ note What happens if you call 'get(key)' on a key which doesn't exist in the cache is up to you to define!
 */
 
 /*
@@ -22,7 +22,7 @@ n = current length of cache
   * Access [get(key)]: O(1)
   * Insertion [put(key, value)]: O(n) 
 + SPACE Complexity: O(n)
-NOTE: BRUTE FORCE approach -- Using an array for the cache would force us to loop through it every time we're looking for a key 
+⇲ note BRUTE FORCE approach -- Using an array for the cache would force us to loop through it every time we're looking for a key 
 (and also, shift up to 'n' elements after we "update" a value that we've accessed). So even though it would simplify 
 adding keys because we could just push them to the end (allowing us to nix the Date() system), we sacrifice runtime as a result. 
 If we use an object, however, we can "get" keys and "put" them back after updating their access time -- Date(), both in O(1) time.
@@ -90,7 +90,7 @@ n = current length of cache
   * Access [i.e. 'get(key)']: O(1)
   * Insertion [i.e. 'put(key, value)']: O(1) 
 + SPACE Complexity: O(n)
-NOTE: Using DOUBLY LINKED LIST alongside an object/hashmap for our cache, allows us to reduce both our 'get' and 'put' methods to O(1) time
+⇲ note Using DOUBLY LINKED LIST alongside an object/hashmap for our cache, allows us to reduce both our 'get' and 'put' methods to O(1) time
 */
 
 function LRUCacheV2(capacity) {

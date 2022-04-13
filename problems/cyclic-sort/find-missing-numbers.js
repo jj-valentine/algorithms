@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Cyclic Sort, Missing Number, Difficulty: Easy
+"use strict"; // «TAGS» Cyclic Sort, Missing Number, Difficulty: Easy
 
 /*
 We are given an unsorted array containing numbers taken from the range 1 to ‘n’. 
@@ -13,7 +13,7 @@ SOLUTION #1
 n = # of elements in input array
 + RUNTIME Complexity: O(2n) → O(n) [WST]
 + SPACE Complexity: O(2n) → O(n) [WST]
-NOTE: Use hash map (object) to find numbers that exist in range 1 to 'n'. Then, loop over original array   
+⇲ note Use hash map (object) to find numbers that exist in range 1 to 'n'. Then, loop over original array   
 and make note of all of the indexes ('i' + 1) that don't exist in the object.
 */
 
@@ -31,7 +31,7 @@ SOLUTION #2
 n = # of elements in input array
 + RUNTIME Complexity: O(n + (n - 1) + n) → O(3n) → O(n) [WST]
 + SPACE Complexity: O(1) [WST] -- Output Array
-NOTE: Employ 'Cyclic Sort' pattern/approach -- Loop over elements in array, swapping those numbers whose associated
+⇲ note Employ 'Cyclic Sort' pattern/approach -- Loop over elements in array, swapping those numbers whose associated
 index 'arr[i] - 1' doesn't have the correct element 'arr[i]'. While iterating, those elements whose associated index 
 DOES in fact already have the correct element are considered to be in their appropriate place, or duplicates of an element
 who is in it's correct place. When iterating over this newly "sorted" array, those elements' indexes that don't match their 

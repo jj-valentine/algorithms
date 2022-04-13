@@ -24,7 +24,7 @@ SOLUTION #2:
 n = # of elements in input array
 + RUNTIME Complexity: O(n) [BST/WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: Using a cache/object (HT)
+⇲ note Using a cache/object (HT)
 */
 
 const noDuplicatesV2 = (arr, cache = {}) => {
@@ -36,7 +36,7 @@ SOLUTION #3:
 n = # of elements in input array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(n)  [WST]
-NOTE: Using ES6 "Set" Object (preserves order)
+⇲ note Using ES6 "Set" Object (preserves order)
 */
 
 const noDuplicatesV3 = arr => [...new Set(arr)];

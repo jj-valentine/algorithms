@@ -1,4 +1,4 @@
-"use strict"; // TAGS: LinkedList, Node, Reverse, Sub-List, Difficulty: Medium
+"use strict"; // «TAGS» LinkedList, Node, Reverse, Sub-List, Difficulty: Medium
 
 import { generateList } from "../../utils/helper-methods.js";
 
@@ -14,7 +14,7 @@ If, in the end, you are left with a sub-list with less than ‘k’ elements, re
 n = # nodes in list
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: This is just like 'Reverse Alternate K Elements', but easier because we don't need to worry about incrementing
+⇲ note This is just like 'Reverse Alternate K Elements', but easier because we don't need to worry about incrementing
 to the next sub-list that we're going to reverse (our pointers are already there because we reverse EVERY sub-list of 'k' elements).
 There's an exception to this though... The thing that through me off at first was forgetting to update my 'prev' pointers
 to point at the new end of the sub-list I just reversed. 

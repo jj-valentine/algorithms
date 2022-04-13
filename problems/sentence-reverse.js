@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Characters, Words, Sentence, Reverse, In-Place, Constant Space, Difficuly: Easy/Medium
+"use strict"; // «TAGS» Array, Characters, Words, Sentence, Reverse, In-Place, Constant Space, Difficuly: Easy/Medium
 
 /*
 You are given an array of characters that consists of sequences of characters separated by spaces (i.e. string with a space). 
@@ -17,7 +17,7 @@ in the array in the most efficient manner.
 n = # of elements/characters in input array (i.e. length of input array)
 + RUNTIME Complexity: O(n + 2n) → O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: First, reverse all of the characters/elements (including spaces) in the input array. Then, iterate through array
+⇲ note First, reverse all of the characters/elements (including spaces) in the input array. Then, iterate through array
 and when we find a space, reverse the preceding characters up to the start of the given word (keep track of this index)!
 */
 

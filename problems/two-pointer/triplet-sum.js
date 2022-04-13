@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Two Pointers
+"use strict"; // «TAGS» Two Pointers
 
 /* 
 Given an array of unsorted numbers, find all unique triplets in it that add up to zero.
@@ -13,7 +13,7 @@ Given an array of unsorted numbers, find all unique triplets in it that add up t
 n = # of elements in input array
 + RUNTIME Complexity: O(n*log(n) + n^2) → O(n^2) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: First, we sort our input array, and then loop through that sorted array. For every UNIQUE element that we iterate over, 
+⇲ note First, we sort our input array, and then loop through that sorted array. For every UNIQUE element that we iterate over, 
 we search the rest of the array (all numbers to the RIGHT of the current element) for pairs that sum up to the given element, 
 but with the opposite sign. This is done by initializing two pointers -- one that starts at the index directly to the right 
 of the given element whose pair we're searching for, and one that always starts at the last index of the array. When we find a pair 

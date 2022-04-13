@@ -1,4 +1,4 @@
-"use strict"; // TAGS: LinkedList, Reverse, Recursion
+"use strict"; // «TAGS» LinkedList, Reverse, Recursion
 
 import { generateList } from "../../utils/helper-methods.js";
 
@@ -11,7 +11,7 @@ SOLUTION #1
 n = # of elements in list
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Iterate through list, individually reversing pointer of each node 
+⇲ note Iterate through list, individually reversing pointer of each node 
 */
 
 const reverseLinkedList = list => {
@@ -30,7 +30,7 @@ SOLUTION #2
 n = # of nodes/elements in list
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Recurse through list...
+⇲ note Recurse through list...
 */
 
 

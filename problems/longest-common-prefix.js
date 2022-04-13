@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Prefix, String, Longest, Horizontal/Vertical Scanning, LeetCode: #14, Difficulty: Easy/Medium, Companies: Snap
+"use strict"; // «TAGS» Prefix, String, Longest, Horizontal/Vertical Scanning, LeetCode: #14, Difficulty: Easy/Medium, Companies: Snap
 
 /*
 Write a function to find the longest common prefix string amongst an array of strings.
@@ -17,7 +17,7 @@ n = # of strings in input array
 m = # of characters in longest string
 + RUNTIME Complexity: O(n * m) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: "Horizontal Scanning": First, let's declare a variable that represents the current prefix we're searching for, setting it equal
+⇲ note "Horizontal Scanning": First, let's declare a variable that represents the current prefix we're searching for, setting it equal
 to the first string in our array. Then, iterate through the rest of the strings in the array -- for each string,
 check if the prefix exists in the front of the string (0th index). If it doesn't, cut the last character off 
 the prefix and check the string again. If it does, we can move on to the next string in our array. If during the 

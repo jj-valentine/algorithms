@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Two Pointers
+"use strict"; // «TAGS» Two Pointers
 
 /* 
 Given an array of unsorted numbers and a target number 'k', find a triplet in the array whose sum is as close to 
@@ -20,7 +20,7 @@ return the sum of the triplet with the smallest sum.
 n = # of elements in input array
 + RUNTIME Complexity: O(n*log(n) + n^2) → O(n^2) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: This is much like the "Triplet Sum" question, in part due to both problems benefiting 
+⇲ note This is much like the "Triplet Sum" question, in part due to both problems benefiting 
 from utilization of the of 'Two Pointer' pattern/approach. 
 */
 

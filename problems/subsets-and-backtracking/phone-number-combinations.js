@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, String, Permutation, Combination, Recursive, Backtracking, Digit, Phone Number, LeetCode: #17, Difficulty: Medium, Companies: Amazon, Apple, Facebook, Google, Microsoft
+"use strict"; // «TAGS» Array, String, Permutation, Combination, Recursive, Backtracking, Digit, Phone Number, LeetCode: #17, Difficulty: Medium, Companies: Amazon, Apple, Facebook, Google, Microsoft
 
 /*
 Given a string containing digits from '2' to '9' inclusive, return all possible letter combinations that the number could represent. 

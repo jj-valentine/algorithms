@@ -9,7 +9,7 @@ Given an array of integers, find the highest product you can get from three of t
 SOLUTION #1
 RUNTIME Complexity: O()
 SPACE Complexity: O()
-NOTE:
+⇲ note
 */
 
 function highestProduct(arr, end = arr.length - 1) {
@@ -22,7 +22,7 @@ function highestProduct(arr, end = arr.length - 1) {
 SOLUTION #2
 RUNTIME COMPLEXITY: O()
 SPACE Complexity: O()
-NOTE:
+⇲ note
 */
 
 function highestProductV2(arr) {

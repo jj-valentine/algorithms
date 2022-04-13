@@ -12,7 +12,7 @@ SOLUTION #1:
 n: # of elements/nodes in list
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(n) [BST/WST]
-NOTE: Initialize a cache object (for nodes), and a reference to the head of the given list (so we can avoid mutating our original list). 
+⇲ note Initialize a cache object (for nodes), and a reference to the head of the given list (so we can avoid mutating our original list). 
 Then, iterate through the list, checking to see if the current node is stored in our cache. If the node hasn't been stored yet, 
 add it to cache (with current node's "value" property as the key, and its "next" property as the value). If the node exists in our cache, return the current node.
 */
@@ -33,7 +33,7 @@ SOLUTION #2:
 n: # of nodes in list
 + RUNTIME Complexity [WST]: O(n)
 + SPACE Complexity [WST]: O(1) -- this solution saves on space complexity!
-NOTE: Create two references, both initially pointing to the head of the list. We'll also need a third reference to store the node that we're currently on. 
+⇲ note Create two references, both initially pointing to the head of the list. We'll also need a third reference to store the node that we're currently on. 
 Upon every step in our iteration of the list, reference 'A' should point to the next node, and pointer 'B' to the "next next" node. Assuming the list takes the form of a loop/cycle, 
 reference 'A' and 'B' will eventually point to the same node, which we can assume is the node right AFTER the (current) node -- we can call the current node the node at the "beginning" of the list.
 */

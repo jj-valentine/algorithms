@@ -1,10 +1,10 @@
-"use strict"; // TAGS: Array, Unsorted, Duplicates, Cyclic Sort, Constant Space, LeetCode: #442, Difficulty: Medium, Companies: Amazon, Facebook
+"use strict"; // «TAGS» Array, Unsorted, Duplicates, Cyclic Sort, Constant Space, LeetCode: #442, Difficulty: Medium, Companies: Amazon, Facebook
 
 /*
  Given an integer array of length 'n', where all the integers in the array fall within the range '[1, n]' and each integer appears only once or twice, 
 return an array of all of the integers that appear twice
   
-  NOTE: You must write an algorithm that runs in O(n) time and uses constant extra space
+  ⇲ note You must write an algorithm that runs in O(n) time and uses constant extra space
 
     EX's:
       arr = [4, 3, 2, 7, 8, 2, 3, 1] → findAllDuplicates(arr) = [2, 3]
@@ -19,7 +19,7 @@ SOLUTION #1
 n = # of integers in input array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Employ 'Cyclic Sort' Approach/Pattern...
+⇲ note Employ 'Cyclic Sort' Approach/Pattern...
 */
 
 const findAllDuplicates = arr => {

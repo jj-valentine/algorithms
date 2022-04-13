@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Two Pointers, Squares, Sorted
+"use strict"; // «TAGS» Two Pointers, Squares, Sorted
 
 /* 
 Given a sorted array, create a new array containing squares of all the numbers of the input array in the sorted order.
@@ -54,7 +54,7 @@ SOLUTION #2
 n = # of elements in input array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: Fill output array with placer strings/numbers and initialize a counter index that starts at n - 1, 
+⇲ note Fill output array with placer strings/numbers and initialize a counter index that starts at n - 1, 
 and two index pointers -- one that starts at each end of input array (0, n - 1). While the left pointer (index) is less 
 than or equal to that of the right (or the counter index is greater than 0), check the square of numbers at each pointer index.
 If the left square is bigger than the right square, add square to output array at counter index → decrement

@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Two Pointers
+"use strict"; // «TAGS» Two Pointers
 
 /*
 You are given 'n' non-negative integers a_1, a_2, ..., a_n , where each represents a point at coordinate (i, a_i).

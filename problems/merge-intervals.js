@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Merge, Interval, Overlap, LeetCode: #56, Difficulty: Medium, Companies: Snap
+"use strict"; // «TAGS» Array, Merge, Interval, Overlap, LeetCode: #56, Difficulty: Medium, Companies: Snap
 
 /*
 Given an array of intervals where intervals[i] = [start_i, end_i], merge all overlapping intervals, 

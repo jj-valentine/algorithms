@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Greedy
+"use strict"; // «TAGS» Greedy
 
 /*
 Given a positive integer, return it as a string in Roman Numeral form.

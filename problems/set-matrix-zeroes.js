@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array of Arrays, Grid, Matrix, Rows, Columns, Zeroes, In-Place, Flag, Reference, Constant Space, LeetCode: #73, Difficulty: Medium, Companies: Amazon, Facebook, Microsoft
+"use strict"; // «TAGS» Array of Arrays, Grid, Matrix, Rows, Columns, Zeroes, In-Place, Flag, Reference, Constant Space, LeetCode: #73, Difficulty: Medium, Companies: Amazon, Facebook, Microsoft
 
 /*
 Given an 'm' x 'n' integer matrix/grid, if a given integer's value is zero, set every integer in its row and column to be zeroes, 
@@ -15,7 +15,7 @@ n = # of elements/integers in input grid row
 n = # of elements/integers in input grid column
 + RUNTIME Complexity: O(n * m) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: We can use the cells belonging to both the first row and columns as "flags" that tell use if all the integers in that given row or column need to be set to zero.
+⇲ note We can use the cells belonging to both the first row and columns as "flags" that tell use if all the integers in that given row or column need to be set to zero.
 Furthermore, as we iterate through the grid/matrix for the first time, we can set simultaneously keep track of two references to tell us if in the end, the first row and 
 the first column must be filled with zeroes. In particular, we can change the integer in the very first cell (i.e. 'grid[0][0]') to zero if the integers in the first row 
 need to be set to zero, and similarly, we can use a separate boolean variable to tell us if all of the integers in the first column need to be set to zeroes. 

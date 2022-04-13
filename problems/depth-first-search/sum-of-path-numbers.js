@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Depth First Search (DFS), Tree, Node, Root, Leaf, Recursion, Path, Sum, Difficulty: Medium
+"use strict"; // «TAGS» Depth First Search (DFS), Tree, Node, Root, Leaf, Recursion, Path, Sum, Difficulty: Medium
 
 import { generateTree } from "../../utils/helper-methods.js";
 
@@ -10,7 +10,7 @@ Find the total sum of all the numbers represented by all paths.*/
 n = # of nodes in tree
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: Space complexity is O(n), since in the worst case, the tree is a LinkedList and we'll therefore end
+⇲ note Space complexity is O(n), since in the worst case, the tree is a LinkedList and we'll therefore end
 up with O(n) calls on the call stack at once at some point during the algorithms lifecycle
 */
 

@@ -8,7 +8,7 @@ Do your best to implement the native Array function, "reduce"
 n = # of elements in array being "reduced"
 + RUNTIME Complexity: O(n) [BST] -- seems like this would depend on the "reducer" function (and it's accumulator)
 + SPACE Complexity: O(1) [BST] -- seems like this would depend on the "reducer" function (and it's accumulator)
-NOTE: The 'reduce' method executes a "reducer" function (provided by the user) on each element of the array that it's called on, resulting in a single output value. On each iteration, of the
+⇲ note The 'reduce' method executes a "reducer" function (provided by the user) on each element of the array that it's called on, resulting in a single output value. On each iteration, of the
 input array, the user's "reducer" function's returned value will be assigned to the accumulator (it's value is "remembered" across each iteration and ultimately becomes the final single
 resulting value). 
 

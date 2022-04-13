@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, String, Permutation, Combination, Recursive, Backtracking, Palindrome, LeetCode: #131, Difficulty: Medium, Companies: Amazon, Facebook, Uber
+"use strict"; // «TAGS» Array, String, Permutation, Combination, Recursive, Backtracking, Palindrome, LeetCode: #131, Difficulty: Medium, Companies: Amazon, Facebook, Uber
 
 /*
 Given a string, partition said string such that every substring of the partition is a palindrome. 

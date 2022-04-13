@@ -1,6 +1,7 @@
 "use strict";
 
-// TODO: Add "removeNode" function
+// ☞ TODO: Add "removeNode" function
+
 
 /*
 + RUNTIME Complexity 
@@ -9,7 +10,7 @@
   * Insertion -- O(nlog(n)) [AVG] / O(n) [WST]
   * Deletion -- O(nlog(n)) [AVG] / O(n) [WST]
 + SPACE Complexity: O(n) [WST] 
-NOTE: A 'Binary Search Tree' is an ordered tree data structure. Every parent nodes has at most two children, 
+ NOTE:  Binary Search Tree' is an ordered tree data structure. Every parent nodes has at most two children, 
 every node to the left of a parent node is always less than the parent, and every node to the right of the parent node 
 is always greater than the parent. (using PROTOTYPAL Inheritance here...)
 */

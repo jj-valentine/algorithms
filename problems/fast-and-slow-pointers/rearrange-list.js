@@ -1,4 +1,4 @@
-"use strict"; // TAGS: LinkedList, Reverse, Rearrange, Merge, Fast & Slow Pointers
+"use strict"; // «TAGS» LinkedList, Reverse, Rearrange, Merge, Fast & Slow Pointers
 
 /*
 Given the head of a single LinkedList, write a method to modify the LinkedList such that the nodes from the 
@@ -16,7 +16,7 @@ Your algorithm should not use any extra space and the input LinkedList should be
 n = # of elements/nodes in input list
 + RUNTIME Complexity: O(3n/2) → O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: First, locate the middle node, and then using said reference, reverse the second half of the list. 
+⇲ note First, locate the middle node, and then using said reference, reverse the second half of the list. 
 Lastly, rearrange the references to the nodes of the first and second list so that they "intertwine".
 */
 
@@ -34,7 +34,7 @@ const rearrangeLinkedList = list => {
     secondHalfReversed = temp;
   }
 
-  // NOTE: remove circular reference:
+  // ⇲ note remove circular reference:
   // if input list has an even number of nodes, the head of the list keeps a reference to the last node of the 
   // second half that's been reversed!
   if (head !== null) head.next = null;

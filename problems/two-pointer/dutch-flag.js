@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Sorting, Two Pointer, In-Place, One Pass, Constant Space, Linear Time, Segregate/Group, Colors, LC: #75 (Medium), IK: Sorting, Companies: Amazon, Apple, Facebook, Microsoft, Salesforce
+"use strict"; // «TAGS» Array, Sorting, Two Pointer, In-Place, One Pass, Constant Space, Linear Time, Segregate/Group, Colors, LC: #75 (Medium), IK: Sorting, Companies: Amazon, Apple, Facebook, Microsoft, Salesforce
 
 /*
 Given a number of balls arranged in a line (each one being one of three possible colors), 
@@ -7,7 +7,7 @@ rearrange them (IN-PLACE) so that they're grouped together by color in the follo
   EX:
     balls = ["G", "B", "G", "G", "R", "B", "R", "G"] → dutchFlag(balls) = ["R", "R", "G", "G", "G", "G", "B", "B"]
 
-NOTE: Implement an approach that only does ONE pass over the array, and doesn't use any extra space. A solution that simply "counts" colors 
+⇲ note Implement an approach that only does ONE pass over the array, and doesn't use any extra space. A solution that simply "counts" colors 
 and overwrites the input array containing the colors of the balls is not allowed...
 */
 
@@ -15,7 +15,7 @@ and overwrites the input array containing the colors of the balls is not allowed
 n = # of elements in input array
 + RUNTIME Complexity: O() [WST]
 + SPACE Complexity: O() [WST]
-NOTE: Use "Two Pointers" approach...
+⇲ note Use "Two Pointers" approach...
 */
 
 const dutchFlag = arr => {

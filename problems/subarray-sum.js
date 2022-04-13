@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Subarray, Contiguous, Prefix Sum, Difference, Target, Cache (i.e. Hash Table), Frequency, LC: #560 (Medium), Companies: Amazon, Apple, Facebook, Google, Microsoft, Salesforce, Snap, Spotify, Tesla, Uber
+"use strict"; // «TAGS» Array, Subarray, Contiguous, Prefix Sum, Difference, Target, Cache (i.e. Hash Table), Frequency, LC: #560 (Medium), Companies: Amazon, Apple, Facebook, Google, Microsoft, Salesforce, Snap, Spotify, Tesla, Uber
 
 /* 
 Given an array of integers and a target integer value 'k', find the total number of continuous subarrays whose elements sum to equal 'k'.
@@ -8,7 +8,7 @@ Given an array of integers and a target integer value 'k', find the total number
 n = # of elements in input array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: As we iterate through the array, we can maintain a reference to an updated "prefix sum" (i.e. sum of all elements preceding and including the current element),
+⇲ note As we iterate through the array, we can maintain a reference to an updated "prefix sum" (i.e. sum of all elements preceding and including the current element),
 while we simultaneously build out a "seen before" cache (i.e. 'Hash Table') which stores the current sums as keys, and the number of times we've used that sum to "trace" a new
 subarray whose elements add up to 'k' as their values. 
 */

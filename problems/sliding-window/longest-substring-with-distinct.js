@@ -1,4 +1,4 @@
-"use strict"; // TAGS: String, Substring, Longest, 'K' Distinct Characters, Hash Map, Cache, Frequency, Sliding Window, Difficulty: Medium/Hard
+"use strict"; // «TAGS» String, Substring, Longest, 'K' Distinct Characters, Hash Map, Cache, Frequency, Sliding Window, Difficulty: Medium/Hard
 
 /* 
 Given a string, find the length of the longest substring in it with no more than 'k' distinct characters
@@ -19,7 +19,7 @@ SOLUTION #1
 n = # of characters in input string
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(k + 1) → O(k) [WST]
-NOTE: Use variable to keep track of # of distinct characters (instead of having to run/call 'Object.keys()' every time 
+⇲ note Use variable to keep track of # of distinct characters (instead of having to run/call 'Object.keys()' every time 
 we need to check the length of our cache of the frequencies of distinct characters)...
 */
 
@@ -53,7 +53,7 @@ SOLUTION #2
 n = # of characters in input string
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(k + 1) → O(k) [WST]
-NOTE: Parse through input string, incrementing each letter's frequency in our 'freq' object/cache, and adding those
+⇲ note Parse through input string, incrementing each letter's frequency in our 'freq' object/cache, and adding those
 letters that have not appeared before. Upon each iteration, compare our window's length with the longest we've recorded so far
 and updated our 'longest' variable accordingly. When we find that the number of distinct letters we have in our frequency cache
 is larger than 'k', we know we have to shrink our window. We do so by decrementing the frequency of the letter

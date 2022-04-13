@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Sorting (Or NOT), Index, Sum, Difference, Hash Table, Cache, Linear Scan/Runtime Complexity, LC: #1 (Easy), IK: Sorting, Companies: Amazon, Apple, Facebook, Google, Microsoft, Salesforce, Spotify, Uber
+"use strict"; // «TAGS»  Array, Sorting (Or NOT), Index, Sum, Difference, Hash Table, Cache, Linear Scan/Runtime Complexity,  LC  #1 (Easy),  IK  Sorting, Companies: Amazon, Apple, Facebook, Google, Microsoft, Salesforce, Spotify, Uber
 
 /*
 Given an array of numbers and a target value, return an array of the indices (in any order) of the two values from the array that sum up to the given target number.
@@ -9,7 +9,7 @@ If more than one solution exists, return either solution. No single index can be
 n = # of elements in array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: 'Hash Table' + 'Linear Scan'...
+⇲ note 'Hash Table' + 'Linear Scan'...
 */
 
 const twoSum = (arr, target) => {

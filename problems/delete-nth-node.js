@@ -1,4 +1,4 @@
-"use strict"; // TAGS: LinkedList, Node, Two Pointers, Delete, Nth, Difficulty: Medium
+"use strict"; // «TAGS» LinkedList, Node, Two Pointers, Delete, Nth, Difficulty: Medium
 
 import { generateList } from "../utils/helper-methods.js";
 
@@ -10,7 +10,7 @@ Given the head of a linked list, remove the 'n'th node from the end of the list 
 n = # of nodes in input list
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Use two pointers, one 'n' steps ahead of the first. When the leading pointer reaches the end of the list, 
+⇲ note Use two pointers, one 'n' steps ahead of the first. When the leading pointer reaches the end of the list, 
 we know that the following pointer will be pointing to the node preceding the one that must be deleted 
 (unless 'n' is equal to the size of the list, in which case we return all of the list EXCEPT FOR the first node).
 */

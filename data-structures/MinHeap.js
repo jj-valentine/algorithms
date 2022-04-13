@@ -1,6 +1,6 @@
 "use strict"; 
 
-// TODO: add 'remove' method
+// ☞ TODO: add 'remove' method
 
 /*
 + RUNTIME Complexity 

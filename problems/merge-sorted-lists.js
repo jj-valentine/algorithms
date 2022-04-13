@@ -12,7 +12,7 @@ n₁ = # of nodes in input list 'l₁'
 n₂ = # of nodes in input list 'l₂'
 + RUNTIME Complexity: O(n₁ + n₂) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: 'Iterative' approach -- Create a "sentinel"/initial node that serves as a dummy and allows us to bypass creating
+⇲ note 'Iterative' approach -- Create a "sentinel"/initial node that serves as a dummy and allows us to bypass creating
 a number of other reference pointers to both save the head of the sorted list, and iterate throught the two given sorted lists.
 At the end, we must remember to return the 'next' node in the merged and sorted list so that we avoid including our "dummy" node.
 */
@@ -40,7 +40,7 @@ n₁ = # of nodes in input list 'l₁'
 n₂ = # of nodes in input list 'l₂'
 + RUNTIME Complexity: O(n₁ + n₂) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: 'Iterative' approach (#2) -- If we choose to avoid using a first "dummy" node, we can check which list's
+⇲ note 'Iterative' approach (#2) -- If we choose to avoid using a first "dummy" node, we can check which list's
 first node has the lesser value, and assign our 'head' pointer to that while iterating past that node in the given list.
 We then must also create a temporary pointer to iterate through the rest of both of the lists 
 so that at the very end, 'head' will still be pointing to the beginning of the sorted list.
@@ -80,7 +80,7 @@ n₁ = # of nodes in input list 'l₁'
 n₂ = # of nodes in input list 'l₂'
 + RUNTIME Complexity: O(n₁ + n₂) [WST]
 + SPACE Complexity: O(n₁ + n₂) [WST]
-NOTE: 'Recursive' approach
+⇲ note 'Recursive' approach
 */
 
 const mergeSortedListsV3 = (l1, l2) => {

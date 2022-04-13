@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Sorting, Merge, Swap, Constant Space Complexity, LC: #88 (Easy), IK: Sorting, Companies: Amazon, Apple, Facebook, Google, LinkedIn, Microsoft, Uber
+"use strict"; // «TAGS» Array, Sorting, Merge, Swap, Constant Space Complexity, LC: #88 (Easy), IK: Sorting, Companies: Amazon, Apple, Facebook, Google, LinkedIn, Microsoft, Uber
 
 /*
 Given two input arrays, merge the first array into the second and return the latter. The first input array has 'n' positive numbers, 

@@ -1,15 +1,14 @@
-"use strict"; // TAGS:
+"use strict"; // «TAGS» 
 
 /*
 Implement an 'UndoStack' data structure... 
-TODO: EXPLAIN WHAT THAT IS HERE
+☞ TODO: EXPLAIN WHAT THAT IS HERE
 */
 
 /*
 n = # of elements in input array
 + RUNTIME Complexity: O() [WST]
 + SPACE Complexity: O() [WST]
-NOTE:
 */
 
 function UndoStack(cap) {

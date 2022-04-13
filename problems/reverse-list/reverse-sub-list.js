@@ -1,4 +1,4 @@
-"use strict"; // TAGS: LinkedList, Node, Reverse, Sub-List, Difficulty: Medium
+"use strict"; // «TAGS» LinkedList, Node, Reverse, Sub-List, Difficulty: Medium
 
 import { generateList } from "../../utils/helper-methods.js";
 

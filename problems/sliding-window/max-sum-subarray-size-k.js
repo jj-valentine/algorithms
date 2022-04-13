@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Subarray, Contiguous, Size 'k', Maximum, Sum, Sliding Window, Difficulty: Easy
+"use strict"; // «TAGS» Array, Subarray, Contiguous, Size 'k', Maximum, Sum, Sliding Window, Difficulty: Easy
 
 /* 
 Given an array of positive numbers and a positive number ‘k,’ find the maximum sum of any contiguous subarray of size ‘k’
@@ -15,7 +15,7 @@ Given an array of positive numbers and a positive number ‘k,’ find the maxim
 n = # of elements in input array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Employing the "Sliding Window" pattern allows us to bypass the brute force approach of iterating through 
+⇲ note Employing the "Sliding Window" pattern allows us to bypass the brute force approach of iterating through 
 each subarray of 'k' elements, which would typically give us a time complexity of O(n * k).
 */
 

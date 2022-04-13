@@ -14,7 +14,7 @@ SOLUTION #1
 n = # of elements in array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: 
+⇲ note 
 */
 
 const maxSumSubarray = arr => {
@@ -38,7 +38,7 @@ SOLUTION #2
 n = # of elements in array
 + RUNTIME Complexity: O(n^2) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: 
+⇲ note 
 */
 
 // const maxSumSubarray = arr => {

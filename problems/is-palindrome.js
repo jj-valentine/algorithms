@@ -12,7 +12,7 @@ Given a string, determine if it is a palindrome, considering only alphanumeric c
 n = # of characters in string
 + RUNTIME Complexity: O(n/2) → O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Somehow, this is a faster solution than checking for an empty string in the beginning of the function (?)
+⇲ note Somehow, this is a faster solution than checking for an empty string in the beginning of the function (?)
 */
 
 const isPalindrome = str => {

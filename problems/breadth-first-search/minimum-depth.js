@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Binary Tree, Node, Array, Subarray, Queue, Traverse, Minimum, Depth, Breadth First Search (BFS), Difficulty: Easy
+"use strict"; // «TAGS» Binary Tree, Node, Array, Subarray, Queue, Traverse, Minimum, Depth, Breadth First Search (BFS), Difficulty: Easy
 
 import { generateTree } from "../../utils/helper-methods.js";
 
@@ -10,7 +10,7 @@ Find the minimum depth of a binary tree. The minimum depth is the number of node
 n = # of nodes in tree
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(n/2) → O(n) [WST]
-NOTE: Use 'Breadth First Search' (BFS) model 
+⇲ note Use 'Breadth First Search' (BFS) model 
 */
 
 const minimumDepth = root => {

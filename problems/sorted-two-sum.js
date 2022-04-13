@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Sorted, Index, Sum, Difference, Hash Table, Cache, Linear Scan/Runtime Complexity, Constant Space Complexity LC: #167 (Medium), IK: Sorting, Companies: Amazon, Apple, Google, Microsoft 
+"use strict"; // «TAGS» Array, Sorted, Index, Sum, Difference, Hash Table, Cache, Linear Scan/Runtime Complexity, Constant Space Complexity LC: #167 (Medium), IK: Sorting, Companies: Amazon, Apple, Google, Microsoft 
 
 /*
 Given a '1-indexed' array of integers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. 
@@ -6,7 +6,7 @@ Let these two numbers be 'n₁' @ index 'i₁' and 'n₂' @ index 'i₂', where 
 
 Return the indices of the two numbers (added by one) in the following format (i.e. for 'n₁' @ index 'i₁' and 'n₂' @ index 'i₂'): '[i₁, i₂]'
 
-NOTE: Contraints
+⇲ note Contraints
   i) The tests are generated such that there is exactly ONE solution
   ii) You may not use the same element twice
   iii) our solution must use only constant extra space.
@@ -16,7 +16,7 @@ NOTE: Contraints
 n = # of elements in array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Employ 'Two Pointer' approach...
+⇲ note Employ 'Two Pointer' approach...
 */
 
 const sortedTwoSum = (arr, target) => {

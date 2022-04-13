@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Binary Search Tree (BST), "Height-Balanced", Node, Recursion, Divide-And-Conquer, LeetCode: #108, Difficulty: Easy, Companies: Amazon, Apple, Facebook
+"use strict"; // «TAGS» Array, Binary Search Tree (BST), "Height-Balanced", Node, Recursion, Divide-And-Conquer, LC  #108 (Easy), Companies: Amazon, Apple, Facebook
 
 import { treeNode } from "../utils/helper-methods.js";
 

@@ -8,7 +8,7 @@ Find the median between two sorted arrays
 n = # of elements in input array
 + RUNTIME Complexity: O() [WST]
 + SPACE Complexity: O() [WST]
-NOTE: We can implement a binary search-type a approach here. First, find the median of each array and compare them. 
+⇲ note We can implement a binary search-type a approach here. First, find the median of each array and compare them. 
 Then, take the top half of the array with the smaller median and the bottom half of the array with the larger median
 and then run 'findMedian' again with the "new" arrays. When an array gets down to one element, we must decide if we need
 to keep considering it.

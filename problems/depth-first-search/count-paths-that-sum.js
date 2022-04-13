@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Tree, Node, Root, Leaf, Depth First Search (DFS), Backtracking, Recursion, Path, Sum, Difficulty: Medium
+"use strict"; // «TAGS» Tree, Node, Root, Leaf, Depth First Search (DFS), Backtracking, Recursion, Path, Sum, Difficulty: Medium
 
 import { generateTree } from "../../utils/helper-methods.js";
 
@@ -12,7 +12,7 @@ paths must follow the direction from parent to child (top to bottom).
 n = # of nodes in tree
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(2n) → O(n) [WST]
-NOTE: As we traverse a given path, keep track of the current sum of all nodes in the path, and create a cache 
+⇲ note As we traverse a given path, keep track of the current sum of all nodes in the path, and create a cache 
 of prefix sums which we will check every time we hit a new node. If the current sum equals the target sum, 
 or if the absolute difference between the current sum and the target sum exists in the our cache, 
 we know we've found a path that adds up to our target sum. Even if we assumed that the values of nodes must 

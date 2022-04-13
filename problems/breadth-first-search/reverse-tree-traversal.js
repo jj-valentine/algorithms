@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Binary Tree, Node, Array, Subarray, Queue, Levels, Reverse, Breadth First Search (BFS), Difficulty: Easy
+"use strict"; // «TAGS» Binary Tree, Node, Array, Subarray, Queue, Levels, Reverse, Breadth First Search (BFS), Difficulty: Easy
 
 import { generateTree } from "../../utils/helper-methods.js";
 
@@ -11,7 +11,7 @@ You should populate the values of all nodes in each level from left to right in 
 n = # of nodes in tree
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(n/2 + 1) → O(n) [WST]
-NOTE: Employing the 'Breadth First Search' (BFS) pattern/model, we can emulate our approach to the 
+⇲ note Employing the 'Breadth First Search' (BFS) pattern/model, we can emulate our approach to the 
 'Traverse Tree' problem, but instead of adding the array for each current level at the end of our results
 array, we can append it to the beginning
 */

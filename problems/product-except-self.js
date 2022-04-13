@@ -13,7 +13,7 @@ SOLUTION #1
 n = # of elements in input array
 + RUNTIME Complexity: O(2n) → O(n) [WST]
 + SPACE Complexity: O(n) [BST/WST]
-NOTE: Loop through and find the product of all the elements in the array. Then, loop through again and divide
+⇲ note Loop through and find the product of all the elements in the array. Then, loop through again and divide
 the product by the given element (arr[i]) of the input array, adding the result to the output array (output).
 */
 
@@ -33,7 +33,7 @@ SOLUTION #2 -- WITHOUT Using Division
 n = # of elements in input array
 + RUNTIME Complexity: O(3n) → O(n) [WST]
 + SPACE Complexity: O(3n) → O(n) [BST/WST]
-NOTE: Each element of the output array is just the product of all the elements to the right of the element at the given index 
+⇲ note Each element of the output array is just the product of all the elements to the right of the element at the given index 
 (in the input array), and all the elements to its left
 */
 

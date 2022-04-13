@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Permutation, Combination, Recursive, Backtracking, LeetCode: #46, Difficulty: Medium, Companies: Amazon, Apple, Facebook
+"use strict"; // «TAGS» Array, Permutation, Combination, Recursive, Backtracking, LeetCode: #46, Difficulty: Medium, Companies: Amazon, Apple, Facebook
 
 /*
 Given two integers 'n' and 'k', return all possible combinations of 'k' numbers out of the range: [1, 'n'].

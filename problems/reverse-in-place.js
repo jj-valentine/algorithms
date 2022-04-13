@@ -9,7 +9,7 @@ Write a function to reverse an array in place, where "in place" means "without c
 
   Since strings are immutable in JS, we will be reversing an array of characters instead.
 
-NOTE: DO NOT USE THE BUILT IN REVERSE METHOD!
+⇲ note DO NOT USE THE BUILT IN REVERSE METHOD!
 */
 
 /*

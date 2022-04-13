@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Cyclic Sort, Missing Number, Difficult: Hard
+"use strict"; // «TAGS» Cyclic Sort, Missing Number, Difficult: Hard
 
 /*
 Given an unsorted array containing numbers and a number ‘k’, find the first ‘k’ missing positive numbers in the array.
@@ -14,7 +14,7 @@ Given an unsorted array containing numbers and a number ‘k’, find the first 
 n = # of elements in input array
 + RUNTIME Complexity: O(n + (n + k)) → O(2n + k) → O(n + k) [WST]
 + SPACE Complexity: O(n) [WST] -- Output Array
-NOTE:
+⇲ note
 */
 
 const findFirstKMissingNumbers = (arr, k) => {

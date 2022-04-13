@@ -28,7 +28,7 @@ function rowWeights(arr) {
 SOLUTION #1:
 RUNTIME Complexity: O()
 SPACE Complexity: O()
-NOTE:
+⇲ note
 */
 
 const rowWeights = array => {
@@ -39,7 +39,7 @@ const rowWeights = array => {
 SOLUTION #2:
 RUNTIME Complexity: O()
 SPACE Complexity: O()
-NOTE:
+⇲ note
 */
 
 const rowWeights2 = array => array.reduce((a, b, i) => (a[i % 2] += b, a), [0, 0]);

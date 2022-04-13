@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Unsorted, Duplicate, Binary Search, Constant Space, Two Pointers, Fast & Slow, Tortoise & Hare, Cyclic Sort, LeetCode: #287, Difficulty: Medium, Companies: Amazon, Facebook, Google, Microsoft, Uber
+"use strict"; // «TAGS» Array, Unsorted, Duplicate, Binary Search, Constant Space, Two Pointers, Fast & Slow, Tortoise & Hare, Cyclic Sort, LeetCode: #287, Difficulty: Medium, Companies: Amazon, Facebook, Google, Microsoft, Uber
 
 /*
 
@@ -14,7 +14,7 @@ SOLUTION #1 (Binary Search)
 n = # of integers in input array
 + RUNTIME Complexity: O(n*log(n)) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Our approach should include running a binary search on every integer from '1' to 'n - 1' (NOT the integers in the input array). 
+⇲ note Our approach should include running a binary search on every integer from '1' to 'n - 1' (NOT the integers in the input array). 
 For every integer/"guess" we hit in said binary search, we can iterate through the input array and count how many integers are less than or equal to our "guess".
 If at any point, we find that said count is larger than our "guess", we know that either the current "guess" OR an integer that's less than our "guess"
 must be the duplicate integer we're looking for. Furthermore, in the aforementioned case, we'll save the POTENTIAL duplicate integer, and instruct our binary search
@@ -45,7 +45,7 @@ SOLUTION #2 (Tortoise & Hare)
 n = # of integers in input array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Employ 'Tortoise & Hare' pattern/approach...
+⇲ note Employ 'Tortoise & Hare' pattern/approach...
 */
 
 const findDuplicateNumberV2 = arr => {
@@ -59,7 +59,7 @@ SOLUTION #3 (Modifies Input Array)
 n = # of integers in input array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Employ 'Cyclic Sort' pattern/approach...
+⇲ note Employ 'Cyclic Sort' pattern/approach...
 */
 
 const findDuplicateNumberV3 = arr => {

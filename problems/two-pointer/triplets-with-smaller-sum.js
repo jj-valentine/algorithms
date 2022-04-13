@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Two Pointers
+"use strict"; // «TAGS» Two Pointers
 
 /*
 Given an array arr of unsorted numbers and a target sum, count all triplets in it such that 
@@ -18,7 +18,7 @@ Write a function to return the count of such triplets.
 n = # of elements in input array
 + RUNTIME Complexity: O(nlog(n) * n^2) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE:
+⇲ note
 */
 
 const tripletsWithSmallerSum = (arr, target) => {

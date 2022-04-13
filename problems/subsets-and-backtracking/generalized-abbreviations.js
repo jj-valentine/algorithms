@@ -1,4 +1,4 @@
-"use strict"; // TAGS: String, Number, Subsets, Permutations, Combinations, Recursive, Backtracking, Code, LeetCode: #320, Difficulty: Medium, Companies: Google
+"use strict"; // «TAGS» String, Number, Subsets, Permutations, Combinations, Recursive, Backtracking, Code, LeetCode: #320, Difficulty: Medium, Companies: Google
 
 /*
 Given a word, write a function to generate all of its unique generalized abbreviations.
@@ -20,7 +20,7 @@ we should consider them together as one substring to get an abbreviation “2”
 n = # of characters in input string
 + RUNTIME Complexity: O(n * 2^(n + 1)) →  [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: In order to calculate our TIME complexity, we must first consider that we're generating '2 * 2^n' abbreviated strings 
+⇲ note In order to calculate our TIME complexity, we must first consider that we're generating '2 * 2^n' abbreviated strings 
 which act as "nodes" in our recursion tree -- that being said, only the leaves of the tree end up being the complete abbreviations 
 that we're looking for (we're generating '2^n' of such leaves). Furthermore, for every abbreviated string/node we're generating, 
 we're calling the "substring" method on said string, which in the worst case will take O(n) time. Therefore, our TIME complexity should be: O(n * 2^n).

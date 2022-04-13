@@ -14,7 +14,7 @@ SOLUTION #1
 n = # of elements in array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Brute Force -- # of operations is not optimized here
+⇲ note Brute Force -- # of operations is not optimized here
 */
 
 const moveZeroes = arr => {
@@ -44,7 +44,7 @@ SOLUTION #2
 n = # of elements in array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: # of operations are minimized -- not moving EVERY zero, but instead ...
+⇲ note # of operations are minimized -- not moving EVERY zero, but instead ...
 */
 
 const moveZeroesV2 = arr => {

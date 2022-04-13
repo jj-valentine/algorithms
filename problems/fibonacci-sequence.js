@@ -8,7 +8,7 @@ INSERT PROBLEM DESCRIPTION
 n = # of elements in input array
 + RUNTIME Complexity: O() [WST]
 + SPACE Complexity: O() [WST]
-NOTE:
+⇲ note
 */
 
 const functionName = () => {

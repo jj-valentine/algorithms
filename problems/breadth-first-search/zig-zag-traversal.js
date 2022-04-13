@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Binary Tree, Node, Array, Subarray, Queue, Traverse, Reverse, Zig Zag, Alternate, Levels, Breadth First Search (BFS), Difficulty: Easy/Medium
+"use strict"; // «TAGS» Binary Tree, Node, Array, Subarray, Queue, Traverse, Reverse, Zig Zag, Alternate, Levels, Breadth First Search (BFS), Difficulty: Easy/Medium
 
 import { generateTree } from "../../utils/helper-methods.js";
 
@@ -12,7 +12,7 @@ keep alternating in the same manner for the following levels.
 n = # of nodes in tree
 + RUNTIME Complexity: O(n + n/2 + 1) → O(n) [WST]
 + SPACE Complexity: O(n/2 + n/2 + 2) → O(n) [WST]
-NOTE: Use 'Breadth First Search' pattern -- Fastest way is to reverse each level's subarray before adding it to the 
+⇲ note Use 'Breadth First Search' pattern -- Fastest way is to reverse each level's subarray before adding it to the 
 result array.
 */
 

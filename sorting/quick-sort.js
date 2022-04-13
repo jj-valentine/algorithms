@@ -5,7 +5,7 @@ SOLUTION #1
 n = # of elements in input array
 + RUNTIME Complexity: O(n*log(n)) [BST/AVG] / O(n^2) [WST]
 + SPACE Complexity: O(log(n)) [BST] / O(n) [WST]
-NOTE: Speed with which "Quick Sort" is executed depends on the pivot element that we choose
+ NOTE:  Speed with which "Quick Sort" is executed depends on the pivot element that we choose
 */
 
 const quickSort = arr => {
@@ -23,12 +23,12 @@ const quickSort = arr => {
 };
 
 /*
-TODO: get this version's code running...
+☞ TODO: get this version's code running...
 SOLUTION #2
 n = # of elements in input array
 + RUNTIME Complexity: O(n^2) [WST] + O(n*log(n)) [BST/AVG] (i.e. "Non-Deterministic" Pivot)
 + SPACE Complexity: 
-NOTE: "Randomized"/"Non-Deterministic" version of 'Quicksort' (i.e. utilizing randomly generated pivot points + "Lomuto's" partitioning)
+⇲ note "Randomized"/"Non-Deterministic" version of 'Quicksort' (i.e. utilizing randomly generated pivot points + "Lomuto's" partitioning)
 */
 
 const quickSortV2 = arr => {

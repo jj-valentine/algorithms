@@ -22,7 +22,7 @@ SOLUTION #1
 n = # of elements in input
 + RUNTIME Complexity: O() [WST]
 + SPACE Complexity: O() [WST]
-NOTE:
+⇲ note
 */
 
 // str = "abcadact"

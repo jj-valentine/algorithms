@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Stock Prices, Profit, Max, LeetCode: #121, Difficulty: Easy, Companies: Snap
+"use strict"; // «TAGS» Stock Prices, Profit, Max, LeetCode: #121, Difficulty: Easy, Companies: Snap
 
 /*
 You are given an array prices where prices[i] is the price of a given stock on the 'i'th day.
@@ -19,7 +19,7 @@ If you cannot achieve any profit, return 0.
 n = # of elements in input array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Only need to track the current minimum as you iterate through the array, since the difference between
+⇲ note Only need to track the current minimum as you iterate through the array, since the difference between
 that price and the current one is the only one that matters (i.e. the profit you must compare to the previous largest profit)
 */
 

@@ -12,7 +12,7 @@ SOLUTION: Filter
 RUNTIME Complexity: O()
 SPACE Complexity: O()
 
-NOTE:
+⇲ note
 */
 
 function filter(collection, callback) {
@@ -47,7 +47,7 @@ SOLUTION: Reject
 RUNTIME Complexity: O()
 SPACE Complexity: O()
 
-NOTE:
+⇲ note
 */
 
 function reject (collection, callback) {

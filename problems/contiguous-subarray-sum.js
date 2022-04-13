@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Subarray, Sum, Contiguous, Hash, Prefix, Difficulty: Medium
+"use strict"; // «TAGS» Subarray, Sum, Contiguous, Hash, Prefix, Difficulty: Medium
 
 /*
 Given an array of numbers, return 'true' if there is a subarray that sums up to a certain number 'k'
@@ -8,7 +8,7 @@ Given an array of numbers, return 'true' if there is a subarray that sums up to 
 n = # of elements in input array
 + RUNTIME Complexity: O(2n) → O(n) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: To avoid brute-forcing a solution (with time complexity O(n^2)) by iterating over each and every contiguous 
+⇲ note To avoid brute-forcing a solution (with time complexity O(n^2)) by iterating over each and every contiguous 
 subarray starting with that starts with a given element in the array, we can create a hash map of prefix sums and 
 then iterate over said hash map and check if the sum 'k' exists OR if the difference between a given prefix sum 
 and 'k' exists (this indicates that a contiguous subarray exists somewhere AFTER a sum ≥ 'k' exists in the array).

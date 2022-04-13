@@ -86,7 +86,7 @@ Intuitively, BFS makes more sense for this problem since water flows in the same
 
 Algorithm
 
-DFS is very similar to BFS. Instead of using a queue and working iteratively, we'll use recursion. Our dfs method will be called for every reachable cell. Note: we could also work iteratively with DFS, in which case we would simply use a stack instead of a queue like in the Approach 1 code, with mostly everything else being identical to the BFS approach.
+DFS is very similar to BFS. Instead of using a queue and working iteratively, we'll use recursion. Our dfs method will be called for every reachable cell. ⇲ note we could also work iteratively with DFS, in which case we would simply use a stack instead of a queue like in the Approach 1 code, with mostly everything else being identical to the BFS approach.
 
 Implementation
 

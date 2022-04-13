@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Subset, Permutation, Combination, Tree, Depth First Search (DFS), Recursive, Backtracking, Difficulty: Medium, Companies: Amazon, Apple, Facebook, Google, Microsoft
+"use strict"; // «TAGS» Array, Subset, Permutation, Combination, Tree, Depth First Search (DFS), Recursive, Backtracking, Difficulty: Medium, Companies: Amazon, Apple, Facebook, Google, Microsoft
 
 /*
 Part #1:
@@ -58,7 +58,7 @@ const findSubsetsV2 = arr => {
   }
   return subsets;
 
-  // Q: this feels like a redundant and inefficient way of doing this because we're generating the same subsets multiple times (right?)
+  //  Q:  this feels like a redundant and inefficient way of doing this because we're generating the same subsets multiple times (right?)
   function backtrackToFindSubsets(first = 0, combo = []) {
     // consecutively add subsets of same length as the index in original array we're iterating over
     if (first === len) {
@@ -80,7 +80,7 @@ SOLUTION #3 (Part #1)
 n = # of integers in input array
 + RUNTIME Complexity: O(n * 2^n) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: In this iterative approach, the space complexity is a function of the size of the largest subset. Since the largest a subset can 
+⇲ note In this iterative approach, the space complexity is a function of the size of the largest subset. Since the largest a subset can 
 be is 'n', the worst case space complexity would be: O(n)
 */
 
@@ -129,7 +129,7 @@ SOLUTION #1 (Part #2)
 n = # of integers in input array
 + RUNTIME Complexity: O(nlog(n) + n * 2^n) → O(n * (log(n) + 2^n)) → O(n * 2^n) [WST] (i.e. since 2^n >> log(n))
 + SPACE Complexity: O(n + log(n)) → O(n) [WST] / O(log(n)) [BST]
-NOTE: In this iterative approach, to skip duplicate subsets, as we iterate through the array we can check to see if there are adjacent
+⇲ note In this iterative approach, to skip duplicate subsets, as we iterate through the array we can check to see if there are adjacent
 integers that equal each other. For this to work, we must first SORT our array. Once we verify that an element is a duplicate of the 
 integer that comes after it, we can save ourself from creating redundant subsets by only adding that duplicate integer to those subsets
 that were JUST created by the current integer (it's original doppleganger). In other words, those subsets would represent ones created 

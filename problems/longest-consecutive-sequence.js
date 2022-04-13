@@ -15,7 +15,7 @@ Write an algorithm that runs in 'O(n)' time.
 n = # of integers in input array
 + RUNTIME Complexity: O() [WST]
 + SPACE Complexity: O() [WST]
-NOTE:
+⇲ note
 */
 /* 
 create a set/cache/hash of all the integers in array

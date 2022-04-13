@@ -1,4 +1,4 @@
-"use strict"; // TAGS: String, Recursion, Backtracking (Not Really Though), Permutation, Lowercase, Uppercase, LeetCode: #784, Difficulty: Medium, Companies: Amazon, Apple, Facebook, Microsoft, Spotify
+"use strict"; // «TAGS» String, Recursion, Backtracking (Not Really Though), Permutation, Lowercase, Uppercase, LeetCode: #784, Difficulty: Medium, Companies: Amazon, Apple, Facebook, Microsoft, Spotify
 
 /*
 Given a string, we can transform every letter individually to be lowercase or uppercase to create another string.
@@ -17,7 +17,7 @@ SOLUTION #1
 n = # of characters in input string
 + RUNTIME Complexity: O(n * 2^n) [WST]
 + SPACE Complexity: O(n * 2^n) [WST]
-NOTE: Recursive approach...
+⇲ note Recursive approach...
 */
 
 const letterCasePermuation = str => {
@@ -47,7 +47,7 @@ SOLUTION #2
 n = # of characters in input string
 + RUNTIME Complexity: O(n * 2^n) [WST]
 + SPACE Complexity: O(n * 2^n) [WST]
-NOTE: Iterative approach -- Take copies of existing permutations and change the casing of the current element 
+⇲ note Iterative approach -- Take copies of existing permutations and change the casing of the current element 
 if it's a character (i.e. a-z OR A-Z). Then add new permutations into the "results" array.
 */
 

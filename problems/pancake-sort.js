@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Sort, Flip, Pancake, Greedy, Leetcode: #969, Difficulty: Medium, Companies: Google
+"use strict"; // «TAGS» Array, Sort, Flip, Pancake, Greedy, Leetcode: #969, Difficulty: Medium, Companies: Google
 
 /*
 Given an array of integers 'arr', write a function 'flip(arr, k)' that reverses the order of the first 'k' elements in the array.
@@ -9,7 +9,7 @@ Alternative Algorithm (Add Commented Out Lines):
   Return an array of the 'k'-values corresponding to a sequence of pancake flips that sort 'arr'. 
   Any valid answer that sorts the array within '10' * 'arr.length' flips will be judged as correct
 
-  NOTE: It’s called "pancake sort" because it resembles sorting pancakes on a plate with a spatula!
+  ⇲ note It’s called "pancake sort" because it resembles sorting pancakes on a plate with a spatula!
 
   EX's:
     arr = [3, 2, 4, 1] → pancakeSort(arr) = [1, 2, 3, 4]
@@ -27,7 +27,7 @@ Alternative Algorithm (Add Commented Out Lines):
 n = # of integers in input array
 + RUNTIME Complexity: O(n^2) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Like most sorting algorithms, we should be able to boil our solution down to a single operation that can then be repeated to sort our entire array. 
+⇲ note Like most sorting algorithms, we should be able to boil our solution down to a single operation that can then be repeated to sort our entire array. 
 In this case, we can start by locating the maximum integer (between indices '0' and 'arr.length - 1', then placing that integer in the last slot of the array.
 This operation will require two "flips": When we located the maximum integer (at index 'k'), we can "flip" the first 'k' elements, thereby placing the maximum
 integer at the front of the array. Next, we can "flip" the entire array in order to place the maximum integer in the last slot in the array. These steps can be

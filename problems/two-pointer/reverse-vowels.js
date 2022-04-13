@@ -1,4 +1,4 @@
-"use strict"; // TAGS: String, Characters, Array, Set, Cache, Vowels, Two Pointers, Reverse, Swap, Linear TIME & SPACE Complexity, Difficulty: Easy, Companies: Google
+"use strict"; // «TAGS» String, Characters, Array, Set, Cache, Vowels, Two Pointers, Reverse, Swap, Linear TIME & SPACE Complexity, Difficulty: Easy, Companies: Google
 
 /*
 Given an input string, "reverse"/"swap" all the vowels (i.e. 'a', 'e', 'i', 'o', and 'u') in the string 

@@ -15,7 +15,7 @@ Find the minimal length of the jump enough to avoid all the obstacles.
 n: length of input string
 + RUNTIME Complexity: [BST/WST]
 + SPACE Complexity: [BST/WST]
-NOTE: Find the smallest possible number that does not divide evenly into any of the numbers (or their sum)
+⇲ note Find the smallest possible number that does not divide evenly into any of the numbers (or their sum)
 */
 
 function avoidObstacles(arr) {

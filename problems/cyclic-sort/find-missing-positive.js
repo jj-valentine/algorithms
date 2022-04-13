@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Unsorted, Smallest, Missing, Positive Integer, Linear Time, Constant Space, LeetCode: #41, Difficulty: Hard, Companies: Amazon, Apple, Facebook, Google, Microsoft, Snap
+"use strict"; // «TAGS» Array, Unsorted, Smallest, Missing, Positive Integer, Linear Time, Constant Space, LeetCode: #41, Difficulty: Hard, Companies: Amazon, Apple, Facebook, Google, Microsoft, Snap
 
 /*
 Given an unsorted integer array nums, return the smallest missing positive integer.
@@ -16,7 +16,7 @@ You must implement an algorithm that runs in O(n) time and uses constant extra s
 n = # of integers in input array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Employ "Cyclic Sort" approach/pattern...
+⇲ note Employ "Cyclic Sort" approach/pattern...
 */
 
 const findMissingPositive = arr => {

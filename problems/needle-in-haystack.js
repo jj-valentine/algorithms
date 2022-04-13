@@ -3,7 +3,7 @@
 /*
 Return the index of the first occurrence of the string 'needle' in the string 'haystack', or -1 if needle is not part of haystack.
 
-NOTE: What should we return when needle is an empty string? This is a great question to ask during an interview.
+⇲ note What should we return when needle is an empty string? This is a great question to ask during an interview.
 For the purpose of this problem, we will return 0 when the needle is an empty string. 
 This method is consistent to C's strstr() and Java's indexOf().
 
@@ -20,7 +20,7 @@ h = # of elements in input string (haystack)
 n = # of elements in input string (needle)
 + RUNTIME Complexity: O((h - n) * n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE:
+⇲ note
 */
 
 const isNeedleInHaystack = (haystack, needle) => {

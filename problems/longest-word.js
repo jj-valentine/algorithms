@@ -10,7 +10,7 @@ Given a list of words, write a program to find the longest word made of other wo
 n = # of words in list/array
 RUNTIME Complexity: O(n^2) [WST]
 SPACE Complexity: O(1) [WST]
-NOTE:
+⇲ note
 */
 
 const longestWord = arr => {

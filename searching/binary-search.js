@@ -10,7 +10,7 @@ SOLUTION #1
 n = # of elements in input array
 + RUNTIME Complexity: O(log(n)) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Iterative approach...
+⇲ note Iterative approach...
 */
 
 const binarySearch = (arr, k) => {
@@ -34,7 +34,7 @@ SOLUTION #2
 n = # of elements in input array
 + RUNTIME Complexity: O(log(n)) [WST]
 + SPACE Complexity: O(log(n)) [WST]
-NOTE: Recursive approach...
+⇲ note Recursive approach...
 */
 
 const binarySearchV2 = (arr, k, low = 0, high = arr.length - 1) => {

@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Sorting, Two Pointer, In-Place, Constant Space Complexity, Linear Time Complexity, Segregate, Parity, Even, Odd, Unordered, LC: #905 (Easy), IK: Sorting, Companies: Amazon, Facebook, Google, Microsoft
+"use strict"; // «TAGS» Array, Sorting, Two Pointer, In-Place, Constant Space Complexity, Linear Time Complexity, Segregate, Parity, Even, Odd, Unordered, LC: #905 (Easy), IK: Sorting, Companies: Amazon, Facebook, Google, Microsoft
 
 /*
 Given an array of integers, rearrange them IN-PLACE so that all of the even numbers appear before odd ones. 
@@ -16,7 +16,7 @@ SOLUTION #1
 n = # of elements in input array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Implement a "Two Pointer" approach...
+⇲ note Implement a "Two Pointer" approach...
 */
 
 const sortByParity = arr => {
@@ -42,7 +42,7 @@ SOLUTION #2
 n = # of elements in input array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Implement a MORE ELEGANT "Two-Pointer" solution/approach...
+⇲ note Implement a MORE ELEGANT "Two-Pointer" solution/approach...
 */
 
 const sortByParityV2 = arr => {

@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Depth First Search (DFS), Tree, Node, Root, Leaf, Recursion, Path, Sum, Difficulty: Medium
+"use strict"; // «TAGS» Depth First Search (DFS), Tree, Node, Root, Leaf, Recursion, Path, Sum, Difficulty: Medium
 
 import { generateTree } from "../../utils/helper-methods.js";
 
@@ -11,7 +11,7 @@ values of each path equals ‘s’.
 n = # of nodes in tree
 + RUNTIME Complexity: O(n^2) [WST]
 + SPACE Complexity: O(n*log(n)) [WST]
-NOTE: The height of a balanced tree is log(n) and in the worst case scenario, every single path of a fully balanced 
+⇲ note The height of a balanced tree is log(n) and in the worst case scenario, every single path of a fully balanced 
 tree adds up to our given sum. Since we know that the maximum number of leaves in a balanced tree is n/2 + 1, in this case
 our output array would hold n/2 + 1 paths (since there can only be as many unique paths as there are leaf nodes) 
 and each path would be log(n) nodes. Consequently, our space complexity would be that of the number of calls on our 

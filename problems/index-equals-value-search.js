@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Sorted, Distinct Integers, Lowest Index, Binary Search (Modified), Optimized, Difficulty: Easy
+"use strict"; // «TAGS» Array, Sorted, Distinct Integers, Lowest Index, Binary Search (Modified), Optimized, Difficulty: Easy
 
 /*
 Given a SORTED array of distinct integers, write a function that returns the lowest index 'i' for which 'arr[i] === i'. 

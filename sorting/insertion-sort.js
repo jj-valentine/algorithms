@@ -4,7 +4,7 @@
 n = # of elements in input array
 + RUNTIME Complexity: O(n) (if array is sorted) [BST] + O(n^2) [AVG/WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: 'Brute Force' sorting approach... 
+⇲ note 'Brute Force' sorting approach... 
 */
 
 const insertionSort = arr => {

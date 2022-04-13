@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Binary Tree, Node, Array, Subarray, Queue, Right-View, Levels, Breadth First Search (BFS), Depth, Difficulty: Easy
+"use strict"; // «TAGS» Binary Tree, Node, Array, Subarray, Queue, Right-View, Levels, Breadth First Search (BFS), Depth, Difficulty: Easy
 
 import { generateTree } from "../../utils/helper-methods.js";
 

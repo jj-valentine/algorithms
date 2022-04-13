@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Degree, Contiguous, Subarray, Smallest, Length, Frequency, Hash, Difficulty: Easy, Companies: Snap
+"use strict"; // «TAGS» Array, Degree, Contiguous, Subarray, Smallest, Length, Frequency, Hash, Difficulty: Easy, Companies: Snap
 
 /*
 Given a non-empty array of non-negative integers nums, the degree of this array is defined as the 
@@ -20,7 +20,7 @@ of a (contiguous) subarray of nums, that has the same degree as nums.
 n = # of elements in input array
 + RUNTIME Complexity: O(2n) → O(n)  [WST]
 + SPACE Complexity: O(3n) → O(n) [WST]
-NOTE:
+⇲ note
 */
 
 const degreeOfArray = nums => {

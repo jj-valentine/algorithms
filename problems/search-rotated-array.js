@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Sorted, Binary Search, Target, Pivot, LeetCode: #33, Difficulty: Medium, Companies: Amazon, Apple, Facebook, LinkedIn, Microsoft, Uber
+"use strict"; // «TAGS» Array, Sorted, Binary Search, Target, Pivot, LeetCode: #33, Difficulty: Medium, Companies: Amazon, Apple, Facebook, LinkedIn, Microsoft, Uber
 
 /*
 Given an integer array 'nums' that's sorted in ascending order (with distinct values), and that's also possibly rotated at an unknown pivot index 'k': 
@@ -20,7 +20,7 @@ Your algorithm must run in O(log(n)) time.
 n = # of elements in input array
 + RUNTIME Complexity: O(2*log(n)) → O(log(n)) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Our approach is straightforward: Use a (slightly modified) binary search algorithm to search for the "pivot" index in the array 
+⇲ note Our approach is straightforward: Use a (slightly modified) binary search algorithm to search for the "pivot" index in the array 
 (i.e. the index at which the array has been "rotated" or "shifted"). Then, depending on the value of our target integer relative to the 
 first integer in the array, we decide which side of the "pivot" index to look for said integer and perform a binary search on those 
 integers that lie on the appropriate side of the "pivot".

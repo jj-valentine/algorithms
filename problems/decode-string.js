@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Decode, String, Stack, Recursion, LeetCode: #394, Difficulty: Medium/Hard, Companies: Amazon, Apple, Facebook, Google, Microsoft, Snap, Uber
+"use strict"; // «TAGS» Decode, String, Stack, Recursion, LC  #394 (Medium/Hard), Companies: Amazon, Apple, Facebook, Google, Microsoft, Snap, Uber
 
 /*
 Given an encoded string, return its decoded string. The encoding rule is: 'k[encoded_string]', where the encoded_string inside 
@@ -20,7 +20,7 @@ SOLUTION #1
 n = # of characters in input string (coded message/string)
 + RUNTIME Complexity: O() [WST]
 + SPACE Complexity: O() [WST]
-NOTE: Using a Stack...
+⇲ note Using a Stack...
 */
 
 const decodeString = str => {
@@ -48,13 +48,13 @@ const decodeString = str => {
 }
 
 // TESTING:
-// console.log(decodeString("3[a]2[bc]")); // Expect: "aaabcbc"
-// console.log(decodeString("3[a2[c2[b]]]")); // Expect: "acbbcbbacbbcbbacbbcbb" 
-// console.log(decodeString("2[abc]3[cd]ef")); // Expect: "abcabccdcdcdef"
-// console.log(decodeString("3[z]abc")); // Expect: "zzzabc"
-// console.log(decodeString("a3[bc]d")); // Expect: "abccdcdcdxyz"
-// console.log(decodeString("c10[ab]")); // Expect: "abccdcdcdxyz"
-// console.log(decodeString("3[z]2[2[y]pq4[2[jk]e1[f]]]ef") === "zzzyypqjkjkefjkjkefjkjkefjkjkefyypqjkjkefjkjkefjkjkefjkjkefef"); // Expect: true 
+console.log(decodeString("3[a]2[bc]")); // Expect: "aaabcbc"
+console.log(decodeString("3[a2[c2[b]]]")); // Expect: "acbbcbbacbbcbbacbbcbb" 
+console.log(decodeString("2[abc]3[cd]ef")); // Expect: "abcabccdcdcdef"
+console.log(decodeString("3[z]abc")); // Expect: "zzzabc"
+console.log(decodeString("a3[bc]d")); // Expect: "abccdcdcdxyz"
+console.log(decodeString("c10[ab]")); // Expect: "abccdcdcdxyz"
+console.log(decodeString("3[z]2[2[y]pq4[2[jk]e1[f]]]ef") === "zzzyypqjkjkefjkjkefjkjkefjkjkefyypqjkjkefjkjkefjkjkefjkjkefef"); // Expect: true 
 
 
 /*
@@ -62,7 +62,7 @@ SOLUTION #2
 n = # of characters in input string (coded message/string)
 + RUNTIME Complexity: O() [WST]
 + SPACE Complexity: O() [WST]
-NOTE: Recursive Approach -- ...
+⇲ note Recursive Approach -- ...
 */
 
 const decodeStringV2 = str => {

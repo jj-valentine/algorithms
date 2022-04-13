@@ -1,5 +1,5 @@
 
-"use strict"; // TAGS: LinkedList
+"use strict"; // «TAGS» LinkedList
 
 import { generateList } from "../utils/helper-methods.js";
 
@@ -23,7 +23,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 n = # of nodes/elements in the longest list [i.e. Math.max(l1.length, l2.length)]
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE:
+⇲ note
 */
 
 const addTwoNumbers = (l1, l2) => {

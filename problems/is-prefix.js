@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Prefix, String, Sentence, Search Word, Companies: Snap, Difficulty: Easy
+"use strict"; // «TAGS» Prefix, String, Sentence, Search Word, Companies: Snap, Difficulty: Easy
 
 /*
 Given a sentence ('sentence'), that consists of some words separated by a single space, and a "search word", check if 'searchWord' 

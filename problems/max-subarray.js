@@ -13,7 +13,7 @@ A subarray is a section of consecutive elements from the original array. The who
 n = # of elements in input array
 + RUNTIME Complexity: O(n ^ 2)
 + SPACE Complexity: O(1)
-NOTE: Brute force method -- could be a better way...
+⇲ note Brute force method -- could be a better way...
 */
 
 const maxSubarray = arr => {

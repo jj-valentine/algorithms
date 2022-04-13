@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Subarray, Graph, Lamp/Light, Position, Range, Brightest, Overlap, Prefix Sum, Difficulty: Medium, LeetCode: #2021, Companies: Amazon
+"use strict"; // «TAGS» Array, Subarray, Graph, Lamp/Light, Position, Range, Brightest, Overlap, Prefix Sum, Difficulty: Medium, LeetCode: #2021, Companies: Amazon
 
 /*
 A perfectly straight street is represented by a number line. The street has street lamp(s) on it and is represented by a 2D-integer array: 'lights'. 
@@ -26,7 +26,7 @@ Out of all these positions, -1 is the smallest, so return it.
 n = # of elements/"street lamps" (i.e. subarrays) in the 2D input array
 + RUNTIME Complexity: O() [WST]
 + SPACE Complexity: O() [WST]
-NOTE:
+⇲ note
 */
 
 const brightestPositionOnStreet = lights => {

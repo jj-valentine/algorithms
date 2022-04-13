@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Queue, Hash Map, Graph, Vertices, Edges, Directed, DFS (Depth First Search), Difficulty: Medium
+"use strict"; // «TAGS» Array, Queue, Hash Map, Graph, Vertices, Edges, Directed, DFS (Depth First Search), Difficulty: Medium
 
 /*
 A "topological sort" of a directed graph (i.e. graph with unidirectional edges) is a linear ordering of its vertices such that for every directed edge '(U, V)'
@@ -6,10 +6,10 @@ A "topological sort" of a directed graph (i.e. graph with unidirectional edges) 
 
   EX's:
     vertices = 4, edges = [[3, 2], [3, 0], [2, 0], [2, 1]] → topologicalSort(vertices, edges) = [3, 2, 0, 1]
-      NOTE: The following is also a valid topological sort: [3, 2, 1, 0]
+      ⇲ note The following is also a valid topological sort: [3, 2, 1, 0]
     
     vertices = 5, edges = [[4, 2], [4, 3], [2, 0], [2, 1], [3, 1]] → topologicalSort(vertices, edges) = [4, 2, 3, 0, 1] 
-      NOTE: The following are also valid topological sorts: [4, 3, 2, 0, 1] / [4, 3, 2, 1, 0] / [4, 2, 3, 1, 0] / [4, 2, 0, 3, 1]
+      ⇲ note The following are also valid topological sorts: [4, 3, 2, 0, 1] / [4, 3, 2, 1, 0] / [4, 2, 3, 1, 0] / [4, 2, 0, 3, 1]
 */
 
 /*

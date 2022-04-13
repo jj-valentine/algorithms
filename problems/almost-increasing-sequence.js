@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Inreasing, Sequence, Remove
+"use strict"; // «TAGS» Array, Inreasing, Sequence, Remove
 
 /* 
 Given a sequence of integers as an array, determine whether it is possible to obtain a strictly increasing sequence by removing 
@@ -9,7 +9,7 @@ no more than one element from the array
 n = # of characters in input array/sequence
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [BST/WST]
-NOTE: Loop through array, and when we find an element that's less than or equal to the previous element,
+⇲ note Loop through array, and when we find an element that's less than or equal to the previous element,
 count the offense, but also check to see if removing the given element OR removing the previous element "fixes"
 our sequence -- if NEITHER theoretical removal creates a fix, we know we would have to remove more than one 
 element to make our sequence "stricty increasing."

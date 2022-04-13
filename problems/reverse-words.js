@@ -9,7 +9,7 @@
 n: # of characters in input array (length)
 RUNTIME Complexity:
 SPACE Complexity:
-NOTE:
+⇲ note
 */
 
 

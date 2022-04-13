@@ -16,7 +16,7 @@ BONUS: 1) Complete in O(n) time
  N = max elements in cache at one time (n/2 + 1)
  + RUNTIME Complexity: O(n)
  + SPACE Complexity: O(N) → O(n)
- NOTE: Iterate over elements, checking if they've already been added to
+ ⇲ note Iterate over elements, checking if they've already been added to
  a given cache (object). If the key already exists, delete the existing key value pair. Otherwise, add element as a key to the cache (w/ arbitrary value).
 */
 
@@ -31,7 +31,7 @@ n = length of array
 N = max elements in cache at one time (n/2 + 1)
 + RUNTIME Complexity: O(n + n * log(n)) → O(n)
 + SPACE Complexity: O(1)
-NOTE: First, sort elements of array in ascending order. Then, iterate over every two elements in the array, checking to see if the given element matches the element following it - if it doesn't, we know we've found our 'unique' number.
+⇲ note First, sort elements of array in ascending order. Then, iterate over every two elements in the array, checking to see if the given element matches the element following it - if it doesn't, we know we've found our 'unique' number.
 */
 
 const uniqueNumber2 = arr => {

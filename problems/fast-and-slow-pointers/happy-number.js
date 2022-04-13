@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Fast & Slow Pointers
+"use strict"; // «TAGS» Fast & Slow Pointers
 
 /*
 Any number will be called a happy number if, after repeatedly replacing it with a number equal to the sum of the 
@@ -15,7 +15,7 @@ SOLUTION #1
 n = input number
 + RUNTIME Complexity: O() [WST]
 + SPACE Complexity: O() [WST]
-NOTE:
+⇲ note
 */
 
 const happyNumber = (n, allSums = {}) => {
@@ -35,7 +35,7 @@ SOLUTION #2
 n = input number
 + RUNTIME Complexity: O(log(n)) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE:
+⇲ note
 */
 
 const happyNumberV2 = n => {

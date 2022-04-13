@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Permutation, Combination, Recursive, Backtracking, LeetCode: #46, Difficulty: Medium, Companies: Amazon, Apple, Facebook, Google, LinkedIn, Microsoft
+"use strict"; // «TAGS» Array, Permutation, Combination, Recursive, Backtracking, LeetCode: #46, Difficulty: Medium, Companies: Amazon, Apple, Facebook, Google, LinkedIn, Microsoft
 
 /*
 Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
@@ -44,7 +44,7 @@ SOLUTION #2
 n = # of elements in input array
 + RUNTIME Complexity: O(n * n!) → O(n!) [WST]
 + SPACE Complexity: O(n) [WST]
-NOTE: When calculating the time complexity of this algorithm, consider that we are generating 'n!' permutations,
+⇲ note When calculating the time complexity of this algorithm, consider that we are generating 'n!' permutations,
 however, it will take 'n' recursive calls to reach each permutation: O(n * n!) → O(n!). For that same reason, our space complexity 
 (excluding the output array) would be O(n).
 */

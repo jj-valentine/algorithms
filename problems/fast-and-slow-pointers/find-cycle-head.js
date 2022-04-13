@@ -1,4 +1,4 @@
-"use strict"; // TAGS: LinkedList, Cycle, Two Pointers, Fast & Slow Pointers
+"use strict"; // «TAGS» LinkedList, Cycle, Two Pointers, Fast & Slow Pointers
 
 /*
 Given the head of a single LinkedList that contains a cycle, write a function to find the starting node of the cycle.
@@ -8,7 +8,7 @@ Given the head of a single LinkedList that contains a cycle, write a function to
 n = # of nodes in input list
 + RUNTIME Complexity: O(3n) → O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-NOTE: Find the length of the cycle in the list, then create two pointers, the second of which is spaced ahead by 
+⇲ note Find the length of the cycle in the list, then create two pointers, the second of which is spaced ahead by 
 the same number of nodes as there are in the cycle. When the nodes first meet, they will both be pointing to the head node of the cycle.
 */
 

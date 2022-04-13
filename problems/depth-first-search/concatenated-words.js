@@ -1,4 +1,4 @@
-"use strict"; // TAGS: Array, Strings, Words, Concatenated, Prefix, Suffix, Recursion, Memoization, DFS, Dynamic Programming, Trie (?), LeetCode: #472, Difficulty: Hard, Companies: Amazon, Microsoft
+"use strict"; // «TAGS» Array, Strings, Words, Concatenated, Prefix, Suffix, Recursion, Memoization, DFS, Dynamic Programming, Trie (?), LeetCode: #472, Difficulty: Hard, Companies: Amazon, Microsoft
 
 
 /*
@@ -17,7 +17,7 @@ A concatenated word is defined as a string that is comprised entirely of at leas
 n = # of strings in input array
 + RUNTIME Complexity: O(n * k^2) [WST]
 + SPACE Complexity: O(max(n, k)) [WST]
-NOTE: 
+⇲ note 
 */
 
 const findAllConcatenatedWords = words => {
