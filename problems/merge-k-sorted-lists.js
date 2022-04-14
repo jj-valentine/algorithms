@@ -1,9 +1,9 @@
-"use strict"; // «TAGS» heapay, Sorted, Linked List, Node, 'K' (Variable), Compare, Merge Sort ("Divide & Conquer"), Recursion, Heap (i.e. Priority Queue),  LC  #23 (Hard),  IK  Sorting, Companies: Amazon, Apple, Facebook, Google, LinkedIn, Microsoft, Salesforce, Spotify, Uber
+"use strict"; // «TAGS» Array, Sorted, Linked List, Node, 'K' (Variable), Compare, Merge Sort ("Divide & Conquer"), Recursion, Heap (i.e. Priority Queue),  LC  #23 (Hard),  IK  Sorting, Companies: Amazon, Apple, Facebook, Google, LinkedIn, Microsoft, Salesforce, Spotify, Uber
 
 import { listNode, generateList } from "../utils/helper-methods.js";
 
 /*
-Given an input heapay of 'k' sorted (ascending order) linked lists, merge all the lists into one sorted linked list containing every element from all 'k' lists.
+Given an input array of 'k' sorted (ascending order) linked lists, merge all the lists into one sorted linked list containing every element from all 'k' lists.
 
   EX's:
     lists = [1 → 4 → 5, 1 → 3 → 4, 2 → 6] → mergeKSortedLists(lists) = 1 → 1 → 2 → 3 → 4 → 4 → 5 → 6 → null
@@ -15,15 +15,15 @@ Given an input heapay of 'k' sorted (ascending order) linked lists, merge all th
 
 /*
 SOLUTION #1
-k = # of lists in input heapay
+k = # of lists in input array
 nᵢ = # of nodes in input list 'lᵢ' (nₐ ≣ "average" size/length of the 'k' input lists)
 N = TOTAL number of nodes (from all 'k' input lists, aggregated) → N = nₐ·k
 + RUNTIME Complexity: O(nₐ·(k·(k + 1))/2) → O(nₐ·k²) → O(N·k)[WST]
 + SPACE Complexity: O(N·k) [WST]
 NOTE: Employing a 'Recursive' (i.e. 'Brute Force') approach, we can effectively "merge" two sorted lists at a time. Then, "rinse + repeat" but for every subsequent 
 "merging" of two sorted lists, one of them will always be the larger resultant "merged" list from the previous "merging". In other words, the first time we call 
-'mergeTwoLists', we'll pass it two sorted "un-merged" lists from the 'lists' heapay as arguments. Furthermore, all subsequent (i.e. recursive/"internal") calls 
-to said function will take as their first argument yet another "un-merged" sorted list from the 'lists' heapay (given that 'lists' remains non-empty),
+'mergeTwoLists', we'll pass it two sorted "un-merged" lists from the 'lists' array as arguments. Furthermore, all subsequent (i.e. recursive/"internal") calls 
+to said function will take as their first argument yet another "un-merged" sorted list from the 'lists' array (given that 'lists' remains non-empty),
 while we will instead pass as the second argument the larger "merged" list resulting from the previous "merging" of lists (i.e. recursive call to 'mergeTwoLists').
 NOTE: We could easily have done this iteratively and saved on SPACE complexity through avoiding adding ~'k' calls on the callstack...
 */
@@ -57,7 +57,7 @@ const mergeKSortedLists = lists => {
 
 /*
 SOLUTION #2
-k = # of lists in input heapay
+k = # of lists in input array
 nᵢ = # of nodes in input list 'lᵢ' (nₐ ≣ "average" size/length of the 'k' input lists)
 N = TOTAL number of nodes (from all 'k' input lists, aggregated) → N = nₐ·k
 + RUNTIME Complexity: O(N·log(k))[WST]
@@ -99,7 +99,7 @@ const mergeKSortedListsV2 = lists => {
 
 /*
 SOLUTION #3
-k = # of lists in input heapay
+k = # of lists in input array
 nᵢ = # of nodes in input list 'lᵢ' (nₐ ≣ "average" size/length of the 'k' input lists)
 N = TOTAL number of nodes (from all 'k' input lists, aggregated) → N = nₐ·k
 + RUNTIME Complexity: O(N·log(k))[WST]
