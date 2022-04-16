@@ -11,13 +11,13 @@ sorted in non-descending order, but the last 'n' numbers are all zeroes.
 
 /*
 n = # of elements in input FIRST input array (i.e. 'a1') 
-+ RUNTIME Complexity: O(2n) → O(n) [WST]
++ RUNTIME Complexity: O(2·n) → O(n) [WST]
 + SPACE Complexity: O(1) [WST]
 */
 
 const mergeSortedArrays = (a1, a2) => {
   const n = a1.length;
-  let p1 = n - 1, p2 = n - 1, curr = (2 * n) - 1;
+  let p1 = n - 1, p2 = p1, curr = (2 * n) - 1;
 
   while (curr >= 0) {
     if (p2 < 0 || a1[p1] > a2[p2]) {
