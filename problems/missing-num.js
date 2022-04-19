@@ -27,7 +27,7 @@ Challenge:
 n = # of elements in array
 + RUNTIME Complexity: O(n) [WST]
 + SPACE Complexity: O(1) [WST]
-⇲ note The sum of all numbers from 1 to n can be represented by the equation:
+NOTE: The sum of all numbers from 1 to n can be represented by the equation:
 n(n + 1) / 2. Calculate the sum of all the numbers from 1 to array.length + 1. Then, iterate through the elements in the array, subtracting each element from the sum. Afterwards, the value of] sum will reflect the value of the missing element.
 */
 
@@ -38,4 +38,4 @@ const missingNum = arr => {
 
 // TESTING:
 const array = [2, 3, 7, 1, 5, 6, 10, 8, 4];
-console.log(missingNum(array)); // → 9
+console.log(missingNum(array)); // Expect: 9

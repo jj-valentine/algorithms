@@ -12,15 +12,33 @@ Return a list of all possible strings we could create. You can return the output
     str = "12345" → letterCasePermutation(str) = ["12345"]
 */
 
+const letterCasePermutation = str => {
+  const permutations = [];
+
+  function permuteLetters(idx = 0) {
+    if (idx === str.length) {
+      permutations.push()
+    }
+
+
+  }
+}
+
+
+
+
+
+
+
 /*
-SOLUTION #1
+SOLUTION #2
 n = # of characters in input string
-+ RUNTIME Complexity: O(n * 2^n) [WST]
-+ SPACE Complexity: O(n * 2^n) [WST]
-⇲ note Recursive approach...
++ RUNTIME Complexity: O(n * 2ⁿ) [WST]
++ SPACE Complexity: O(n * 2ⁿ) [WST]
+NOTE: 'Recursive' approach...
 */
 
-const letterCasePermuation = str => {
+const letterCasePermuationV2 = str => {
   const permutations = []
   permuteLetters();
   return permutations;
@@ -42,16 +60,17 @@ const letterCasePermuation = str => {
   }
 };
 
+
 /*
-SOLUTION #2
+SOLUTION #3
 n = # of characters in input string
-+ RUNTIME Complexity: O(n * 2^n) [WST]
-+ SPACE Complexity: O(n * 2^n) [WST]
-⇲ note Iterative approach -- Take copies of existing permutations and change the casing of the current element 
++ RUNTIME Complexity: O(n * 2ⁿ) [WST]
++ SPACE Complexity: O(n * 2ⁿ) [WST]
+NOTE: 'Iterative' approach -- Take copies of existing permutations and change the casing of the current element 
 if it's a character (i.e. a-z OR A-Z). Then add new permutations into the "results" array.
 */
 
-const letterCasePermuationV2 = str => {
+const letterCasePermuationV3 = str => {
   let permutations = [str];
 
   for (let i = 0; i < str.length; i++) {
@@ -69,7 +88,6 @@ const letterCasePermuationV2 = str => {
 
   return permutations;
 }
-
 
 // TESTING:
 console.log(letterCasePermuation("a1b2")); // Expect: ["a1b2", "a1B2", "A1b2", "A1B2"]

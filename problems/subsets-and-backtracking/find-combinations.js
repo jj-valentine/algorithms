@@ -1,24 +1,42 @@
-"use strict"; // «TAGS» Array, Permutation, Combination, Recursive, Backtracking, LeetCode: #46, Difficulty: Medium, Companies: Amazon, Apple, Facebook
+"use strict"; // «TAGS» Array, Permutation, Combination, Recursive, Backtracking, LC : #46 (Medium), Companies: Amazon, Apple, Facebook
 
 /*
-Given two integers 'n' and 'k', return all possible combinations of 'k' numbers out of the range: [1, 'n'].
-You may return the answer in any order
 
-  EX: 
-    n = 4, k = 2 → findCombinations(n, k) = [[2, 4], [3, 4], [2, 3], [1, 2], [1, 3], [1, 4]]
-    n = 3, k = 3 → findCombinations(n, k) = [[1, 2, 3]]
-    n = 1, k = 1 → findCombinations(n, k) = [[1]]
+Part #1:
+  Given an array of integers and an integer 'k', return a list of all possible combinations of the integers from the array of size 'k'
+
+  EX:
+    arr = [1, 2, 3, 4], k = 2 → findCombinationsP1()
+
+Part #2:
+  Given two integers 'n' and 'k', return all possible combinations of 'k' numbers out of the range: [1, 'n'].
+  You may return the answer in any order
+
+    EX: 
+      n = 4, k = 2 → findCombinationsP2(n, k) = [[2, 4], [3, 4], [2, 3], [1, 2], [1, 3], [1, 4]]
+      n = 3, k = 3 → findCombinationsP2(n, k) = [[1, 2, 3]]
+      n = 1, k = 1 → findCombinationsP2(n, k) = [[1]]
 */
 
 /*
-n = max possible integer in each combination (top of "range")
+SOLUTION #1 (Part #1)
+n = # of elements/integers in input array
 k = # of integers in each combination
-P['n' CHOOSE 'k'] = P[n, k] = n! / (k! * (n - k)!)
+C['n' CHOOSE 'k'] = C[n, k] = (n! / (k!·(n - k)!))
 + RUNTIME Complexity: O(P[n, k]) [WST]
 + SPACE Complexity: O(k + k) → O(k) [WST]
 */
 
-const findCombinations = (n, k) => {
+/*
+SOLUTION #1 (Part #2)
+n = max possible integers in each combination (top of "range")
+k = # of integers in each combination
+C['n' CHOOSE 'k'] = C[n, k] = (n! / (k!·(n - k)!))
++ RUNTIME Complexity: O(P[n, k]) [WST]
++ SPACE Complexity: O(k + k) → O(k) [WST]
+*/
+
+const findCombinationsP2 = (n, k) => {
   let combinations = [];
   recurseToFindCombinations();
   return combinations;
@@ -29,7 +47,6 @@ const findCombinations = (n, k) => {
       return;
     }
 
-
     for (let i = startIdx; i < n + 1; i++) {
       currCombo.push(i);
       recurseToFindCombinations(i + 1, currCombo);
@@ -37,7 +54,6 @@ const findCombinations = (n, k) => {
     }
   }
 };
-
 
 // TESTING:
 console.log(findCombinations(5, 5)); // Expect: [[1, 2, 3, 4, 5]]

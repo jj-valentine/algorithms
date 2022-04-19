@@ -1,4 +1,6 @@
-"use strict"; // «TAGS» Decode, String, Stack, Recursion, LC  #394 (Medium/Hard), Companies: Amazon, Apple, Facebook, Google, Microsoft, Snap, Uber
+"use strict"; // «TAGS» Decode, String, Stack, Recursion, LC : #394 (Medium/Hard), Companies: Amazon, Apple, Facebook, Google, Microsoft, Snap, Uber
+
+// ☞ TODO: finish computing time/space complexity
 
 /*
 Given an encoded string, return its decoded string. The encoding rule is: 'k[encoded_string]', where the encoded_string inside 
@@ -20,7 +22,7 @@ SOLUTION #1
 n = # of characters in input string (coded message/string)
 + RUNTIME Complexity: O() [WST]
 + SPACE Complexity: O() [WST]
-⇲ note Using a Stack...
+NOTE: Using a Stack...
 */
 
 const decodeString = str => {

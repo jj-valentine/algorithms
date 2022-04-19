@@ -1,4 +1,4 @@
-"use strict"; // «TAGS» Array, Hash Table, Sorted, 'K' (Variable), Frequency, Compare, "Divide & Conquer", Heap (i.e. Priority Queue),  LC  #347 (Medium),  IK  Sorting, Companies: Amazon, Apple, Facebook, Google, Microsoft, Netflix, Snap, Uber
+"use strict"; // «TAGS» Array, Hash Table, Sorted, 'K' (Variable), Frequency, Compare, "Divide & Conquer", Heap (i.e. Priority Queue), LC : #347 (Medium), IK : Sorting, Companies: Amazon, Apple, Facebook, Google, Microsoft, Netflix, Snap, Uber
 
 /*
 Given an integer array and an integer 'k', return the 'k' most frequent elements in the array. You may return the answer in any order.

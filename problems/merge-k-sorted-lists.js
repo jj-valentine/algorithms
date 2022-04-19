@@ -1,4 +1,4 @@
-"use strict"; // «TAGS» Array, Sorted, Linked List, Node, 'K' (Variable), Compare, Merge Sort ("Divide & Conquer"), Recursion, Heap (i.e. Priority Queue),  LC  #23 (Hard),  IK  Sorting, Companies: Amazon, Apple, Facebook, Google, LinkedIn, Microsoft, Salesforce, Spotify, Uber
+"use strict"; // «TAGS» Array, Sorted, Linked List, Node, 'K' (Variable), Compare, Merge Sort ("Divide & Conquer"), Recursion, Heap (i.e. Priority Queue), LC : #23 (Hard), IK : Sorting, Companies: Amazon, Apple, Facebook, Google, LinkedIn, Microsoft, Salesforce, Spotify, Uber
 
 import { listNode, generateList } from "../utils/helper-methods.js";
 

@@ -1,4 +1,4 @@
-"use strict"; // «TAGS» Array, Subset, Permutation, Combination, Tree, Depth First Search (DFS), Recursive, Backtracking, Difficulty: Medium, Companies: Amazon, Apple, Facebook, Google, Microsoft
+"use strict"; // «TAGS» Array, Subset, Permutation, Combination, Tree, Depth First Search (DFS), Recursive, Backtracking, LC : #78 (Medium), Companies: Amazon, Apple, Facebook, Google, Microsoft
 
 /*
 Part #1:
@@ -9,7 +9,6 @@ Part #1:
       arr = [1, 2, 3] → findSubsets(arr) = [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
       
       arr = [0] → findSubsets(arr) = [[], [0]]
-
       
 Part #2:
   Given an integer array nums that MAY contain duplicates, return all possible subsets (the power set).
@@ -24,29 +23,30 @@ Part #2:
 /*
 SOLUTION #1 (Part #1)
 n = # of integers in input array
-+ RUNTIME Complexity: O(n * 2^n) [WST]
++ RUNTIME Complexity: O(n·2ⁿ) [WST]
 + SPACE Complexity: O(n) [WST]
 */
 
 const findSubsets = arr => {
   let subsets = [];
-  backtrackToFindSubsets();
+  recurseToGenerateSubsets();
 
-  function backtrackToFindSubsets(first = 0, combo = []) {
+  function recurseToGenerateSubsets(first = 0, combo = []) {
     subsets.push([...combo]);
     for (let i = first; i < arr.length; i++) {
       combo.push(arr[i]);
       // iterate over all other integers in array (i.e. other than 'arr[i]') to create combos that start with 'arr[i]'
-      backtrackToFindSubsets(i + 1, combo);
+      recurseToGenerateSubsets(i + 1, combo);
       combo.pop()
     }
   }
 }
 
+
 /*
 SOLUTION #2 (Part #1)
 n = # of integers in input array
-+ RUNTIME Complexity: O(n * 2^n) [WST]
++ RUNTIME Complexity: O(n·2ⁿ) [WST]
 + SPACE Complexity: O(n) [WST]
 */
 
@@ -54,12 +54,13 @@ const findSubsetsV2 = arr => {
   let n = arr.length, subsets = [];
   // iterating through LENGTHS of subarrays (so we want 'i' to equal 'n' before loop terminates)
   for (var len = 0; len < n + 1; len++) {
-    backtrackToFindSubsets();
+    recurseToGenerateSubsets();
   }
+
   return subsets;
 
   //  Q:  this feels like a redundant and inefficient way of doing this because we're generating the same subsets multiple times (right?)
-  function backtrackToFindSubsets(first = 0, combo = []) {
+  function recurseToGenerateSubsets(first = 0, combo = []) {
     // consecutively add subsets of same length as the index in original array we're iterating over
     if (first === len) {
       subsets.push([...combo]);
@@ -68,7 +69,7 @@ const findSubsetsV2 = arr => {
     
     for (let i = first; i < n; i++) {
       combo.push(arr[i]);
-      backtrackToFindSubsets(i + 1, combo);
+      recurseToGenerateSubsets(i + 1, combo);
       combo.pop();
     } 
   }
@@ -78,9 +79,9 @@ const findSubsetsV2 = arr => {
 /*
 SOLUTION #3 (Part #1)
 n = # of integers in input array
-+ RUNTIME Complexity: O(n * 2^n) [WST]
++ RUNTIME Complexity: O(n·2ⁿ) [WST]
 + SPACE Complexity: O(n) [WST]
-⇲ note In this iterative approach, the space complexity is a function of the size of the largest subset. Since the largest a subset can 
+NOTE: In this iterative approach, the space complexity is a function of the size of the largest subset. Since the largest a subset can 
 be is 'n', the worst case space complexity would be: O(n)
 */
 
@@ -95,41 +96,17 @@ const findSubsetsV3 = arr => {
   return subsets;
 };
 
-const findSubsetzV2 = arr => {
-
-
-
-}
-
-var majorityElement = function(nums) {
-  nums.sort();
-  let n = nums.length;
-  for (let i = 1, count = 1; i < n; i++) {
-      if (count > Math.floor(n/2)) return nums[i - 1]; 
-
-      if (nums[i - 1] === nums[i]) {
-          count++;
-      }
-      else count = 1;
-
-      
-  }
-  return nums[n - 1];
-};
-majorityElement([3,3,4]);
-
-
 // TESTING:
-// console.log(findSubsetsV3([1, 2, 3, 4])); // Expect: [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
-// console.log(findSubsetsV3([0])); // Expect: [[], [0]]`
+console.log(findSubsetsV2([1, 2, 3])); // Expect: [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
+console.log(findSubsetsV2([0])); // Expect: [[], [0]]`
 
 
 /*
 SOLUTION #1 (Part #2)
 n = # of integers in input array
-+ RUNTIME Complexity: O(nlog(n) + n * 2^n) → O(n * (log(n) + 2^n)) → O(n * 2^n) [WST] (i.e. since 2^n >> log(n))
++ RUNTIME Complexity: O(n·log(n) + n·2ⁿ) → O(n·(log(n) + 2ⁿ)) → O(n·2ⁿ) [WST]
 + SPACE Complexity: O(n + log(n)) → O(n) [WST] / O(log(n)) [BST]
-⇲ note In this iterative approach, to skip duplicate subsets, as we iterate through the array we can check to see if there are adjacent
+NOTE: In this iterative approach, to skip duplicate subsets, as we iterate through the array we can check to see if there are adjacent
 integers that equal each other. For this to work, we must first SORT our array. Once we verify that an element is a duplicate of the 
 integer that comes after it, we can save ourself from creating redundant subsets by only adding that duplicate integer to those subsets
 that were JUST created by the current integer (it's original doppleganger). In other words, those subsets would represent ones created 
@@ -160,7 +137,7 @@ const findSubsetsP2 = arr => {
 /*
 SOLUTION #2 (Part #2)
 n = # of integers in input array
-+ RUNTIME Complexity: O(n * 2^n) [WST]
++ RUNTIME Complexity: O(n·2ⁿ) [WST]
 + SPACE Complexity: O(log(n) + n) → O(n) [WST]
 */
 

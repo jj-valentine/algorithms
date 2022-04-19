@@ -1,4 +1,4 @@
-"use strict"; // «TAGS» Dynamic Programming (DP), Bottom-Up, Top-Down, Backtracking, Recursive, Permutations, Subsets, Minimum, Fewest, Money, Coins, Change, LeetCode: #322, Difficulty: Medium, Companies: Amazon, Apple, Google, Microsoft, Uber, Zoom
+"use strict"; // «TAGS» Dynamic Programming (DP), Bottom-Up, Top-Down, Backtracking, Recursive, Permutations, Subsets, Minimum, Fewest, Money, Coins, Change, LC : #322 (Medium), Companies: Amazon, Apple, Google, Microsoft, Uber, Zoom
 
 import { perf } from "../../utils/performance-tests.js";
 
@@ -9,7 +9,7 @@ You may assume that you have an infinite number of each kind of coin
 
   EX's:
     coins = [1, 2, 5], total = 11 → coinChange(coins, total) = 3
-      Explanation -- 5 + 5 + 1 = 11
+      EXPLANATION -- 5 + 5 + 1 = 11
     
     coins = [1], amount = 2 → coinChange(coins, total) = 2
 
@@ -18,14 +18,13 @@ You may assume that you have an infinite number of each kind of coin
     coins = [1], amount = 0 → coinChange(coins, total) = 0
 */
 
-
 /*
 SOLUTION #1
 n = # of integer values in input array: 'coins'
 t = total amount of money represented by the input integer: 'total'
-+ RUNTIME Complexity: O(total * n) [WST]
++ RUNTIME Complexity: O(t·n) [WST]
 + SPACE Complexity: O(t) [WST]
-⇲ note Dynamic Programming (DP) approach ("Bottom-Up")...
+NOTE: Dynamic Programming (DP) approach ("Bottom-Up")...
 */
 
 const coinChange = (coins, total) => {
@@ -41,13 +40,14 @@ const coinChange = (coins, total) => {
   return dp[total] === Infinity ? -1 : dp[total]; 
 }
 
+
 /*
 SOLUTION #2
-n = # of integer values in input array: 'coins'
-t = total amount of money represented by the input integer: 'total'
-+ RUNTIME Complexity: O(total * n) [WST]
+n ≣ # of integer values in input array: 'coins'
+t ≣ total amount of money represented by the input integer: 'total'
++ RUNTIME Complexity: O(t·n) [WST]
 + SPACE Complexity: O(t) [WST]
-⇲ note Memoization approach ("Top-Down")...
+NOTE: 'Memoization' approach ("Top-Down")...
 */
 
 const coinChangeV2 = (coins, total) => {
@@ -71,12 +71,12 @@ const coinChangeV2 = (coins, total) => {
 
 
 /*
-SOLUTION #3 -- This takes far too long (times out on LC)
+SOLUTION #3 -- This takes far too long (times out in execution on LeetCode)
 n = # of integer values in input array (i.e. 'coins) AKA # of different denominations of coins
 t = total amount of money represented by the input integer (i.e. 'total')
-+ RUNTIME Complexity: O(total^n) [WST]
++ RUNTIME Complexity: O(totalⁿ) [WST]
 + SPACE Complexity: O(t) [WST]
-⇲ note Backtracking like this would be considered a "BRUTE FORCE" method, compared to the memoization approach above (i.e. SOLUTION #2) and even 
+NOTE: Backtracking like this would be considered a "BRUTE FORCE" method, compared to the memoization approach above (i.e. SOLUTION #2) and even 
 more so for the DP approach above that (i.e. SOLUTION #1). The reason our TIME complexity will be O(total^n), is that every coin in the coins array 
 could have at most 't'/'c_i' (where 'c_i' is the coin value for index 'i'). So the total number of possible combinations of coins is would be 
 ('t'/'c_0') *  ('t'/'c_1') * ... * ('t'/'c_n') = (('t'^'n')/'c_1'*'c_2'*...*'c_n') → O(t^n). The worst case for the space complexity would be O(t) 
@@ -117,4 +117,4 @@ console.log(coinChange([411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 4
 
 perf(coinChange, [[411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422], 9864]);
 perf(coinChangeV2, [[411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422], 9864]);
-// perf(coinChangeV3, [[411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422], 9864]); // ⇲ note takes forever...
+// perf(coinChangeV3, [[411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422], 9864]); // NOTE: takes forever...

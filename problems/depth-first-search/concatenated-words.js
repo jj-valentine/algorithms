@@ -1,5 +1,6 @@
-"use strict"; // «TAGS» Array, Strings, Words, Concatenated, Prefix, Suffix, Recursion, Memoization, DFS, Dynamic Programming, Trie (?), LeetCode: #472, Difficulty: Hard, Companies: Amazon, Microsoft
+"use strict"; // «TAGS» Array, Strings, Words, Concatenated, Prefix, Suffix, Recursion, Memoization, DFS, Dynamic Programming, Trie (?), LC : #472 (Hard), Companies: Amazon, Microsoft
 
+// ☞ TODO: finish solving
 
 /*
 Given an array of strings (without duplicates), return all the concatenated words in the given list of words.
@@ -7,36 +8,29 @@ A concatenated word is defined as a string that is comprised entirely of at leas
 
   EX's:
     words = ["cat", "cats", "catsdogcats", "dog", "dogcatsdog", "hippopotamuses", "rat", "ratcatdogcat"] → findAllConcatenatedWords(words) = ["catsdogcats", "dogcatsdog", "ratcatdogcat"]
-      EXPLANATION --- "catsdogcats" can be concatenated by "cats", "dog" and "cats"; "dogcatsdog" can be concatenated by "dog", "cats" and "dog";  
+      EXPLANATION -- "catsdogcats" can be concatenated by "cats", "dog" and "cats"; "dogcatsdog" can be concatenated by "dog", "cats" and "dog";  
         "ratcatdogcat" can be concatenated by "rat", "cat", "dog" and "cat".
     
-      words =  ["cat", "dog", "catdog"] → findAllConcatenatedWords(words) = ["catdog"]
+    words =  ["cat", "dog", "catdog"] → findAllConcatenatedWords(words) = ["catdog"]
 */
 
 /*
 n = # of strings in input array
-+ RUNTIME Complexity: O(n * k^2) [WST]
++ RUNTIME Complexity: O(n·k²) [WST]
 + SPACE Complexity: O(max(n, k)) [WST]
-⇲ note 
 */
 
 const findAllConcatenatedWords = words => {
   const dict = new Map(words), memo = new Map();
 
   function doesWordContainOtherWords() {
-
     for (let word in words) {
       for (let i = 1; i < word.length; i++) {
         let prefix = word.slice(0, i), suffix = word.slice(i);
       }
     }
   }
-};
-
-
-
-
-
+}; 
 
 // TESTING:
 console.log(findAllConcatenatedWords(["cat", "cats", "catdogkick", "catsdogcats", "dog", "dogcatsdog", "hippopotamuses", "rat", "ratcatdogcat"])); // Expect: ["catsdogcats", "dogcatsdog", "ratcatdogcat"]

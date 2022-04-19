@@ -1,4 +1,4 @@
-"use strict"; // «TAGS» Array, Class, Stream, 'K' (Variable), Largest, Compare, Priority Queue (i.e. 'MinHeap'),   LC  #703 (Easy),  IK  Sorting, Companies: Amazon, Facebook, Google
+"use strict"; // «TAGS» Array, Class, Stream, 'K' (Variable), Largest, Compare, Priority Queue (i.e. 'MinHeap'), LC : #703 (Easy), IK : Sorting, Companies: Amazon, Facebook, Google
 
 /*
 Design a class to find the 'k'th largest element in a stream. It should initialize the object with the integer 'k' and the stream of integers as inputs/arguments.
@@ -10,7 +10,6 @@ NOTE: We're searching for and returning the 'k'th largest element in the sorted 
   EX:
     k = 3, arr = [4, 5, 8, 2] → kthLargest.add(3) = 4; kthLargest.add(5) = 5; kthLargest.add(10) = 5; kthLargest.add(9) = 8; kthLargest.add(4) = 8
  
-
   CONSTRAINTS:
     1 ≤ k ≤ 104
     0 ≤ arr.length ≤ 104
@@ -23,18 +22,10 @@ NOTE: At most 104 calls will be made to 'add', and it's guaranteed there will be
 /*
 n = # of elements in input array (i.e. initial stream)
 m = total # of elements "appended" to heap (i.e. # of times 'add' method is called after class is initialized)
-+ RUNTIME Complexity: O(n·log(k)) [WST]
-+ SPACE Complexity: O() [WST]
-NOTE:
++ RUNTIME Complexity: O(n·log(k) + m·log(k)) → O((n + m)·log(k)) [WST]
++ SPACE Complexity: O(k) [WST]
 */
 
-
-/*
-idea:  
-  create MinHeap of size 'k'
-  add initial array (maintaining "heap" property)
-
-*/
 class KthLargestInStream {
   #size;
   #heap;
@@ -46,7 +37,7 @@ class KthLargestInStream {
   }
 
   get kthLargest() {
-    return this.#heap[0] || null;
+    return this.#heap[0];
   }
 
   get heap() {
@@ -59,9 +50,11 @@ class KthLargestInStream {
 
   add(n) {
     if (this.#size < this.k) {
-      this.#heap[this.#size++ - 1] = n;
+      this.#heap[this.#size] = n;
+      this.#size++;
       this.#heapifyUp(this.#heap);
     } else if (n > this.kthLargest) {
+      console.log(n);
       this.#heap[0] = n;
       this.#heapifyDown(this.#heap, 0);
     }
@@ -75,18 +68,18 @@ class KthLargestInStream {
       if (i <= this.k - 1) minHeap[i] = arr[i];
       else if (arr[i] > minHeap[0]) {
         minHeap[0] = arr[i];
-        this.#heapifyDown(minHeap, 0);
-
+        this.#heapifyDown(minHeap);
       }
+
       this.#size++;
-      this.#heapifyUp(minHeap, i);
+      if (this.#size > 1) this.#heapifyUp(minHeap, i);
     }
 
     return minHeap;
   };
 
   #heapifyUp(minHeap, i = this.#size - 1) {
-    const parent = idx => Math.floor((idx - 1)/ 2);
+    const parent = idx => Math.floor((idx - 1) / 2);
     let curr = i;
     while (curr >= 1 && minHeap[parent(curr)] > minHeap[curr]) {
       this.#swap(minHeap, curr, parent(curr));
@@ -114,15 +107,27 @@ class KthLargestInStream {
 }
 
 // TESTING:
-const kthLargestV1 = new KthLargestInStream(3, [4, 5, 8, 2]);
-console.log(kthLargestV1.heap);
-console.log(kthLargestV1.add(3)); // Expect: 4
-console.log(kthLargestV1.heap);
-console.log(kthLargestV1.add(5)); // Expect: 5
-console.log(kthLargestV1.add(10)); // Expect: 5
-console.log(kthLargestV1.add(9)); // Expect: 8
-console.log(kthLargestV1.add(4)); // Expect: 8
-console.log(kthLargestV1.heap);
+let kthLargest = new KthLargestInStream(3, [4, 5, 8, 2]);
+console.log(kthLargest.add(3)); // Expect: 4
+console.log(kthLargest.add(5)); // Expect: 5
+console.log(kthLargest.add(10)); // Expect: 5
+console.log(kthLargest.add(9)); // Expect: 8
+console.log(kthLargest.add(4)); // Expect: 8
 
-// const kthLargestV2 = new KthLargestInStream(5, [4, 5, 8, 2]);
+kthLargest = new KthLargestInStream(1, []);
+console.log(kthLargest.heap);
+console.log(kthLargest.add(-3)); // Expect: -3
+console.log(kthLargest.heap);
+console.log(kthLargest.add(-2)); // Expect: -2
+console.log(kthLargest.add(-4)); // Expect: -2
+console.log(kthLargest.add(0)); // Expect: 0
+console.log(kthLargest.add(4)); // Expect: 4
 
+kthLargest = new KthLargestInStream(2, [0]);
+console.log(kthLargest.heap);
+console.log(kthLargest.add(-1)); // Expect: -1
+console.log(kthLargest.heap);
+console.log(kthLargest.add(1)); // Expect: 0
+console.log(kthLargest.add(-2)); // Expect: 0
+console.log(kthLargest.add(-4)); // Expect: 0
+console.log(kthLargest.add(3)); // Expect: 1

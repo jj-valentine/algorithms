@@ -78,6 +78,7 @@ class MaxHeap {
   NOTE: Performed IN-PLACE if we "empty" our heap by calling 'extractMax' for every element in heap... Will leave heap "un-heapified" (i.e. without "heap property") 
     → call 'buildMaxHeap' afterward to re-instate said property 
   */
+ 
   heapSort() {
     if (this.size < 1) return this.heap;
     const size = this.size;

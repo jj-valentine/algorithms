@@ -1,4 +1,4 @@
-"use strict"; // «TAGS» Array, Sorted, Linked List, Node, 'K' (Variable), Compare, Merge Sort ("Divide & Conquer"), Recursion, Heap (i.e. Priority Queue),  LC  #23 (Hard),  IK  Sorting, Companies: Amazon, Apple, Facebook, Google, LinkedIn, Microsoft, Salesforce, Spotify, Uber
+"use strict"; // «TAGS» Array, Sorted, Linked List, Node, 'K' (Variable), Compare, Merge Sort ("Divide & Conquer"), Recursion, Heap (i.e. Priority Queue), LC : #23 (Hard), IK : Sorting, Companies: Amazon, Apple, Facebook, Google, LinkedIn, Microsoft, Salesforce, Spotify, Uber
 
 import { listNode, generateList } from "../utils/helper-methods.js";
 
@@ -18,7 +18,7 @@ SOLUTION #1
 k = # of lists in input array
 nᵢ = # of nodes in input list 'lᵢ' (nₐ ≣ "average" size/length of the 'k' input lists)
 N = TOTAL number of nodes (from all 'k' input lists, aggregated) → N = nₐ·k
-+ RUNTIME Complexity: O(nₐ·(k·(k + 1))/2) → O(nₐ·k²) → O(N·k)[WST]
++ RUNTIME Complexity: O(nₐ·(k·(k + 1)) / 2) → O(nₐ·k²) → O(N·k)[WST]
 + SPACE Complexity: O(N·k) [WST]
 NOTE: Employing a 'Recursive' (i.e. 'Brute Force') approach, we can effectively "merge" two sorted lists at a time. Then, "rinse + repeat" but for every subsequent 
 "merging" of two sorted lists, one of them will always be the larger resultant "merged" list from the previous "merging". In other words, the first time we call 

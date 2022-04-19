@@ -1,4 +1,4 @@
-"use strict"; // «TAGS» Depth First Search (DFS), Backtracking, Recursion, Grid, Row, Column, Word, Character, LeetCode: #79, Difficulty: Medium, Companies: Amazon, Apple, Facebook, Google, Microsoft, Snap, Twitter, Uber
+"use strict"; // «TAGS» Depth First Search (DFS), Backtracking, Recursion, Grid, Row, Column, Word, Character, LC : #79 (Medium), Companies: Amazon, Apple, Facebook, Google, Microsoft, Snap, Twitter, Uber
 
 /*
 Given an 'm'x'n' grid of characters and a string 'word', return 'true' if 'word' exists in the grid. 
@@ -7,11 +7,11 @@ The same letter cell may not be used more than once.
 */
 
 /*
-k = # of characters/letters in the input grid (i.e. n * m)
+k = # of characters/letters in the input grid (i.e. n·m)
 l = # of characters in input 'word'/string
-+ RUNTIME Complexity: O(k * 4 * 3^min(k, l)) [WST]
++ RUNTIME Complexity: O(k·4·3^min(k, l)) [WST]
 + SPACE Complexity: O(l) [WST]
- NOTE:  In order to calculate our time complexity, we can first focus on the DFS backtracking path that we will take. After the first character/cell,
+ NOTE: In order to calculate our time complexity, we can first focus on the DFS backtracking path that we will take. After the first character/cell,
 we will only have '3' available directions to travel since we avoid going backward. So aside from the very first cell (our "root"),
 which has '4' options available (i.e. 4^1), 
 */
@@ -39,13 +39,14 @@ const wordSearch = (grid, word) => {
 
     let found = false, offset = [0, 1, 0, -1];
     grid[currRow][currCol] = "@";
-    // save time by pruning (i.e. cutting off our backtracking when we find a match)
+
+    /* save time by pruning (i.e. cutting off our backtracking when we find a match) */
     for (let i = 0; i < 4; i++) {
       found = backtrackWithDFS(currRow + offset[3 - i], currCol + offset[i], idx + 1);
       if (found) break;
     }
 
-    // clean up with backtracking
+    /* clean up with backtracking */
     grid[currRow][currCol] = word.charAt(idx);
     return found;
   } 

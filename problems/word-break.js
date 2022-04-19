@@ -9,7 +9,7 @@ Given an input string and dictionary of words/strings...
 
       EX's:
         str = "leetcode", dict = ["leet", "code"] → wordBreak(str, dict) = true
-        Explanation -- "leetcode" can be segmented as "leet code"
+          EXPLANATION -- "leetcode" can be segmented as "leet code"
 
         str = "applepineapple", dict = ["apple", "pineapple"] → wordBreak(str, dict) = true
       
@@ -27,7 +27,7 @@ Given an input string and dictionary of words/strings...
 
       str = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"] → wordBreakP2(str, dict) = []
 
- NOTE:  In BOTH parts (#1, and #2), the same word in the dictionary may be re-used multiple times in the segmentation!
+NOTE: In BOTH parts (#1, and #2), the same word in the dictionary may be re-used multiple times in the segmentation!
 */
 
 /*
@@ -36,7 +36,7 @@ n = # of words in input array (i.e. the "dictionary")
 k = # of characters in (i.e. 'length' of) input string
 + RUNTIME Complexity: O(k^3) [WST]
 + SPACE Complexity: O(max(n, k)) [WST]
- NOTE:  Can also solve using BFS!
+NOTE: Can also solve using BFS!
 */
 
 const wordBreak = (str, dict) => {
@@ -59,7 +59,7 @@ const wordBreak = (str, dict) => {
   }
 };
 
-// TESTING (Part #1):
+// TESTING:
 // console.log(wordBreak("a", ["a"])); // Expect: true
 // console.log(wordBreak("leet", ["l", "e", "ee", "le", "lee"])); // Expect: false
 // console.log(wordBreak("ccbb", ["bc", "cb"])); // Expect: false
@@ -73,9 +73,9 @@ const wordBreak = (str, dict) => {
 SOLUTION #1 (Part #2)
 n = # of words in input array (i.e. the "dictionary")
 k = # of characters in (i.e. 'length' of) input string
-+ RUNTIME Complexity: O(k^3 + n^k) [WST] →  Q:  OR is it: k^2 * 2^k (LeetCode)...
-+ SPACE Complexity: O(k + k^2) [WST]
- NOTE:  Employ "Top-Down" Dynamic Programming (DP)...
++ RUNTIME Complexity: O(k³ + n^k) [WST] →  Q:  OR is it: O(k²·2^k) -- from LeetCode?
++ SPACE Complexity: O(k + k²) [WST]
+ NOTE: Employ 'Dynamic Programming' (DP)...
 */
 
 const wordBreakP2 = (str, dict) => {

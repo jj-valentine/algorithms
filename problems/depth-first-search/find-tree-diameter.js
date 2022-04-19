@@ -1,4 +1,4 @@
-"use strict"; // «TAGS» Depth First Search (DFS), Tree, Node, Root, Leaf, Recursion, Path, Diameter, Longest, Difficulty: Medium
+"use strict"; // «TAGS» Depth First Search (DFS), Tree, Node, Root, Leaf, Recursion, Path, Diameter, Longest, LC : #543 (Easy), Companies: Amazon, Apple, Facebook, Google, Microsoft
 
 import { generateTree } from "../../utils/helper-methods.js";
 
@@ -28,7 +28,6 @@ const findTreeDiameter = root => {
     return Math.max(leftPath, rightPath) + 1;
   }
 };
-
 
 // TESTING:
 let tree = generateTree([[1], [2, 3], [null, 4, 5, 6]]);

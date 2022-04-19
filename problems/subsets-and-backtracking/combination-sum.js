@@ -1,4 +1,4 @@
-"use strict"; // «TAGS» Array, Permutation, Combination, Recursive, Backtracking, Sum, Choose, Target, Frequency, Duplicates, Candidates, Sort, LeetCode: #39/#40/#216, Difficulty: Medium, Companies: Airbnb, Amazon, Apple, Facebook, Google, LinkedIn, Microsoft
+"use strict"; // «TAGS» Array, Permutation, Combination, Recursive, Backtracking, Sum, Choose, Target, Frequency, Duplicates, Candidates, Sort, LC : #39/#40/#216 (Medium), Companies: Airbnb, Amazon, Apple, Facebook, Google, LinkedIn, Microsoft
 
 /*
 Given an array of distinct integers and a target integer (i.e. 'target'), return a list of all unique combinations of integers/candidates 
@@ -49,8 +49,8 @@ where the chosen numbers sum to 'target'. You may return the combinations in any
 SOLUTION #1 (Part #1)
 n = # of integers in input array
 t = input target # (i.e. 'target')
-m = lowest integer/candidate in input array
-+ RUNTIME Complexity: O(n * n^(t/m)) [WST]
+m = smallest integer/candidate in input array
++ RUNTIME Complexity: O(n·n^(t/m)) [WST]
 + SPACE Complexity: O(t/m) [WST]
 */
 
@@ -86,7 +86,7 @@ console.log(combinationSum([1], 2)); // Expect: [[1, 1]]
 SOLUTION #1 (Part #2)
 n = # of integers in input array
 t = input target # (i.e. 'target')
-+ RUNTIME Complexity: O(n*log(n) + 2^n) → O(2^n)[WST]
++ RUNTIME Complexity: O(n·log(n) + 2ⁿ) → O(2ⁿ)[WST]
 + SPACE Complexity: O(log(n) + n) [WST]
 */
 
@@ -127,8 +127,8 @@ const combinationSumP2 = (arr, target) => {
 SOLUTION #1 (Part #3)
 k = input integer representing length of combo's we're searching for
 t = input target # (i.e. 'target')
-P['9' CHOOSE 'k'] = P[n, k] = n! / (k! * (n - k)!)
-+ RUNTIME Complexity: O(k * P[9, k]) [WST]
+C['9' CHOOSE 'k'] = C[n, k] = (n! / (k!·(n - k)!))
++ RUNTIME Complexity: O(k·P[9, k]) [WST]
 + SPACE Complexity: O(k + k) → O(k) [WST]
 */
 
@@ -155,7 +155,7 @@ const combinationSumP3 = (k, target) => {
 }
 
 // TESTING:
-console.log(combinationSumP3(3, 7)); // Expect: [[1, 2, 4]]
-console.log(combinationSumP3(3, 9)); // Expect: [[1, 2, 6], [1, 3, 5], [2, 3, 4]]
-console.log(combinationSumP3(4, 1)); // Expect: []
-console.log(combinationSumP3(9, 45)); // Expect: [[1, 2, 3, 4, 5, 6, 7, 8, 9]]
+// console.log(combinationSumP3(3, 7)); // Expect: [[1, 2, 4]]
+// console.log(combinationSumP3(3, 9)); // Expect: [[1, 2, 6], [1, 3, 5], [2, 3, 4]]
+// console.log(combinationSumP3(4, 1)); // Expect: []
+// console.log(combinationSumP3(9, 45)); // Expect: [[1, 2, 3, 4, 5, 6, 7, 8, 9]]

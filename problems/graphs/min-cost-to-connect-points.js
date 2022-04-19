@@ -1,4 +1,4 @@
-"use strict"; // «TAGS» Array, Subarray, Graph, Adjaceny List/Matrix, Undirected, Weighted, Minimum, Cost, Distance, Greedy, LeetCode: #1584, Difficulty: Medium, Companies: Amazon
+"use strict"; // «TAGS» Array, Subarray, Graph, Adjaceny List/Matrix, Undirected, Weighted, Minimum, Cost, Distance, Greedy, LC : #1584 (Medium), Companies: Amazon
 
 /*
 You are given an array representing integer coordinates of some points on a 2D-plane, where 'points[i] = [x_i, y_i]'.
@@ -15,7 +15,7 @@ The cost of connecting two points with coordinates '[x_i, y_i]' and '[x_j, y_j]'
 
 /*
 n = # of subarrays in input array (i.e. each pair/subarray of'x' & 'y' coordinates represents a single point) 
-+ RUNTIME Complexity: O(n^2) [WST]
++ RUNTIME Complexity: O(n²) [WST]
 + SPACE Complexity: O(n) [WST]
 */
 

@@ -1,4 +1,4 @@
-"use strict"; // «TAGS» Depth First Search (DFS), Recursion, Grid, Matrix, Image, Pixels, Color, 4-Directionally, Adjacent,  LC : #733 (Easy), IK : Recursion, Companies: Amazon, Microsoft, Palantir
+"use strict"; // «TAGS» Depth First Search (DFS), Recursion, Grid, Matrix, Image, Pixels, Color, 4-Directionally, Adjacent  LC : #733 (Easy), IK : Recursion, Companies: Amazon, Microsoft, Palantir
 
 /*
 An image is represented by an 'm' x 'n' integer grid where each integer represents the pixel value of the image. You are also given three other inputs (all integers)
