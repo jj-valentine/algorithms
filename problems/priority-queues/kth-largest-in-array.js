@@ -64,7 +64,7 @@ const kthLargestInArrayV2 = (arr, k) => {
   function heapifyDown(heap, i = 0) {
     let l = (2 * i) + 1, r = l + 1, min = i;
 
-    if (l >=   size) return;
+    if (l >= size) return;
     if (heap[l] < heap[min]) min = l;
     if (heap[r] < heap[min]) min = r;
 

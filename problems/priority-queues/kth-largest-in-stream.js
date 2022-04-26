@@ -115,7 +115,6 @@ console.log(kthLargest.add(9)); // Expect: 8
 console.log(kthLargest.add(4)); // Expect: 8
 
 kthLargest = new KthLargestInStream(1, []);
-console.log(kthLargest.heap);
 console.log(kthLargest.add(-3)); // Expect: -3
 console.log(kthLargest.heap);
 console.log(kthLargest.add(-2)); // Expect: -2
@@ -124,7 +123,6 @@ console.log(kthLargest.add(0)); // Expect: 0
 console.log(kthLargest.add(4)); // Expect: 4
 
 kthLargest = new KthLargestInStream(2, [0]);
-console.log(kthLargest.heap);
 console.log(kthLargest.add(-1)); // Expect: -1
 console.log(kthLargest.heap);
 console.log(kthLargest.add(1)); // Expect: 0

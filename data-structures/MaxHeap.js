@@ -85,6 +85,7 @@ class MaxHeap {
     for (let i = 0; i < size; i++) {
       this.extractMax();
     }
+    
     const sorted = this.heap;
     this.size = size;
     return sorted;
@@ -94,11 +95,35 @@ class MaxHeap {
 
 // TESTING:
 const maxHeap = new MaxHeap();
-maxHeap.insert(3);
+maxHeap.insert(9);
+maxHeap.insert(7);
 maxHeap.insert(4);
-maxHeap.insert(1);
-maxHeap.insert(5);
+maxHeap.insert(6);
 console.log(maxHeap); // Expect: [5, 4, 1, 3]
 console.log(maxHeap.heapSort()); Expect: [1, 3, 4, 5]
 
 export default MaxHeap;
+
+
+// let toAdd = n;
+    // if (this.MaxHeap.length === this.MinHeap.length) {
+    //   let maxRoot = this.MaxHeap[0];
+    //   if (toAdd < maxRoot) {
+    //     this.MaxHeap[0] = n;
+    //     this.#heapifyDown(this.MaxHeap);
+    //     toAdd = maxRoot;
+    //   } 
+
+    //   this.MinHeap[this.MinHeap.length] = toAdd;
+    //   this.#heapifyUp(this.MinHeap);
+    // } else {
+    //   let minRoot = this.MinHeap[0];
+    //   if (toAdd >= minRoot) {
+    //     this.MinHeap[0] = n;
+    //     this.#heapifyDown(this.MinHeap);
+    //     toAdd = minRoot;
+    //   } 
+      
+    //   this.MaxHeap[this.MaxHeap.length] = toAdd
+    //   this.#heapifyUp(this.MaxHeap);
+    // }

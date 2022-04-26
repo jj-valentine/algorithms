@@ -92,7 +92,7 @@ t = input target # (i.e. 'target')
 
 const combinationSumP2 = (arr, target) => {
   let combos = [];
-  arr = arr.sort((a, b) => a - b);
+  arr.sort();
   // for (let i = 0; i < arr.length; i++) {
   //   if (i > 0 && arr[i] === arr[i - 1]) continue;
   //   backtrackToFindCombinations(i + 1, arr[i], [arr[i]]);
@@ -106,7 +106,7 @@ const combinationSumP2 = (arr, target) => {
       combos.push(combo.concat());
       return;
     }
-
+    
     for (let i = idx; i < arr.length; i++) {
       // if current integer added to our current sum is LARGER than the target,
       // OR if we're considering adding an integer other than the one we started with and it's a duplicate
